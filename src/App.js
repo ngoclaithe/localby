@@ -22,6 +22,7 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogDetail />} />
               <Route path="/destinations" element={<Destinations />} />
               <Route path="/about" element={<About />} />
