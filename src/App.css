@@ -4503,6 +4503,216 @@ body {
 }
 
 .related-post-title a:hover {
+  color: var(--primary-600);
+}
+
+.related-post-excerpt {
+  color: var(--dark-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.related-post-meta {
+  display: flex;
+  gap: var(--space-lg);
+  color: var(--dark-500);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Image Grid Styles for Blog Detail */
+.image-grid {
+  display: grid;
+  gap: var(--space-md);
+  margin: var(--space-2xl) 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.image-grid:not(.large) {
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-grid.large {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100%;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform var(--duration-normal) var(--ease-smooth);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-medium);
+}
+
+.image-grid.large img {
+  height: 150px;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+.image-caption {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--dark-500);
+  font-style: italic;
+  margin-top: var(--space-md);
+  padding: var(--space-sm);
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-md);
+}
+
+/* Blog Detail CTA */
+.blog-detail-cta {
+  background: var(--gradient-cosmic);
+  color: white;
+  padding: var(--space-4xl) 0;
+  text-align: center;
+}
+
+.blog-detail-cta .cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-detail-cta .cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blog-detail-cta .cta-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: var(--space-3xl);
+}
+
+.blog-detail-cta .cta-actions {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog-detail-cta .cta-button {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: var(--space-lg) var(--space-2xl);
+  border-radius: var(--radius-2xl);
+  transition: all var(--duration-normal) var(--ease-spring);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+}
+
+.blog-detail-cta .cta-button.primary {
+  background: var(--gradient-sunset);
+  color: white;
+}
+
+.blog-detail-cta .cta-button.secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(16px);
+}
+
+.blog-detail-cta .cta-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design for Blog Detail */
+@media (max-width: 1024px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .article-sidebar {
+    position: relative;
+    top: 0;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-header-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .article-info {
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .article-stats {
+    justify-content: center;
+  }
+
+  .article-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .image-grid.large {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-content {
+    padding: var(--space-xl);
+  }
+
+  .breadcrumb-current {
+    max-width: 200px;
+  }
+
+  .related-posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-detail-cta .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid:not(.large),
+  .image-grid.large {
+    grid-template-columns: 1fr;
+  }
+
+  .article-title {
+    font-size: 1.8rem;
+  }
+
+  .sidebar-widget {
+    padding: var(--space-lg);
+  }
+}
+  color: var(--dark-800);
+  transition: color var(--duration-normal) var(--ease-smooth);
+}
+
+.related-post-title a:hover {
   background: var(--gradient-cosmic);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
