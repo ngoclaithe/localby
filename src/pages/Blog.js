@@ -25,7 +25,7 @@ const Blog = () => {
   useEffect(() => {
     // Simulate API loading
     setTimeout(() => {
-      const posts = generateMorePosts();
+      const posts = getAllPosts();
       setAllPosts(posts);
       setFilteredPosts(posts);
       setIsLoading(false);
