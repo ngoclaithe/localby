@@ -7,7 +7,68 @@ const Contact = () => {
     email: "",
     subject: "",
     message: "",
+    reason: "general",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const contactReasons = [
+    { value: "general", label: "Câu hỏi chung", icon: "💬" },
+    { value: "collaboration", label: "Hợp tác & Partnership", icon: "🤝" },
+    { value: "contribution", label: "Đóng góp nội dung", icon: "✍️" },
+    { value: "technical", label: "Vấn đề kỹ thuật", icon: "🔧" },
+    { value: "feedback", label: "Góp ý & Phản hồi", icon: "💡" },
+  ];
+
+  const contactMethods = [
+    {
+      type: "Email",
+      value: APP_CONFIG.CONTACT_EMAIL,
+      icon: "📧",
+      description: "Gửi email cho chúng tôi, phản hồi trong vòng 24 giờ",
+      action: `mailto:${APP_CONFIG.CONTACT_EMAIL}`,
+      actionText: "Gửi email",
+    },
+    {
+      type: "Social Media",
+      value: "Theo dõi chúng tôi",
+      icon: "🌐",
+      description: "Kết nối và theo dõi cập nhật mới nhất từ LocalBy",
+      action: null,
+      actionText: "Theo dõi",
+    },
+    {
+      type: "Community",
+      value: "Tham gia cộng đồng",
+      icon: "👥",
+      description: "Gia nhập cộng đồng LocalBy để chia sẻ và kết nối",
+      action: "/community",
+      actionText: "Tham gia",
+    },
+  ];
+
+  const faqItems = [
+    {
+      question: "Làm thế nào để chia sẻ câu chuyện du lịch của tôi?",
+      answer:
+        "Bạn có thể gửi câu chuyện qua form liên hệ hoặc email trực tiếp. Chúng tôi sẽ hỗ trợ bạn trong quá trình biên tập và xuất bản.",
+    },
+    {
+      question: "Tôi có thể hợp tác với LocalBy như thế nào?",
+      answer:
+        "LocalBy luôn chào đón các hình thức hợp tác từ tác giả cá nhân, doanh nghiệp du lịch đến các tổ chức văn hóa. Hãy liên hệ với chúng tôi để thảo luận chi tiết.",
+    },
+    {
+      question: "Có phí để đăng bài trên LocalBy không?",
+      answer:
+        "Không, việc chia sẻ câu chuyện trên LocalBy hoàn toàn miễn phí. Chúng tôi tin rằng những câu chuyện hay cần được chia sẻ rộng rãi.",
+    },
+    {
+      question: "Tôi có thể sử dụng nội dung từ LocalBy không?",
+      answer:
+        "Vui lòng liên hệ với chúng tôi trước khi sử dụng nội dung. Chúng tôi sẽ hướng dẫn bạn về quyền sử dụng và ghi credit phù hợp.",
+    },
+  ];
 
   const handleChange = (e) => {
     setFormData({
@@ -16,69 +77,163 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.");
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      setSubmitStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        reason: "general",
+      });
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="contact-page">
-      <div className="container">
-        <div className="contact-content">
-          <h1 className="page-title">Liên hệ với chúng tôi</h1>
-
-          <div className="contact-grid">
-            <div className="contact-info">
-              <h2>Thông tin liên hệ</h2>
-              <p>
-                Bạn có câu hỏi, góp ý hoặc muốn chia sẻ câu chuyện du lịch?
-                Chúng tôi rất mong nhận được phản hồi từ bạn!
-              </p>
-
-              <div className="contact-methods">
-                <div className="contact-method">
-                  <h4>📧 Email</h4>
-                  <a href={`mailto:${APP_CONFIG.CONTACT_EMAIL}`}>
-                    {APP_CONFIG.CONTACT_EMAIL}
-                  </a>
-                </div>
-
-                <div className="contact-method">
-                  <h4>🌐 Mạng xã hội</h4>
-                  <div className="social-links">
-                    <a
-                      href={APP_CONFIG.SOCIAL_LINKS.facebook}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Facebook
-                    </a>
-                    <a
-                      href={APP_CONFIG.SOCIAL_LINKS.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Instagram
-                    </a>
-                    <a
-                      href={APP_CONFIG.SOCIAL_LINKS.youtube}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      YouTube
-                    </a>
-                  </div>
-                </div>
+      {/* Hero Section */}
+      <section className="contact-hero">
+        <div className="contact-hero-background"></div>
+        <div className="container">
+          <div className="contact-hero-content">
+            <h1 className="contact-hero-title">
+              <span className="title-line">Liên hệ</span>
+              <span className="title-line gradient-text">với chúng tôi</span>
+            </h1>
+            <p className="contact-hero-description">
+              Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Hãy chia sẻ câu
+              hỏi, ý tưởng hoặc câu chuyện du lịch của bạn với cộng đồng
+              LocalBy.
+            </p>
+            <div className="hero-stats">
+              <div className="stat-item">
+                <span className="stat-icon">⚡</span>
+                <span className="stat-text">Phản hồi trong 24h</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-icon">👥</span>
+                <span className="stat-text">Hỗ trợ tận tình</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-icon">🌟</span>
+                <span className="stat-text">Dịch vụ miễn phí</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="contact-form">
-              <h2>Gửi tin nhắn</h2>
-              <form onSubmit={handleSubmit}>
+      {/* Contact Methods */}
+      <section className="contact-methods">
+        <div className="container">
+          <h2 className="section-title">
+            <span className="text-gradient">📞 Cách liên hệ</span>
+          </h2>
+          <div className="methods-grid">
+            {contactMethods.map((method, index) => (
+              <div
+                key={index}
+                className="method-card fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="method-icon">{method.icon}</div>
+                <h3 className="method-type">{method.type}</h3>
+                <p className="method-value">{method.value}</p>
+                <p className="method-description">{method.description}</p>
+                {method.type === "Social Media" ? (
+                  <div className="social-actions">
+                    {Object.entries(APP_CONFIG.SOCIAL_LINKS).map(
+                      ([platform, link]) => (
+                        <a
+                          key={platform}
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-button"
+                        >
+                          {platform === "facebook" && "📘"}
+                          {platform === "instagram" && "📷"}
+                          {platform === "youtube" && "📺"}
+                          <span>
+                            {platform.charAt(0).toUpperCase() +
+                              platform.slice(1)}
+                          </span>
+                        </a>
+                      ),
+                    )}
+                  </div>
+                ) : (
+                  <a
+                    href={method.action || "#"}
+                    className="method-action"
+                    {...(method.action?.startsWith("mailto:")
+                      ? {}
+                      : { target: "_blank", rel: "noopener noreferrer" })}
+                  >
+                    {method.actionText}
+                    <span className="action-arrow">→</span>
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section className="contact-form-section">
+        <div className="container">
+          <div className="form-container">
+            <div className="form-header">
+              <h2 className="form-title">
+                <span className="text-gradient">✉️ Gửi tin nhắn</span>
+              </h2>
+              <p className="form-description">
+                Điền thông tin bên dưới và chúng tôi sẽ phản hồi bạn sớm nhất có
+                thể
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="contact-form">
+              {/* Contact Reason */}
+              <div className="form-group full-width">
+                <label className="form-label">Lý do liên hệ</label>
+                <div className="reason-options">
+                  {contactReasons.map((reason) => (
+                    <label key={reason.value} className="reason-option">
+                      <input
+                        type="radio"
+                        name="reason"
+                        value={reason.value}
+                        checked={formData.reason === reason.value}
+                        onChange={handleChange}
+                        className="reason-input"
+                      />
+                      <div className="reason-label">
+                        <span className="reason-icon">{reason.icon}</span>
+                        <span className="reason-text">{reason.label}</span>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Name and Email */}
+              <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="name">Họ tên *</label>
+                  <label htmlFor="name" className="form-label">
+                    Họ tên <span className="required">*</span>
+                  </label>
                   <input
                     type="text"
                     id="name"
@@ -86,11 +241,15 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    className="form-input"
+                    placeholder="Nhập họ tên của bạn"
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">Email *</label>
+                  <label htmlFor="email" className="form-label">
+                    Email <span className="required">*</span>
+                  </label>
                   <input
                     type="email"
                     id="email"
@@ -98,40 +257,135 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    className="form-input"
+                    placeholder="example@email.com"
                   />
                 </div>
+              </div>
 
-                <div className="form-group">
-                  <label htmlFor="subject">Chủ đề</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                  />
+              {/* Subject */}
+              <div className="form-group full-width">
+                <label htmlFor="subject" className="form-label">
+                  Chủ đề
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="form-input"
+                  placeholder="Tóm tắt nội dung bạn muốn trao đổi"
+                />
+              </div>
+
+              {/* Message */}
+              <div className="form-group full-width">
+                <label htmlFor="message" className="form-label">
+                  Tin nhắn <span className="required">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="form-textarea"
+                  placeholder="Chia sẻ chi tiết về điều bạn muốn trao đổi..."
+                ></textarea>
+              </div>
+
+              {/* Submit Status */}
+              {submitStatus === "success" && (
+                <div className="submit-status success">
+                  <span className="status-icon">✅</span>
+                  <span>
+                    Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có
+                    thể.
+                  </span>
                 </div>
+              )}
 
-                <div className="form-group">
-                  <label htmlFor="message">Tin nhắn *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
+              {submitStatus === "error" && (
+                <div className="submit-status error">
+                  <span className="status-icon">❌</span>
+                  <span>
+                    Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ trực tiếp qua
+                    email.
+                  </span>
                 </div>
+              )}
 
-                <button type="submit" className="submit-button">
-                  Gửi tin nhắn
-                </button>
-              </form>
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="submit-button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <span className="submit-spinner"></span>
+                    Đang gửi...
+                  </>
+                ) : (
+                  <>
+                    <span>🚀</span>
+                    Gửi tin nhắn
+                  </>
+                )}
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="contact-faq">
+        <div className="container">
+          <h2 className="section-title">
+            <span className="text-gradient">❓ Câu hỏi thường gặp</span>
+          </h2>
+          <div className="faq-grid">
+            {faqItems.map((item, index) => (
+              <div
+                key={index}
+                className="faq-item fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <h3 className="faq-question">{item.question}</h3>
+                <p className="faq-answer">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="contact-cta">
+        <div className="container">
+          <div className="cta-content">
+            <h2 className="cta-title">
+              Bạn có câu chuyện du lịch hay muốn chia sẻ?
+            </h2>
+            <p className="cta-description">
+              Đừng chần chừ! Hãy chia sẻ những trải nghiệm độc đáo của bạn với
+              cộng đồng LocalBy. Câu chuyện của bạn có thể truyền cảm hứng cho
+              hàng ngàn người khác.
+            </p>
+            <div className="cta-actions">
+              <a href="#contact-form" className="cta-button primary">
+                <span>✍️</span>
+                Chia sẻ ngay
+              </a>
+              <a href="/blog" className="cta-button secondary">
+                <span>📖</span>
+                Xem các câu chuyện khác
+              </a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
