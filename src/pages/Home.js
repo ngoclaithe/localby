@@ -59,7 +59,7 @@ const Home = () => {
               </Link>
               <Link to="/blog" className="cta-button secondary">
                 <span>📚</span>
-                Đọc blog
+                Đi Đâu Mới Zui?
               </Link>
             </div>
           </div>

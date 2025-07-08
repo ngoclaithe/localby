@@ -12,7 +12,7 @@ const Header = () => {
   const navigation = [
     { name: "Trang chủ", path: "/", icon: "🏠" },
     { name: "Điểm đến", path: "/destinations", icon: "🗺️" },
-    { name: "Blog", path: "/blog", icon: "📝" },
+    { name: "Đi Đâu Mới Zui?	", path: "/blog", icon: "📝" },
     { name: "Giới thiệu", path: "/about", icon: "💫" },
     { name: "Liên hệ", path: "/contact", icon: "📞" },
   ];

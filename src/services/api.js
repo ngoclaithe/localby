@@ -88,36 +88,20 @@ export const mockData = {
   blogPosts: [
     {
       id: 1,
-      title: "Khám phá ẩm thực đường phố Hà Nội",
-      slug: "kham-pha-am-thuc-duong-pho-ha-noi",
+      title: "Gà gáy 5h sáng, bản Liền gọi mình dậy bằng bình yên",
+      slug: "ga-gay-5h-sang-ban-lien-goi-minh-day-bang-binh-yen",
       excerpt:
-        "Hà Nội không chỉ nổi tiếng với những địa danh lịch sử mà còn là thiên đường ẩm thực đường phố...",
+        "Ở bản Liền, người ta không cần báo thức. Một sáng dậy giữa sương, ngắm ruộng bậc thang xa xa, nghe tiếng gà gáy vọng qua thung – đáng 1000 story Instagram luôn!",
       content: "Nội dung bài viết đầy đủ...",
-      author: "Ngọc Lai",
-      category: "am-thuc",
-      tags: ["Hà Nội", "ẩm thực", "đường phố"],
-      featured_image: "/images/destinations/hanoi-food.jpg",
-      published_at: "2024-01-15T10:00:00Z",
+      author: "Phúc Đỗ TourGuide",
+      category: "du-lich",
+      tags: ["Bắc Hà", "bản Liền", "du lịch vùng cao", "Lào Cai", "cuối tuần chill"],
+      featured_image: "https://vntravel.org.vn/uploads/images/2025/06/26/509441539-1303551227806945-1122938122157054925-n-1750898806.jpg",
+      published_at: "2025-07-09T10:00:00Z",
       views: 1250,
-      reading_time: 5,
+      reading_time: 4,
       featured: true,
-    },
-    {
-      id: 2,
-      title: "Top 10 điểm đến phải thăm ở Đà Nẵng",
-      slug: "top-10-diem-den-phai-tham-o-da-nang",
-      excerpt:
-        "Đà Nẵng với bờ biển tuyệt đẹp và những cây cầu nổi tiếng đang chờ đón bạn...",
-      content: "Nội dung bài viết đầy đủ...",
-      author: "Minh Tuấn",
-      category: "thien-nhien",
-      tags: ["Đà Nẵng", "biển", "du lịch"],
-      featured_image: "/images/destinations/danang-beach.jpg",
-      published_at: "2024-01-10T14:30:00Z",
-      views: 980,
-      reading_time: 7,
-      featured: false,
-    },
+    }
   ],
 
   destinations: [
