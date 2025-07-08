@@ -14,45 +14,182 @@ const BlogDetail = () => {
 
   // Mock detailed content for the post
   const getDetailedContent = (postData) => {
+    if (
+      postData.slug === "ga-gay-5h-sang-ban-lien-goi-minh-day-bang-binh-yen"
+    ) {
+      return `
+        <h2>1. Di chuyển</h2>
+        
+        <h3>Di chuyển bằng phương tiện cá nhân</h3>
+        <p>Từ Hà Nội di chuyển theo hướng cao tốc Hà Nội - Lào Cai khoảng ~300km sẽ tới thị trấn Bắc Hà, từ đây di chuyển thêm khoảng 22km nữa sẽ tới Bản Liền, tổng thời gian di chuyển khoảng 6 tiếng đồng hồ. Chỉ nên sử dụng xe từ 16 chỗ trở xuống.</p>
+        
+        <div class="image-grid">
+          <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lộ trình di chuyển" />
+        </div>
+        <p class="image-caption">Hình ảnh 1: Lộ trình di chuyển từ trung tâm thị trấn Bắc Hà tới Bản Liền</p>
+        
+        <h3>Di chuyển bằng xe khách</h3>
+        <p>Từ Hà Nội có thể bắt xe khách của những nhà xe như Futa Hà Sơn (ưu tiên), xe Trúc Nghiêu, xe Vũ Hán Group… Đặt vé qua ứng dụng Vexere hoặc tổng đài nhà xe. Thời gian di chuyển khoảng 6 tiếng đồng hồ.</p>
+        
+        <p>(Ngoài ra có thể đặt xe đi Sapa và xuống tại điểm Bến xe trung tâm thành phố Lào Cai, sau đó bắt xe trung chuyển lên thị trấn Bắc Hà. Tại bến xe có rất nhiều xe lên Bắc Hà, để có thêm thông tin về nhà xe vui lòng hỏi sự tư vấn của nhân viên nhà xe. Đối với cách này quý khách sẽ có nhiều lựa chọn về khung giờ hơn, tuy nhiên nhược điểm là sẽ phải đổi xe nhiều lần và tốn nhiều thời gian chờ đợi.)</p>
+        
+        <p>Sau khi tới trung tâm thị trấn Bắc Hà hoặc Bến xe Bắc Hà, di chuyển tới Khách sạn Ngân Nga (Ngan Nga Bac Ha Hotel trên Google maps) để nghỉ ngơi hoặc thuê xe máy, liên hệ anh Đông theo SĐT 0817801988. Ngoài ra quý khách cũng có thể đặt dịch vụ xe ôm (khoảng 200k/người) liên hệ chú An - đội trưởng đội xe ôm du lịch Bắc Hà SĐT 0827999339 hoặc taxi (khoảng 700-800k) để tới Bản Liền. Vào mùa cao điểm như tháng 8-9-10 quý khách nên gọi điện đặt xe trước tránh tình trạng quá tải.</p>
+        
+        <p>Tiếp theo, nhập tên homestay tại Bản Liền và di chuyển theo Google Maps. Từ trung tâm Bắc Hà tới Bản Liền quãng đường khoảng 22km tương ứng với hơn 1 tiếng đồng hồ lái xe.</p>
+        
+        <div class="image-grid">
+          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Đường vào Bản Liền" />
+          <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cảnh đường miền núi" />
+        </div>
+        <p class="image-caption">Hình ảnh 2 và hình ảnh 3</p>
+        
+        <blockquote>
+          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
+        </blockquote>
+        
+        <p>Khi gần tới homestay nếu không tìm được đường xuống hoặc đường quá dốc và khó đi, quý khách có thể liên hệ chủ nhà lên hỗ trợ đưa xe và hành lý xuống.</p>
+
+        <h2>2. Các cơ sở lưu trú</h2>
+        
+        <h3>Banlien Pine Homestay (0886 073 408 - Vàng Thị Thông)</h3>
+        <div class="image-grid large">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Phòng tập thể" />
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Phòng tắm" />
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Bungalow" />
+          <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c15a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Không gian chung" />
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Khu vực ăn uống" />
+          <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Phòng vệ sinh" />
+          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Bungalow interior" />
+          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Khu vực nghỉ ngơi" />
+          <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - View từ homestay" />
+        </div>
+        <p class="image-caption">Hình ảnh 4,5,6,7,8,9,10,11,12</p>
+        
+        <p>BanLien Pine Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 3-4) và 2-5 khách đối với phòng bungalow (ảnh 7-8-9). Hiện tại gia đình có 1 phòng bungalow và tương lai sẽ có thêm một phòng nữa. Gia đình hiện có 2 phòng tắm có trang bị bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng bungalow có phòng tắm và phòng vệ sinh khép kín.</p>
+        
+        <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
+        
+        <p><strong>Phí dịch vụ:</strong></p>
+        <ul>
+          <li>150k/người/đêm cho phòng tập thể</li>
+          <li>Ăn uống: 150k/người áp dụng v���i bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
+          <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
+          <li>Đối với phòng Bungalow mức giá sẽ phụ thuộc vào số lượng khách, vui lòng liên hệ chủ nhà để có thêm thông tin chi tiết.</li>
+        </ul>
+
+        <h3>Bản Liền Forest Homestay (0343 639 564 - Lâm A Nâng)</h3>
+        <div class="image-grid large">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Exterior" />
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Phòng tập thể" />
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Phòng riêng" />
+          <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c15a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Khu vực chung" />
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Phòng tắm" />
+          <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Khu bếp" />
+          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Phòng bungalow" />
+          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Toilet riêng" />
+          <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - View" />
+        </div>
+        <p class="image-caption">Hình ảnh 13,14,15,16,17,18,19,20,21</p>
+        
+        <p>Bản Liền Forest Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 4) và 2-6 khách đối với phòng bungalow 2 giường (ảnh 7-8). Hiện tại gia đình có 1 phòng riêng chứa được tối đa 6 người. Homestay được trang bị 2 phòng tắm có bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng riêng có phòng tắm và phòng vệ sinh khép kín (ảnh 9).</p>
+        
+        <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
+        
+        <p><strong>Phí dịch vụ:</strong></p>
+        <ul>
+          <li>150k/người/đêm cho phòng tập thể</li>
+          <li>Ăn uống: 150k/người áp dụng với bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
+          <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
+          <li>Phòng riêng có giá 600k/đêm áp cho tối đa 6 khách</li>
+        </ul>
+
+        <h3>Hướng Hoan Homestay (0837 856 293 - Lâm A Hướng)</h3>
+        <div class="image-grid large">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Exterior" />
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Phòng tập thể" />
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Khu vực chung" />
+          <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c15a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Phòng tắm" />
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Khu bếp" />
+          <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Khu vực ăn" />
+          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Giường ngủ" />
+          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - View núi" />
+          <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Sân" />
+        </div>
+        <p class="image-caption">Hình ảnh 22,23,24,25,26,27,28,29,30</p>
+        
+        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian t���i.</p>
+        
+        <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
+        
+        <p><strong>Phí dịch vụ:</strong></p>
+        <ul>
+          <li>150k/người/đêm cho phòng tập thể</li>
+          <li>Ăn uống: 150k/người áp dụng với bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
+          <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
+        </ul>
+
+        <h3>Vang A Binh Homestay (0388 572 409 - Vàng A Bình)</h3>
+        <div class="image-grid large">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Exterior" />
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Phòng tập thể" />
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Khu vực chung" />
+          <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c15a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Phòng ngủ" />
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Khu bếp" />
+          <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Khu vực ăn" />
+          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Phòng tắm" />
+          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - View đường" />
+          <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Cảnh quan" />
+        </div>
+        <p class="image-caption">Hình ảnh 31,32,33,34,35,36,37,38,39</p>
+        
+        <p>Vang A Binh Homestay nằm ở cuối đường bê tông của Bản Liền, từ trung tâm xã tới homestay khoảng 15-20 phút di chuyển. Homestay hiện đang có sức chứa tối đa khoảng 15 khách tại phòng tập thể. Gia đình hiện chưa có phòng riêng.</p>
+        
+        <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
+        
+        <p><strong>Phí dịch vụ:</strong></p>
+        <ul>
+          <li>150k/người/đêm cho phòng tập thể</li>
+          <li>Ăn uống: 150k/người áp dụng với bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
+          <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
+        </ul>
+
+        <h2>3. Hoạt động trải nghiệm</h2>
+        <p>Tại Bản Liền quý khách có thể trải nghiệm vô số các hoạt động đặc sắc để hiểu hơn về văn hoá của người dân tộc thiểu số nói chung và của người Tày tại Bản Liền nói riêng.</p>
+        
+        <p>Một số hoạt động có thể kể tới như: Hái chè và làm chè hữu cơ, thăm ruộng bậc thang, cấy lúa, chăn trâu, xúc cá, tắm thác, dùng bữa bên suối, lên rừng lấy tre, làm đũa cẩm truyền thống, nấu ăn cùng gia đình, đan nón lá, văn nghệ truyền thống, trò chơi dân tộc, làm cốm (theo mùa)….</p>
+        
+        <h3>Lịch trình tham khảo cho chương trình trải nghiệm 2 ngày 1 đêm tại Bản Liền:</h3>
+        
+        <h4>Ngày 1:</h4>
+        <ul>
+          <li><strong>7h:</strong> Thức dậy đón bình minh tại Bản Liền, vệ sinh cá nhân sau đó dùng bữa sáng</li>
+          <li><strong>8h - 11h:</strong> Lên rừng chè cổ thụ, uống nước suối nguồn, hái rau mầm đá và lấy tre về làm đũa cẩm</li>
+          <li><strong>12h:</strong> Dùng bữa trưa cùng gia đình sau đó nghỉ trưa</li>
+          <li><strong>14h:</strong> Thăm quan thác nước tại trung tâm xã, tắm thác, hái rau rừng</li>
+          <li><strong>19h:</strong> Dùng bữa tối sau đó nghỉ ngơi hoặc tham gia hoạt động làm cốc tre, làm đũa cẩm, làm trà, chơi trò chơi dân tộc…</li>
+        </ul>
+        
+        <h4>Ngày 2:</h4>
+        <ul>
+          <li><strong>7h:</strong> Dùng bữa sáng sau đó quý khách có thể chọn tham gia các hoạt động trải nghiệm hoặc nghỉ ngơi thư giãn và tận hưởng thiên nhiên tại homestay.</li>
+          <li><strong>8h:</strong> Ra chơi suối, xúc cá suối, hái chè, check-in ruộng bậc thang quanh nhà</li>
+          <li><strong>12h:</strong> Dùng bữa trưa và nghỉ ngơi sau đó di chuyển về Hà Nội</li>
+        </ul>
+        
+        <blockquote>
+          <strong>Lưu ý:</strong><br/>
+          Đây chỉ là lịch trình tham khảo, tuỳ vào tình hình thời tiết và mùa vụ mà các hoạt động trải nghiệm có thể khác nhau và có những điều chỉnh sao cho phù hợp với tình hình thực tế. Để có thêm thông tin về những hoạt động trải nghiệm cụ thể theo từng ngày quý khách vui lòng liên hệ với chủ nhà để được tư vấn thêm.<br/>
+          Các hoạt động trải nghiệm áp dụng cho tất cả các hộ homestay tại Bản Liền.
+        </blockquote>
+        
+        <p><em>Bản Liền chờ đón bạn với những trải nghiệm chân thực và ấm áp nhất từ vùng đất Tày xinh đẹp này!</em></p>
+      `;
+    }
+
+    // Default content for other posts (if any)
     return `
-      <p>Việt Nam - đất nước hình chữ S xinh đẹp của chúng ta, không chỉ nổi tiếng với những cảnh quan thiên nhiên hùng vĩ mà còn với nền ẩm thực phong phú và đa dạng. Mỗi vùng miền đều có những đặc sản riêng, mang đậm dấu ấn văn hóa địa phương.</p>
-
-      <h2>🍜 Ẩm thực miền Bắc - Tinh tế và đậm đà</h2>
-      <p>Miền Bắc nổi tiếng với những món ăn tinh tế, hương vị đậm đà và cách chế biến cầu kỳ. Từ tô phở nóng hổi vào buổi sáng đến chén bún chả thơm phức vào buổi trưa, mỗi món ăn đều kể một câu chuyện riêng về văn hóa và con người nơi đây.</p>
-
-      <blockquote>
-        "Ẩm thực không chỉ là thức ăn, mà là cầu nối kết nối con người với nhau, kết nối quá khứ với hiện tại." - Đầu bếp Ngọc Lai
-      </blockquote>
-
-      <h3>🥢 Những món ăn không thể bỏ qua:</h3>
-      <ul>
-        <li><strong>Phở Hà Nội:</strong> Biểu tượng của ẩm thực Việt Nam với nước dùng trong vắt, bánh phở dai dai và thịt bò tươi ngon.</li>
-        <li><strong>Bún chả:</strong> Món ăn đặc trưng với thịt nướng thơm phức, bún tươi và nước mắm chua ngọt.</li>
-        <li><strong>Chả cá Lã Vọng:</strong> Món ăn truyền thống v��i cá lang tẩm ướp nghệ và galangal, nướng trên bếp than.</li>
-      </ul>
-
-      <h2>🌶️ Ẩm thực miền Trung - Cay nồng và đậm chất</h2>
-      <p>Miền Trung với khí hậu khắc nghiệt đã tạo nên những món ăn có vị cay nồng đặc trưng. Huế - cố đô của Việt Nam, không chỉ nổi tiếng với những di tích lịch sử mà còn với nền ẩm thực cung đình tinh tế.</p>
-
-      <div class="image-gallery">
-        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ẩm thực Việt Nam" />
-        <p class="image-caption">Hương vị đặc trưng của ẩm thực Việt Nam (Ảnh: Unsplash)</p>
-      </div>
-
-      <h2>🥥 Ẩm thực miền Nam - Ngọt ngào và đậm đà</h2>
-      <p>Miền Nam với đất đai phì nhiêu, khí hậu ôn hòa đã tạo nên những món ăn mang hương vị ngọt ngào đặc trưng. Sự sáng tạo và phong phú trong cách chế biến đã làm nên sự đa dạng của ẩm thực miền Nam.</p>
-
-      <h3>💡 Mẹo hay khi thưởng thức ẩm thực Việt Nam:</h3>
-      <ol>
-        <li>Hãy thử ăn như người địa phương - dùng đũa và thìa đúng cách</li>
-        <li>Đừng ngần ngại thử các loại rau thơm địa phương</li>
-        <li>Nước mắm là linh hồn của ẩm thực Việt, hãy học cách sử dụng</li>
-        <li>Mỗi vùng miền có cách ăn riêng, hãy tôn trọng và trải nghiệm</li>
-      </ol>
-
-      <p>Ẩm thực Việt Nam không chỉ là những món ăn ngon, mà còn là câu chuyện về con người, về tình yêu quê hương và niềm tự hào dân tộc. Mỗi lần thưởng thức một món ăn Việt Nam, chúng ta đang cảm nhận được tâm hồn và tình cảm mà người đầu bếp đã gửi gắm vào đó.</p>
-
-      <p><em>Hãy cùng LocalBy khám phá thêm nhiều câu chuyện ẩm thực thú vị khác từ khắp mọi miền đất nước Việt Nam xinh đẹp!</em></p>
+      <p>Việt Nam - đất nước hình chữ S xinh đẹp của chúng ta, không chỉ nổi tiếng với những cảnh quan thiên nhiên hùng vĩ mà còn với nền ẩm thực phong phú và đa dạng.</p>
+      <p><em>Hãy cùng LocalBy khám phá thêm nhiều câu chuyện du lịch thú vị khác!</em></p>
     `;
   };
 
@@ -295,16 +432,13 @@ const BlogDetail = () => {
                 <nav className="table-of-contents">
                   <ul>
                     <li>
-                      <a href="#section-1">Ẩm thực miền Bắc</a>
+                      <a href="#section-1">Di chuyển</a>
                     </li>
                     <li>
-                      <a href="#section-2">Ẩm thực miền Trung</a>
+                      <a href="#section-2">Các cơ sở lưu trú</a>
                     </li>
                     <li>
-                      <a href="#section-3">Ẩm thực miền Nam</a>
-                    </li>
-                    <li>
-                      <a href="#section-4">Mẹo hay</a>
+                      <a href="#section-3">Hoạt động trải nghiệm</a>
                     </li>
                   </ul>
                 </nav>
