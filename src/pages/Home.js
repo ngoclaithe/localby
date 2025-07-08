@@ -126,28 +126,87 @@ const Home = () => {
       {/* Categories Section */}
       <section className="section categories-section">
         <div className="container">
-          <h2 className="section-title">
-            <span className="text-gradient">🗂️ Khám phá theo chủ đề</span>
-          </h2>
-          <div className="grid categories-grid">
-            {BLOG_CATEGORIES.map((category, index) => (
-              <Link
-                key={category.id}
-                to={`/category/${category.slug}`}
-                className="category-card glassmorphism fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="category-icon floating">
-                  {category.slug === "am-thuc" && "🍜"}
-                  {category.slug === "thien-nhien" && "🏞️"}
-                  {category.slug === "van-hoa" && "🏛️"}
-                  {category.slug === "festival" && "🎉"}
-                  {category.slug === "pho-tay" && "🌃"}
-                  {category.slug === "kinh-nghiem" && "💡"}
-                </div>
-                <h3 className="category-name">{category.name}</h3>
-              </Link>
-            ))}
+          <div className="section-header">
+            <h2 className="section-title">
+              <span className="text-gradient">🗂️ Khám phá theo chủ đề</span>
+            </h2>
+            <p className="section-subtitle">
+              Tìm hiểu Việt Nam qua những góc nhìn đa dạng từ người dân địa
+              phương
+            </p>
+          </div>
+          <div className="categories-grid-enhanced">
+            {BLOG_CATEGORIES.map((category, index) => {
+              const categoryIcons = {
+                "am-thuc": {
+                  icon: "🍜",
+                  color: "linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)",
+                  description: "Khám phá hương vị độc đáo",
+                },
+                "thien-nhien": {
+                  icon: "🏞️",
+                  color: "linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%)",
+                  description: "Thiên nhiên hùng vĩ",
+                },
+                "van-hoa": {
+                  icon: "🏛️",
+                  color: "linear-gradient(135deg, #A8EDEA 0%, #F8E71C 100%)",
+                  description: "Văn hóa truyền thống",
+                },
+                festival: {
+                  icon: "🎉",
+                  color: "linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%)",
+                  description: "Lễ hội đặc sắc",
+                },
+                "pho-tay": {
+                  icon: "🌃",
+                  color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                  description: "Cuộc sống phố thị",
+                },
+                "kinh-nghiem": {
+                  icon: "💡",
+                  color: "linear-gradient(135deg, #FDBB2D 0%, #22C1C3 100%)",
+                  description: "Mẹo hay từ dân địa phương",
+                },
+              };
+
+              const categoryData =
+                categoryIcons[category.slug] || categoryIcons["kinh-nghiem"];
+
+              return (
+                <Link
+                  key={category.id}
+                  to={`/category/${category.slug}`}
+                  className="enhanced-category-card fade-in-up"
+                  style={{
+                    animationDelay: `${index * 0.1}s`,
+                    "--category-gradient": categoryData.color,
+                  }}
+                >
+                  <div className="category-card-background"></div>
+                  <div className="category-card-content">
+                    <div className="category-icon-wrapper">
+                      <div className="category-icon-large floating">
+                        {categoryData.icon}
+                      </div>
+                      <div className="category-icon-glow"></div>
+                    </div>
+                    <div className="category-text">
+                      <h3 className="category-name-enhanced">
+                        {category.name}
+                      </h3>
+                      <p className="category-description">
+                        {categoryData.description}
+                      </p>
+                    </div>
+                    <div className="category-arrow">
+                      <span>→</span>
+                    </div>
+                  </div>
+                  <div className="category-hover-effect"></div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

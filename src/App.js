@@ -5,6 +5,7 @@ import ErrorBoundary from "./components/common/ErrorBoundary";
 
 // Pages (we'll create these)
 import Home from "./pages/Home";
+import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -21,6 +22,7 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogDetail />} />
               <Route path="/destinations" element={<Destinations />} />
               <Route path="/about" element={<About />} />
