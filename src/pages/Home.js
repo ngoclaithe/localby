@@ -196,7 +196,7 @@ const Home = () => {
                 "van-hoa": {
                   icon: "🏛️",
                   color: "linear-gradient(135deg, #A8EDEA 0%, #F8E71C 100%)",
-                  description: "Văn hóa truyền thống",
+                  description: "V��n hóa truyền thống",
                 },
                 festival: {
                   icon: "🎉",
@@ -302,12 +302,25 @@ const Home = () => {
                   className="destination-card fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="destination-image">
+                  <div
+                    className="destination-image"
+                    onClick={() =>
+                      setImagePreview({
+                        open: true,
+                        src: `https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
+                        alt: destination,
+                      })
+                    }
+                  >
                     <img
                       src={`https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
                       alt={destination}
                       loading="lazy"
                     />
+                    <div className="image-preview-overlay">
+                      <span className="preview-icon">🔍</span>
+                      <span className="preview-text">Xem ảnh lớn</span>
+                    </div>
                   </div>
                   <div className="destination-name">{destination}</div>
                 </Link>
