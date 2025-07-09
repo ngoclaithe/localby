@@ -452,63 +452,62 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section
-        className="section"
-        style={{
-          background: "var(--color-neutral-100)",
-        }}
-      >
+      {/* Stats Section - Modern Design */}
+      <section className="stats-section">
         <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-              gap: "var(--space-xl)",
-              textAlign: "center",
-            }}
-          >
+          <div className="stats-header">
+            <h2 className="stats-title">
+              Con số ấn tượng
+              <span className="stats-emoji">📊</span>
+            </h2>
+            <p className="stats-subtitle">
+              Hành trình khám phá Việt Nam cùng LocalBy
+            </p>
+          </div>
+          <div className="stats-grid">
             {[
-              { number: "500+", label: "Bài viết", icon: "📝" },
-              { number: "50+", label: "Điểm đến", icon: "🗺️" },
-              { number: "10K+", label: "Độc giả", icon: "��" },
-              { number: "100+", label: "Tác giả", icon: "✍️" },
+              {
+                number: "500+",
+                label: "Bài review",
+                icon: "📝",
+                color: "#3b82f6",
+              },
+              {
+                number: "50+",
+                label: "Địa điểm",
+                icon: "🗺️",
+                color: "#10b981",
+              },
+              {
+                number: "10K+",
+                label: "Followers",
+                icon: "👥",
+                color: "#8b5cf6",
+              },
+              {
+                number: "100+",
+                label: "Travel buddies",
+                icon: "✍️",
+                color: "#f59e0b",
+              },
             ].map((stat, index) => (
               <div
                 key={index}
-                className="glassmorphism fade-in-up"
+                className="stat-card"
                 style={{
-                  padding: "var(--space-xl)",
-                  borderRadius: "var(--radius-xl)",
-                  animationDelay: `${index * 0.1}s`,
+                  animationDelay: `${index * 0.15}s`,
+                  "--stat-color": stat.color,
                 }}
               >
-                <div
-                  style={{ fontSize: "3rem", marginBottom: "var(--space-md)" }}
-                >
-                  {stat.icon}
+                <div className="stat-icon-wrapper">
+                  <div className="stat-icon">{stat.icon}</div>
+                  <div className="stat-icon-bg"></div>
                 </div>
-                <div
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: "700",
-                    background: "var(--gradient-primary)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                    marginBottom: "var(--space-sm)",
-                  }}
-                >
-                  {stat.number}
+                <div className="stat-content">
+                  <div className="stat-number">{stat.number}</div>
+                  <div className="stat-label">{stat.label}</div>
                 </div>
-                <div
-                  style={{
-                    color: "var(--color-neutral-600)",
-                    fontWeight: "500",
-                  }}
-                >
-                  {stat.label}
-                </div>
+                <div className="stat-decoration"></div>
               </div>
             ))}
           </div>
