@@ -296,33 +296,35 @@ const Home = () => {
               ];
 
               return (
-                <Link
+                <div
                   key={index}
-                  to={`/destination/${destination.toLowerCase().replace(/\s+/g, "-")}`}
                   className="destination-card fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
+                  onMouseEnter={() =>
+                    setImagePreview({
+                      open: true,
+                      src: `https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
+                      alt: destination,
+                    })
+                  }
+                  onMouseLeave={() =>
+                    setImagePreview({ open: false, src: "", alt: "" })
+                  }
                 >
-                  <div
-                    className="destination-image"
-                    onMouseEnter={() =>
-                      setImagePreview({
-                        open: true,
-                        src: `https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
-                        alt: destination,
-                      })
-                    }
-                    onMouseLeave={() =>
-                      setImagePreview({ open: false, src: "", alt: "" })
-                    }
+                  <Link
+                    to={`/destination/${destination.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="destination-link"
                   >
-                    <img
-                      src={`https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
-                      alt={destination}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="destination-name">{destination}</div>
-                </Link>
+                    <div className="destination-image">
+                      <img
+                        src={`https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
+                        alt={destination}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="destination-name">{destination}</div>
+                  </Link>
+                </div>
               );
             })}
           </div>
