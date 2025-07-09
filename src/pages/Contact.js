@@ -25,15 +25,15 @@ const Contact = () => {
       type: "Email",
       value: APP_CONFIG.CONTACT_EMAIL,
       icon: "📧",
-      description: "Gửi email cho chúng tôi, phản hồi trong vòng 24 giờ",
+      description: "Gửi email cho bảnk nè, phản hồi trong vòng 24 giờ luôn á!",
       action: `mailto:${APP_CONFIG.CONTACT_EMAIL}`,
       actionText: "Gửi email",
     },
     {
       type: "Social Media",
-      value: "Theo dõi chúng tôi",
+      value: "Theo dõi bảnk",
       icon: "🌐",
-      description: "Kết nối và theo dõi cập nhật mới nhất từ LocalBy",
+      description: "Kết nối và theo dõi update mới nhất từ LocalBy nha",
       action: null,
       actionText: "Theo dõi",
     },
@@ -41,7 +41,7 @@ const Contact = () => {
       type: "Community",
       value: "Tham gia cộng đồng",
       icon: "👥",
-      description: "Gia nhập cộng đồng LocalBy để chia sẻ và kết nối",
+      description: "Gia nhập cộng đồng LocalBy để chia sẻ và kết nối với bảnk",
       action: "/community",
       actionText: "Tham gia",
     },
@@ -51,22 +51,22 @@ const Contact = () => {
     {
       question: "Làm thế nào để chia sẻ câu chuyện du lịch của tôi?",
       answer:
-        "Bạn có thể gửi câu chuyện qua form liên hệ hoặc email trực tiếp. Chúng tôi sẽ hỗ trợ bạn trong quá trình biên tập và xuất bản.",
+        "Bạn có thể gửi câu chuyện qua form liên hệ hoặc email trực tiếp. Bảnk sẽ hỗ trợ bạn trong quá trình biên tập và xuất bản nha!",
     },
     {
       question: "Tôi có thể hợp tác với LocalBy như thế nào?",
       answer:
-        "LocalBy luôn chào đón các hình thức hợp tác từ tác giả cá nhân, doanh nghiệp du lịch đến các tổ chức văn hóa. Hãy liên hệ với chúng tôi để thảo luận chi tiết.",
+        "LocalBy luôn chào đón các hình thức hợp tác từ tác giả cá nhân, doanh nghiệp du lịch đến các tổ chức văn hóa. Hãy liên hệ với bảnk để thảo luận chi tiết nha!",
     },
     {
       question: "Có phí để đăng bài trên LocalBy không?",
       answer:
-        "Không, việc chia sẻ câu chuyện trên LocalBy hoàn toàn miễn phí. Chúng tôi tin rằng những câu chuyện hay cần được chia sẻ rộng rãi.",
+        "Không đâu! Việc chia sẻ câu chuyện trên LocalBy hoàn toàn miễn phí luôn. Bảnk tin rằng những câu chuyện hay cần được chia sẻ rộng rãi mà.",
     },
     {
       question: "Tôi có thể sử dụng nội dung từ LocalBy không?",
       answer:
-        "Vui lòng liên hệ với chúng tôi trước khi sử dụng nội dung. Chúng tôi sẽ hướng dẫn bạn về quyền sử dụng và ghi credit phù hợp.",
+        "Vui lòng liên hệ với bảnk trước khi sử dụng nội dung nha. Bảnk sẽ hướng dẫn bạn về quyền sử dụng và ghi credit phù hợp.",
     },
   ];
 
@@ -107,13 +107,13 @@ const Contact = () => {
         <div className="container">
           <div className="contact-hero-content">
             <h1 className="contact-hero-title">
-              <span className="title-line">Liên hệ</span>
-              <span className="title-line gradient-text">với chúng tôi</span>
+              <span className="title-line">Chat với</span>
+              <span className="title-line gradient-text">bảnk nè!</span>
             </h1>
             <p className="contact-hero-description">
-              Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Hãy chia sẻ câu
-              hỏi, ý tưởng hoặc câu chuyện du lịch của bạn với cộng đồng
-              LocalBy.
+              Bảnk luôn sẵn sàng lắng nghe và hỗ trợ bạn đấy! Hãy chia sẻ câu
+              hỏi, ý tưởng hoặc câu chuyện du lịch của bạn với bảnk nha. LocalBy
+              mà, chill chill thôi! 😎
             </p>
             <div className="hero-stats">
               <div className="stat-item">
@@ -137,7 +137,7 @@ const Contact = () => {
       <section className="contact-methods">
         <div className="container">
           <h2 className="section-title">
-            <span className="text-gradient">📞 Cách liên hệ</span>
+            <span className="text-gradient">📞 Cách liên hệ với bảnk</span>
           </h2>
           <div className="methods-grid">
             {contactMethods.map((method, index) => (
@@ -196,11 +196,11 @@ const Contact = () => {
           <div className="form-container">
             <div className="form-header">
               <h2 className="form-title">
-                <span className="text-gradient">✉️ Gửi tin nhắn</span>
+                <span className="text-gradient">✉️ Gửi tin nhắn cho bảnk</span>
               </h2>
               <p className="form-description">
-                Điền thông tin bên dưới và chúng tôi sẽ phản hồi bạn sớm nhất có
-                thể
+                Điền thông tin bên dưới và bảnk sẽ phản hồi bạn sớm nhất có thể
+                nha! 💪
               </p>
             </div>
 
@@ -292,7 +292,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="form-textarea"
-                  placeholder="Chia sẻ chi tiết về điều bạn muốn trao đổi..."
+                  placeholder="Chia sẻ chi tiết về điều bạn muốn trao đổi với bảnk..."
                 ></textarea>
               </div>
 
@@ -301,8 +301,8 @@ const Contact = () => {
                 <div className="submit-status success">
                   <span className="status-icon">✅</span>
                   <span>
-                    Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có
-                    thể.
+                    Cảm ơn bạn đã liên hệ! Bảnk sẽ phản hồi sớm nhất có thể nha!
+                    🥰
                   </span>
                 </div>
               )}
@@ -311,8 +311,8 @@ const Contact = () => {
                 <div className="submit-status error">
                   <span className="status-icon">❌</span>
                   <span>
-                    Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ trực tiếp qua
-                    email.
+                    Có lỗi xảy ra rồi! Vui lòng thử lại hoặc liên hệ trực tiếp
+                    qua email nha.
                   </span>
                 </div>
               )}
@@ -331,7 +331,7 @@ const Contact = () => {
                 ) : (
                   <>
                     <span>🚀</span>
-                    Gửi tin nhắn
+                    Gửi tin nhắn cho bảnk
                   </>
                 )}
               </button>
@@ -366,17 +366,17 @@ const Contact = () => {
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">
-              Bạn có câu chuyện du lịch hay muốn chia sẻ?
+              Bạn có câu chuyện du lịch hay muốn chia sẻ với bảnk không?
             </h2>
             <p className="cta-description">
               Đừng chần chừ! Hãy chia sẻ những trải nghiệm độc đáo của bạn với
-              cộng đồng LocalBy. Câu chuyện của bạn có thể truyền cảm hứng cho
-              hàng ngàn người khác.
+              bảnk và cộng đồng LocalBy. Câu chuyện của bạn có thể truyền cảm
+              hứng cho hàng ngàn người khác đấy! 🌟
             </p>
             <div className="cta-actions">
               <a href="#contact-form" className="cta-button primary">
                 <span>✍️</span>
-                Chia sẻ ngay
+                Chia sẻ ngay với bảnk
               </a>
               <a href="/blog" className="cta-button secondary">
                 <span>📖</span>
