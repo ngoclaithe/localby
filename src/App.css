@@ -1572,6 +1572,91 @@ body {
   }
 }
 
+/* Mobile-specific utility classes for better responsiveness */
+.mobile-responsive-text {
+  font-size: clamp(0.9rem, 3vw, 1.1rem) !important;
+  line-height: 1.5 !important;
+}
+
+.mobile-responsive-padding {
+  padding: var(--space-sm) !important;
+}
+
+.mobile-responsive-margin {
+  margin: var(--space-sm) 0 !important;
+}
+
+.mobile-center-text {
+  text-align: center !important;
+}
+
+.mobile-flex-column {
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Enhanced categories section for mobile */
+@media (max-width: 768px) {
+  .categories-grid-enhanced {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-lg) !important;
+  }
+
+  .enhanced-category-card {
+    min-height: 120px !important;
+  }
+
+  .category-card-content {
+    padding: var(--space-lg) !important;
+    gap: var(--space-md) !important;
+  }
+
+  .category-icon-large {
+    font-size: 2.5rem !important;
+  }
+
+  .category-name-enhanced {
+    font-size: 1.3rem !important;
+  }
+
+  .category-description {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-grid-enhanced {
+    gap: var(--space-md) !important;
+  }
+
+  .enhanced-category-card {
+    min-height: 100px !important;
+  }
+
+  .category-card-content {
+    padding: var(--space-md) !important;
+    gap: var(--space-sm) !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .category-icon-large {
+    font-size: 2rem !important;
+  }
+
+  .category-name-enhanced {
+    font-size: 1.1rem !important;
+  }
+
+  .category-description {
+    font-size: 0.85rem !important;
+  }
+
+  .category-arrow {
+    display: none !important;
+  }
+}
+
 /* Utility Classes */
 .text-gradient {
   background: var(--gradient-cosmic);
