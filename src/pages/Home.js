@@ -196,7 +196,7 @@ const Home = () => {
                 "van-hoa": {
                   icon: "🏛️",
                   color: "linear-gradient(135deg, #A8EDEA 0%, #F8E71C 100%)",
-                  description: "V��n hóa truyền thống",
+                  description: "Văn hóa truyền thống",
                 },
                 festival: {
                   icon: "🎉",
@@ -304,12 +304,15 @@ const Home = () => {
                 >
                   <div
                     className="destination-image"
-                    onClick={() =>
+                    onMouseEnter={() =>
                       setImagePreview({
                         open: true,
                         src: `https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
                         alt: destination,
                       })
+                    }
+                    onMouseLeave={() =>
+                      setImagePreview({ open: false, src: "", alt: "" })
                     }
                   >
                     <img
@@ -317,10 +320,6 @@ const Home = () => {
                       alt={destination}
                       loading="lazy"
                     />
-                    <div className="image-preview-overlay">
-                      <span className="preview-icon">🔍</span>
-                      <span className="preview-text">Xem ảnh lớn</span>
-                    </div>
                   </div>
                   <div className="destination-name">{destination}</div>
                 </Link>
@@ -432,7 +431,7 @@ const Home = () => {
             {[
               { number: "500+", label: "Bài viết", icon: "📝" },
               { number: "50+", label: "Điểm đến", icon: "🗺️" },
-              { number: "10K+", label: "Độc giả", icon: "👥" },
+              { number: "10K+", label: "Độc giả", icon: "��" },
               { number: "100+", label: "Tác giả", icon: "✍️" },
             ].map((stat, index) => (
               <div
