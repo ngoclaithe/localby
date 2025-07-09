@@ -41,6 +41,31 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      {/* Image Preview Modal */}
+      {imagePreview.open && (
+        <div
+          className="image-preview-modal"
+          onClick={() => setImagePreview({ open: false, src: "", alt: "" })}
+        >
+          <div
+            className="image-preview-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="image-preview-close"
+              onClick={() => setImagePreview({ open: false, src: "", alt: "" })}
+            >
+              ✕
+            </button>
+            <img
+              src={imagePreview.src}
+              alt={imagePreview.alt}
+              className="image-preview-img"
+            />
+            <div className="image-preview-caption">{imagePreview.alt}</div>
+          </div>
+        </div>
+      )}
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
