@@ -1814,36 +1814,7 @@ body {
 }
 
 .destination-card:hover .destination-image {
-  transform: scale(1.1);
-}
-
-.destination-card .destination-image:hover .image-preview-overlay {
-  opacity: 1;
-}
-
-.image-preview-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
-  opacity: 0;
-  transition: opacity var(--duration-normal) var(--ease-smooth);
-  color: white;
-  font-weight: 600;
-}
-
-.preview-icon {
-  font-size: 2rem;
-}
-
-.preview-text {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  transform: scale(1.05);
 }
 
 .destination-name {
