@@ -118,15 +118,42 @@ const Contact = () => {
             <div className="hero-stats">
               <div className="stat-item">
                 <span className="stat-icon">⚡</span>
-                <span className="stat-text">Phản hồi trong 24h</span>
+                <span
+                  className="stat-text"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.95)",
+                    fontWeight: "600",
+                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  Phản hồi trong 24h
+                </span>
               </div>
               <div className="stat-item">
                 <span className="stat-icon">👥</span>
-                <span className="stat-text">Hỗ trợ tận tình</span>
+                <span
+                  className="stat-text"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.95)",
+                    fontWeight: "600",
+                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  Hỗ trợ tận tình
+                </span>
               </div>
               <div className="stat-item">
                 <span className="stat-icon">🌟</span>
-                <span className="stat-text">Dịch vụ miễn phí</span>
+                <span
+                  className="stat-text"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.95)",
+                    fontWeight: "600",
+                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  Dịch vụ miễn phí
+                </span>
               </div>
             </div>
           </div>
