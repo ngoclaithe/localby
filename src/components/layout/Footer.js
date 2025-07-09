@@ -104,7 +104,7 @@ const Footer = () => {
               >
                 <input
                   type="email"
-                  placeholder="Email của bạn..."
+                  placeholder="Email của mom..."
                   style={{
                     flex: "1",
                     minWidth: "200px",

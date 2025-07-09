@@ -152,7 +152,7 @@ const Blog = () => {
             <div className="newsletter-form">
               <input
                 type="email"
-                placeholder="Nhập email của bạn..."
+                placeholder="Nhập email của mom..."
                 className="newsletter-input"
               />
               <button className="newsletter-submit">

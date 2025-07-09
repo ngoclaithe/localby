@@ -155,7 +155,7 @@ const Destinations = () => {
             </h1>
             <p className="destinations-hero-description">
               Từ núi rừng Tây Bắc đến biển cả Nam Trung Bộ, mỗi điểm đến là một
-              câu chuyện độc đáo chờ bạn khám phá qua góc nhìn của người dân địa
+              câu chuyện độc đáo chờ mom khám phá qua góc nhìn của người dân địa
               phương.
             </p>
             <div className="hero-stats">
@@ -347,11 +347,11 @@ const Destinations = () => {
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">
-              Bạn có câu chuyện du lịch hay muốn chia sẻ?
+              mom có câu chuyện du lịch hay muốn chia sẻ?
             </h2>
             <p className="cta-description">
               Hãy trở thành một phần của cộng đồng LocalBy và chia sẻ những trải
-              nghiệm độc đáo của bạn
+              nghiệm độc đáo của mom
             </p>
             <div className="cta-actions">
               <Link to="/contribute" className="cta-button primary">

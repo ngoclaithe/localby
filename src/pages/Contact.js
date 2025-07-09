@@ -51,7 +51,7 @@ const Contact = () => {
     {
       question: "Làm thế nào để chia sẻ câu chuyện du lịch của tôi?",
       answer:
-        "Bạn có thể gửi câu chuyện qua form liên hệ hoặc email trực tiếp. Bảnk sẽ hỗ trợ bạn trong quá trình biên tập và xuất bản nha!",
+        "Bạn có thể gửi câu chuyện qua form liên hệ hoặc email trực tiếp. Bảnk sẽ hỗ trợ mom trong quá trình biên tập và xuất bản nha!",
     },
     {
       question: "Tôi có thể hợp tác với LocalBy như thế nào?",
@@ -66,7 +66,7 @@ const Contact = () => {
     {
       question: "Tôi có thể sử dụng nội dung từ LocalBy không?",
       answer:
-        "Vui lòng liên hệ với bảnk trước khi sử dụng nội dung nha. Bảnk sẽ hướng dẫn bạn về quyền sử dụng và ghi credit phù hợp.",
+        "Vui lòng liên hệ với bảnk trước khi sử dụng nội dung nha. Bảnk sẽ hướng dẫn mom về quyền sử dụng và ghi credit phù hợp.",
     },
   ];
 
@@ -111,8 +111,8 @@ const Contact = () => {
               <span className="title-line gradient-text">bảnk nè!</span>
             </h1>
             <p className="contact-hero-description">
-              Bảnk luôn sẵn sàng lắng nghe và hỗ trợ bạn đấy! Hãy chia sẻ câu
-              hỏi, ý tưởng hoặc câu chuyện du lịch của bạn với bảnk nha. LocalBy
+              Bảnk luôn sẵn sàng lắng nghe và hỗ trợ mom đấy! Hãy chia sẻ câu
+              hỏi, ý tưởng hoặc câu chuyện du lịch của mom với bảnk nha. LocalBy
               mà, chill chill thôi! 😎
             </p>
             <div className="hero-stats">
@@ -226,7 +226,7 @@ const Contact = () => {
                 <span className="text-gradient">✉️ Gửi tin nhắn cho bảnk</span>
               </h2>
               <p className="form-description">
-                Điền thông tin bên dưới và bảnk sẽ phản hồi bạn sớm nhất có thể
+                Điền thông tin bên dưới và bảnk sẽ phản hồi mom sớm nhất có thể
                 nha! 💪
               </p>
             </div>
@@ -269,7 +269,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="Nhập họ tên của bạn"
+                    placeholder="Nhập họ tên của mom"
                   />
                 </div>
 
@@ -302,7 +302,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   className="form-input"
-                  placeholder="Tóm tắt nội dung bạn muốn trao đổi"
+                  placeholder="Tóm tắt nội dung mom muốn trao đổi"
                 />
               </div>
 
@@ -319,7 +319,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="form-textarea"
-                  placeholder="Chia sẻ chi tiết về điều bạn muốn trao đổi với bảnk..."
+                  placeholder="Chia sẻ chi tiết về điều mom muốn trao đổi với bảnk..."
                 ></textarea>
               </div>
 
@@ -328,7 +328,7 @@ const Contact = () => {
                 <div className="submit-status success">
                   <span className="status-icon">✅</span>
                   <span>
-                    Cảm ơn bạn đã liên hệ! Bảnk sẽ phản hồi sớm nhất có thể nha!
+                    Cảm ơn mom đã liên hệ! Bảnk sẽ phản hồi sớm nhất có thể nha!
                     🥰
                   </span>
                 </div>
@@ -393,11 +393,11 @@ const Contact = () => {
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">
-              Bạn có câu chuyện du lịch hay muốn chia sẻ với bảnk không?
+              mom có câu chuyện du lịch hay muốn chia sẻ với bảnk không?
             </h2>
             <p className="cta-description">
-              Đừng chần chừ! Hãy chia sẻ những trải nghiệm độc đáo của bạn với
-              bảnk và cộng đồng LocalBy. Câu chuyện của bạn có thể truyền cảm
+              Đừng chần chừ! Hãy chia sẻ những trải nghiệm độc đáo của mom với
+              bảnk và cộng đồng LocalBy. Câu chuyện của mom có thể truyền cảm
               hứng cho hàng ngàn người khác đấy! 🌟
             </p>
             <div className="cta-actions">

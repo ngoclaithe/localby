@@ -88,8 +88,8 @@ const Home = () => {
             <p className="hero-description genz-description">
               Trải nghiệm du lịch <strong>authentic</strong> với những câu
               chuyện kể từ trái tim người địa phương. Khám phá văn hóa, ẩm thực
-              và những <em>hidden gems</em>
-              của mảnh đất hình chữ S qua LocalBy! 🌟
+              và những <em>hidden gems </em>
+               của mảnh đất hình chữ S qua LocalBy! 🌟
             </p>
             <div className="hero-stats">
               <div className="stat-item">
@@ -108,7 +108,7 @@ const Home = () => {
             <div className="hero-actions">
               <Link to="/destinations" className="cta-button primary genz-btn">
                 <span>🌟</span>
-                Khám phá ngay bro!
+                Khám phá ngay các mom ơi!
                 <div className="btn-shine"></div>
               </Link>
               <Link to="/blog" className="cta-button secondary genz-btn">
@@ -168,7 +168,7 @@ const Home = () => {
           <div className="container">
             <h2 className="section-title genz-section-title">
               <span className="text-gradient">✨ Content hot nhất tuần</span>
-              <span className="subtitle">
+              <span className="subtitle text-gradient">
                 Những địa điểm đang viral trên MXH 🔥
               </span>
             </h2>
@@ -393,11 +393,11 @@ const Home = () => {
             <div className="newsletter-badge">📱 Stay Connected</div>
             <h2 className="newsletter-title">
               Đăng ký nhận noti
-              <span className="gradient-text">mỗi khi có content mới!</span>
+              <span className="gradient-text"> mỗi khi có content mới!</span>
             </h2>
             <p className="newsletter-description">
-              Subscribe để không bỏ lỡ những <strong>hidden gems</strong> và
-              <em>travel hacks</em> từ các local experts 🌟
+              Subscribe để không bỏ lỡ những <strong>hidden gems</strong> và 
+              <em> travel hacks</em> từ các local experts 🌟
             </p>
             <div className="newsletter-features">
               <div className="feature-item">
@@ -416,7 +416,7 @@ const Home = () => {
             <div className="newsletter-form">
               <input
                 type="email"
-                placeholder="Nhập email của bạn..."
+                placeholder="Nhập email của mom..."
                 className="newsletter-input"
               />
               <button className="newsletter-button">🚀 Subscribe ngay!</button>

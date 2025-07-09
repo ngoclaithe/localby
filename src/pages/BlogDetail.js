@@ -257,7 +257,7 @@ const BlogDetail = () => {
           <h2 class="section-heading"><span class="section-icon">🎯</span>3. Hoạt động trải nghiệm</h2>
 
           <div class="intro-card">
-            <p class="intro-text">🌿 Tại Bản Liền, bạn sẽ được hòa mình vào cuộc sống của người Tày với những trải nghiệm đích thực không thể tìm thấy ở nơi nào khác!</p>
+            <p class="intro-text">🌿 Tại Bản Liền, mom sẽ được hòa mình vào cuộc sống của người Tày với những trải nghiệm đích thực không thể tìm thấy ở nơi nào khác!</p>
           </div>
 
           <div class="activities-grid">
@@ -458,7 +458,7 @@ const BlogDetail = () => {
         <div className="container">
           <div className="not-found">
             <h1>Không tìm thấy bài viết</h1>
-            <p>Bài viết bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.</p>
+            <p>Bài viết mom đang tìm kiếm không tồn tại hoặc đã bị xóa.</p>
             <Link to="/blog" className="back-to-blog">
               ← Quay lại trang Blog
             </Link>
@@ -677,7 +677,7 @@ const BlogDetail = () => {
                 <div className="newsletter-form">
                   <input
                     type="email"
-                    placeholder="Email của bạn..."
+                    placeholder="Email của mom..."
                     className="newsletter-input"
                   />
                   <button className="newsletter-button">Đăng ký</button>

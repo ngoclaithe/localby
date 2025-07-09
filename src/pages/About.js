@@ -87,9 +87,9 @@ const About = () => {
       <section className="about-cta">
         <div className="container">
           <div className="cta-content">
-            <h2 className="cta-title">Hãy cùng bảnk kể câu chuyện của bạn</h2>
+            <h2 className="cta-title">Hãy cùng bảnk kể câu chuyện của mom</h2>
             <p className="cta-description">
-              Bạn có câu chuyện du lịch thú vị muốn chia sẻ? Hoặc muốn trở thành
+              mom có câu chuyện du lịch thú vị muốn chia sẻ? Hoặc muốn trở thành
               một phần của cộng đồng LocalBy? Bảnk luôn chào đón những người
               cùng chung tâm huyết.
             </p>
