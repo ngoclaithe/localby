@@ -191,7 +191,9 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://tiktok.com/@localby"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="social-link"
                   aria-label="TikTok"
                   title="TikTok"
