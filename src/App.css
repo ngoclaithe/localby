@@ -2120,6 +2120,8 @@ body {
   color: var(--dark-500);
   flex-wrap: wrap;
   font-weight: 500;
+  margin-top: auto;
+  padding-top: var(--space-md);
 }
 
 /* Blog Filters */
