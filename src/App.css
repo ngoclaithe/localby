@@ -1801,6 +1801,32 @@ body {
   color: var(--dark-700);
 }
 
+.destination-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--duration-slow) var(--ease-smooth);
+}
+
+.destination-card:hover .destination-image {
+  transform: scale(1.1);
+}
+
+.destination-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  color: white;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  text-align: center;
+}
+
 /* CTA Section */
 .destinations-cta {
   background: var(--gradient-cosmic);
