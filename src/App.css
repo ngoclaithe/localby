@@ -1807,10 +1807,41 @@ body {
   object-fit: cover;
   object-position: center;
   transition: transform var(--duration-slow) var(--ease-smooth);
+  cursor: pointer;
+  position: relative;
 }
 
 .destination-card:hover .destination-image {
   transform: scale(1.1);
+}
+
+.destination-card .destination-image:hover .image-preview-overlay {
+  opacity: 1;
+}
+
+.image-preview-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-smooth);
+  color: white;
+  font-weight: 600;
+}
+
+.preview-icon {
+  font-size: 2rem;
+}
+
+.preview-text {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .destination-name {
@@ -1825,6 +1856,81 @@ body {
   font-weight: 700;
   font-family: var(--font-display);
   text-align: center;
+}
+
+/* Image Preview Modal */
+.image-preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  animation: fadeIn 0.3s var(--ease-smooth);
+}
+
+.image-preview-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.image-preview-close {
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--dark-800);
+  transition: all var(--duration-normal) var(--ease-spring);
+  z-index: 1;
+}
+
+.image-preview-close:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+.image-preview-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.image-preview-caption {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-full);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* CTA Section */
