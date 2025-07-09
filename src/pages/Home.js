@@ -451,68 +451,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Stats Section - Modern Design */}
-      <section className="stats-section">
-        <div className="container">
-          <div className="stats-header">
-            <h2 className="stats-title">
-              Con số ấn tượng
-              <span className="stats-emoji">📊</span>
-            </h2>
-            <p className="stats-subtitle">
-              Hành trình khám phá Việt Nam cùng LocalBy
-            </p>
-          </div>
-          <div className="stats-grid">
-            {[
-              {
-                number: "500+",
-                label: "Bài review",
-                icon: "📝",
-                color: "#3b82f6",
-              },
-              {
-                number: "50+",
-                label: "Địa điểm",
-                icon: "🗺️",
-                color: "#10b981",
-              },
-              {
-                number: "10K+",
-                label: "Followers",
-                icon: "👥",
-                color: "#8b5cf6",
-              },
-              {
-                number: "100+",
-                label: "Travel buddies",
-                icon: "✍️",
-                color: "#f59e0b",
-              },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="stat-card"
-                style={{
-                  animationDelay: `${index * 0.15}s`,
-                  "--stat-color": stat.color,
-                }}
-              >
-                <div className="stat-icon-wrapper">
-                  <div className="stat-icon">{stat.icon}</div>
-                  <div className="stat-icon-bg"></div>
-                </div>
-                <div className="stat-content">
-                  <div className="stat-number">{stat.number}</div>
-                  <div className="stat-label">{stat.label}</div>
-                </div>
-                <div className="stat-decoration"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

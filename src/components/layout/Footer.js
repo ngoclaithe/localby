@@ -139,7 +139,7 @@ const Footer = () => {
             {/* Social Links */}
             <div>
               <h4 style={{ marginBottom: "var(--space-lg)" }}>
-                🌐 Theo dõi chúng tôi
+                🌐 Theo dõi bảnk
               </h4>
               <div className="social-links">
                 <a

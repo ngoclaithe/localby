@@ -377,7 +377,7 @@ const Header = () => {
                 fontSize: "0.9rem",
               }}
             >
-              Theo dõi chúng tôi
+              Theo dõi bảnk
             </p>
             <div
               style={{

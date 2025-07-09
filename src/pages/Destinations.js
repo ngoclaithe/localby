@@ -151,7 +151,7 @@ const Destinations = () => {
             <h1 className="destinations-hero-title">
               <span className="title-line">Khám phá</span>
               <span className="title-line gradient-text">Việt Nam</span>
-              <span className="title-line">cùng chúng tôi</span>
+              <span className="title-line">cùng bảnk</span>
             </h1>
             <p className="destinations-hero-description">
               Từ núi rừng Tây Bắc đến biển cả Nam Trung Bộ, mỗi điểm đến là một
@@ -360,7 +360,7 @@ const Destinations = () => {
               </Link>
               <Link to="/contact" className="cta-button secondary">
                 <span>💬</span>
-                Liên hệ với chúng tôi
+                Liên hệ với bảnk
               </Link>
             </div>
           </div>
