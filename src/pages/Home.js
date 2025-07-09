@@ -130,10 +130,26 @@ const Home = () => {
       >
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">
-              <span className="text-gradient">🗂️ Khám phá theo chủ đề</span>
+            <h2 className="section-title" style={{ color: "var(--dark-800)" }}>
+              <span
+                style={{
+                  background:
+                    "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                🗂️ Khám phá theo chủ đề
+              </span>
             </h2>
-            <p className="section-subtitle">
+            <p
+              className="section-subtitle"
+              style={{
+                color: "var(--dark-600)",
+                fontSize: "1.1rem",
+              }}
+            >
               Tìm hiểu Việt Nam qua những góc nhìn đa dạng từ người dân địa
               phương
             </p>
