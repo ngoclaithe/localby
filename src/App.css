@@ -2564,6 +2564,15 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .featured-posts-grid-equal {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-posts-grid-equal .featured-post-card {
+    width: 100%;
+    height: auto;
+  }
+
   .blog-stats {
     gap: var(--space-xl);
   }
