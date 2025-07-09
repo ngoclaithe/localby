@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { mockData } from "../services/api";
+
 import { FEATURED_DESTINATIONS } from "../utils/constants";
 
 const Destinations = () => {
