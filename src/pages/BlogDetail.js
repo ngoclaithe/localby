@@ -9,8 +9,6 @@ const BlogDetail = () => {
   const [post, setPost] = useState(null);
   const [relatedPosts, setRelatedPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isLiked, setIsLiked] = useState(false);
-  const [isBookmarked, setIsBookmarked] = useState(false);
 
   // Mock detailed content for the post
   const getDetailedContent = (postData) => {
@@ -66,7 +64,7 @@ const BlogDetail = () => {
         
         <p>BanLien Pine Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 3-4) và 2-5 khách đối với phòng bungalow (ảnh 7-8-9). Hiện tại gia đình có 1 phòng bungalow và tương lai sẽ có thêm một phòng nữa. Gia đình hiện có 2 phòng tắm có trang bị bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng bungalow có phòng tắm và phòng vệ sinh khép kín.</p>
         
-        <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
+        <p><strong>Dịch v��:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
         
         <p><strong>Phí dịch vụ:</strong></p>
         <ul>
@@ -97,7 +95,7 @@ const BlogDetail = () => {
         <ul>
           <li>150k/người/đêm cho phòng tập thể</li>
           <li>Ăn uống: 150k/người áp dụng với bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
-          <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
+          <li>Hư���ng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
           <li>Phòng riêng có giá 600k/đêm áp cho tối đa 6 khách</li>
         </ul>
 
@@ -211,32 +209,6 @@ const BlogDetail = () => {
     }, 800);
   }, [slug]);
 
-  const handleLike = () => {
-    setIsLiked(!isLiked);
-  };
-
-  const handleBookmark = () => {
-    setIsBookmarked(!isBookmarked);
-  };
-
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: post.title,
-          text: post.excerpt,
-          url: window.location.href,
-        });
-      } catch (error) {
-        console.log("Error sharing:", error);
-      }
-    } else {
-      // Fallback: copy to clipboard
-      navigator.clipboard.writeText(window.location.href);
-      alert("Link đã được sao chép vào clipboard!");
-    }
-  };
-
   if (isLoading) {
     return (
       <div className="loading-container">
@@ -330,29 +302,6 @@ const BlogDetail = () => {
                 </span>
               </div>
             </div>
-
-            <div className="article-actions">
-              <button
-                onClick={handleLike}
-                className={`action-button ${isLiked ? "active" : ""}`}
-              >
-                <span className="action-icon">{isLiked ? "❤️" : "🤍"}</span>
-                <span>Thích</span>
-              </button>
-              <button
-                onClick={handleBookmark}
-                className={`action-button ${isBookmarked ? "active" : ""}`}
-              >
-                <span className="action-icon">
-                  {isBookmarked ? "🔖" : "📌"}
-                </span>
-                <span>Lưu</span>
-              </button>
-              <button onClick={handleShare} className="action-button">
-                <span className="action-icon">📤</span>
-                <span>Chia sẻ</span>
-              </button>
-            </div>
           </div>
 
           <div className="article-image">
@@ -360,7 +309,7 @@ const BlogDetail = () => {
               src={"/images/ban-lien/cover.jpg"}
               alt={post.title}
               loading="eager"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
         </div>
