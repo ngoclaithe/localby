@@ -121,7 +121,7 @@ const Blog = () => {
             <div className="blog-stats">
               <div className="blog-stat">
                 <span className="stat-number">{allPosts.length}</span>
-                <span className="stat-label">Bài viết</span>
+                <span className="stat-label">B��i viết</span>
               </div>
               <div className="blog-stat">
                 <span className="stat-number">{BLOG_CATEGORIES.length}</span>
@@ -147,7 +147,9 @@ const Blog = () => {
             <h2 className="section-title">
               <span className="text-gradient">⭐ Nổi bật</span>
             </h2>
-            <div className="featured-posts-grid">
+            <div
+              className={`featured-posts-grid ${featuredPosts.length <= 2 ? "featured-posts-grid-equal" : ""}`}
+            >
               {featuredPosts.map((post, index) => (
                 <article
                   key={post.id}
@@ -159,7 +161,11 @@ const Blog = () => {
                       src={"/images/ban-lien/cover.jpg"}
                       alt={post.title}
                       loading="lazy"
-                      style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+                      style={{
+                        width: "100%",
+                        height: "200px",
+                        objectFit: "cover",
+                      }}
                     />
                     <div className="featured-post-category">
                       {
@@ -190,203 +196,6 @@ const Blog = () => {
           </div>
         </section>
       )}
-
-      {/* Filters and Search */}
-      <section className="blog-filters">
-        <div className="container">
-          <div className="filters-container">
-            {/* Search */}
-            <div className="search-section">
-              <div className="search-wrapper">
-                <span className="search-icon">🔍</span>
-                <input
-                  type="text"
-                  placeholder="Tìm kiếm bài viết, tác giả, từ khóa..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="search-input"
-                />
-                {searchTerm && (
-                  <button
-                    onClick={() => setSearchTerm("")}
-                    className="search-clear"
-                  >
-                    ✕
-                  </button>
-                )}
-              </div>
-            </div>
-
-            {/* Category Filters */}
-            <div className="category-filters">
-              <button
-                onClick={() => setSelectedCategory("all")}
-                className={`category-filter ${selectedCategory === "all" ? "active" : ""}`}
-              >
-                Tất cả ({allPosts.length})
-              </button>
-              {BLOG_CATEGORIES.map((category) => {
-                const count = allPosts.filter(
-                  (post) => post.category === category.slug,
-                ).length;
-                return (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.slug)}
-                    className={`category-filter ${selectedCategory === category.slug ? "active" : ""}`}
-                  >
-                    {category.name} ({count})
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Sort Options */}
-            <div className="sort-section">
-              <label htmlFor="sort-select" className="sort-label">
-                Sắp xếp:
-              </label>
-              <select
-                id="sort-select"
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="sort-select"
-              >
-                {sortOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Results Info */}
-          <div className="results-info">
-            <p>
-              Hiển thị <strong>{filteredPosts.length}</strong> bài viết
-              {selectedCategory !== "all" && (
-                <span>
-                  {" "}
-                  trong chủ đề{" "}
-                  <strong>
-                    {
-                      BLOG_CATEGORIES.find(
-                        (cat) => cat.slug === selectedCategory,
-                      )?.name
-                    }
-                  </strong>
-                </span>
-              )}
-              {searchTerm && (
-                <span>
-                  {" "}
-                  cho từ khóa "<strong>{searchTerm}</strong>"
-                </span>
-              )}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Posts */}
-      <section className="blog-content">
-        <div className="container">
-          {filteredPosts.length === 0 ? (
-            <div className="no-results">
-              <span className="no-results-icon">📝</span>
-              <h3>Không tìm thấy bài viết nào</h3>
-              <p>Hãy thử tìm kiếm với từ khóa khác hoặc chọn chủ đề khác</p>
-              <button
-                onClick={() => {
-                  setSearchTerm("");
-                  setSelectedCategory("all");
-                }}
-                className="reset-filters-btn"
-              >
-                Xóa bộ lọc
-              </button>
-            </div>
-          ) : (
-            <div className="blog-posts-grid">
-              {filteredPosts.map((post, index) => {
-                const imageIds = [
-                  "1588392382425-d9181b0bd8c0",
-                  "1552465011-b4e21bf6e79a",
-                  "1583417319070-4a69db38a482",
-                  "1559827260-dc66d52bef19",
-                  "1551632436-cbf8dd35adfa",
-                  "1528127269322-539801943592",
-                  "1578662996442-48f60103fc96",
-                  "1571218447-b7ba11f10515",
-                ];
-
-                return (
-                  <article
-                    key={post.id}
-                    className="blog-post-card fade-in-up"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="blog-post-image">
-                      <img
-                        src={`https://images.unsplash.com/photo-${imageIds[index % imageIds.length]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80`}
-                        alt={post.title}
-                        loading="lazy"
-                      />
-                      <div className="blog-post-category">
-                        {
-                          BLOG_CATEGORIES.find(
-                            (cat) => cat.slug === post.category,
-                          )?.name
-                        }
-                      </div>
-                      <div className="blog-post-reading-time">
-                        ⏱️ {formatReadingTime(post.content)}
-                      </div>
-                    </div>
-                    <div className="blog-post-content">
-                      <h3 className="blog-post-title">
-                        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                      </h3>
-                      <p className="blog-post-excerpt">{post.excerpt}</p>
-                      <div className="blog-post-meta">
-                        <div className="meta-left">
-                          <span className="post-author">👤 {post.author}</span>
-                          <span className="post-date">
-                            📅 {formatDate(post.published_at)}
-                          </span>
-                        </div>
-                        <div className="meta-right">
-                          <span className="post-views">
-                            👁️ {post.views.toLocaleString()}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="post-tags">
-                        {post.tags.slice(0, 3).map((tag, tagIndex) => (
-                          <span key={tagIndex} className="post-tag">
-                            #{tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          )}
-
-          {/* Load More Button */}
-          {filteredPosts.length > 0 && filteredPosts.length % 6 === 0 && (
-            <div className="load-more-section">
-              <button className="load-more-btn">
-                <span>📖</span>
-                Xem thêm bài viết
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
 
       {/* Newsletter CTA */}
       <section className="blog-newsletter">
