@@ -5707,3 +5707,190 @@ body {
 .related-post-image img {
   will-change: transform;
 }
+
+/* Touch Optimization for Mobile Devices */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets */
+  .nav-link,
+  .mobile-nav-link,
+  .cta-button,
+  .footer-link,
+  .social-link,
+  .search-toggle,
+  .mobile-menu-toggle {
+    min-height: 44px;
+    min-width: 44px;
+    padding: var(--space-md);
+  }
+
+  /* Button touch optimization */
+  button,
+  .genz-btn,
+  .newsletter-button,
+  .explore-btn {
+    min-height: 48px;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Link touch optimization */
+  a {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Card touch optimization */
+  .card,
+  .destination-card,
+  .category-card,
+  .enhanced-category-card {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Input touch optimization */
+  input,
+  textarea {
+    min-height: 44px;
+    padding: var(--space-md);
+    font-size: 16px; /* Prevents zoom on iOS */
+    border-radius: var(--radius-lg);
+    touch-action: manipulation;
+  }
+
+  /* Remove hover effects on touch devices */
+  .card:hover,
+  .destination-card:hover,
+  .category-card:hover,
+  .enhanced-category-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-medium);
+  }
+
+  .nav-link:hover,
+  .cta-button:hover,
+  .genz-btn:hover {
+    transform: none;
+  }
+
+  /* Improve scrolling performance */
+  .hero-section,
+  .section,
+  .main-content {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  /* Optimize animations for touch */
+  * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+/* iOS Safari specific optimizations */
+@supports (-webkit-touch-callout: none) {
+  .header-container {
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+  }
+
+  .card,
+  .content-section {
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  /* Fix iOS viewport issues */
+  .hero-section {
+    min-height: calc(100vh - 80px);
+    min-height: calc(100dvh - 80px);
+  }
+
+  /* iOS safe area support */
+  .header-container {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .footer-container {
+    padding-bottom: calc(var(--space-xl) + env(safe-area-inset-bottom));
+  }
+}
+
+/* Android Chrome specific optimizations */
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
+  .header-container {
+    backdrop-filter: blur(24px) saturate(180%);
+  }
+
+  /* Improve scroll performance on Android */
+  .main-content {
+    will-change: scroll-position;
+  }
+}
+
+/* High DPI optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo-text,
+  .hero-title,
+  .section-title {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Optimize images for retina */
+  .card-image img,
+  .hero-image img,
+  .destination-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Accessibility improvements for mobile */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .floating-emoji {
+    animation: none !important;
+  }
+
+  .fade-in-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Focus management for mobile */
+@media (max-width: 768px) {
+  *:focus {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+  }
+
+  .mobile-menu-toggle:focus,
+  .search-toggle:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+
+  /* Improve keyboard navigation */
+  .nav-link:focus,
+  .footer-link:focus,
+  .cta-button:focus {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+  }
+}
