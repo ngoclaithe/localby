@@ -1,20 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { mockData } from "../services/api";
 import { formatDate, formatReadingTime } from "../utils/formatters";
 import { BLOG_CATEGORIES } from "../utils/constants";
 
 const Blog = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
   const [allPosts, setAllPosts] = useState([]);
-  const [filteredPosts, setFilteredPosts] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(
-    searchParams.get("category") || "all",
-  );
-  const [searchTerm, setSearchTerm] = useState(
-    searchParams.get("search") || "",
-  );
-  const [sortBy, setSortBy] = useState("latest");
   const [isLoading, setIsLoading] = useState(true);
 
   // Use only the mock data from API
@@ -27,64 +18,11 @@ const Blog = () => {
     setTimeout(() => {
       const posts = getAllPosts();
       setAllPosts(posts);
-      setFilteredPosts(posts);
       setIsLoading(false);
     }, 600);
   }, []);
 
-  useEffect(() => {
-    let filtered = [...allPosts];
-
-    // Filter by category
-    if (selectedCategory !== "all") {
-      filtered = filtered.filter((post) => post.category === selectedCategory);
-    }
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(
-        (post) =>
-          post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          post.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          post.tags.some((tag) =>
-            tag.toLowerCase().includes(searchTerm.toLowerCase()),
-          ),
-      );
-    }
-
-    // Sort posts
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case "latest":
-          return new Date(b.published_at) - new Date(a.published_at);
-        case "oldest":
-          return new Date(a.published_at) - new Date(b.published_at);
-        case "popular":
-          return b.views - a.views;
-        case "reading_time":
-          return a.reading_time - b.reading_time;
-        default:
-          return 0;
-      }
-    });
-
-    setFilteredPosts(filtered);
-
-    // Update URL params
-    const params = new URLSearchParams();
-    if (selectedCategory !== "all") params.set("category", selectedCategory);
-    if (searchTerm) params.set("search", searchTerm);
-    setSearchParams(params);
-  }, [allPosts, selectedCategory, searchTerm, sortBy, setSearchParams]);
-
   const featuredPosts = allPosts.filter((post) => post.featured);
-  const sortOptions = [
-    { value: "latest", label: "Mới nhất" },
-    { value: "popular", label: "Phổ biến nhất" },
-    { value: "oldest", label: "Cũ nhất" },
-    { value: "reading_time", label: "Đọc nhanh nhất" },
-  ];
 
   if (isLoading) {
     return (
@@ -121,7 +59,7 @@ const Blog = () => {
             <div className="blog-stats">
               <div className="blog-stat">
                 <span className="stat-number">{allPosts.length}</span>
-                <span className="stat-label">B��i viết</span>
+                <span className="stat-label">Bài viết</span>
               </div>
               <div className="blog-stat">
                 <span className="stat-number">{BLOG_CATEGORIES.length}</span>
