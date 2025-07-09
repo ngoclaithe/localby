@@ -108,26 +108,33 @@ export const ErrorMessage = ({
 };
 
 export const NotFound = ({
-  title = "Không tìm thấy trang",
-  message = "Trang bạn đang tìm kiếm không tồn tại.",
+  title = "Cái này bảnk chưa làm 😅",
+  message = "Trang này bảnk chưa kịp code xong nè! Thông cảm bảnk chút nha 🙏",
 }) => {
   return (
     <div className="not-found-container">
       <div className="not-found-content">
         <div className="not-found-icon">
-          <span className="not-found-number">404</span>
+          <span className="not-found-emoji">🚧</span>
+          <span className="not-found-subtitle">Work in Progress</span>
         </div>
         <h2 className="not-found-title">{title}</h2>
         <p className="not-found-message">{message}</p>
+        <div className="not-found-extra">
+          <p className="not-found-extra-text">
+            💡 Bảnk đang code cật lực để hoàn thiện tính năng này. Hãy quay lại
+            sau nha!
+          </p>
+        </div>
         <div className="not-found-actions">
           <button onClick={() => window.history.back()} className="back-button">
-            Quay lại
+            ← Quay lại
           </button>
           <button
             onClick={() => (window.location.href = "/")}
             className="home-button"
           >
-            Về trang chủ
+            🏠 Về trang chủ
           </button>
         </div>
       </div>
