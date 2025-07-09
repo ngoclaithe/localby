@@ -34,20 +34,31 @@ const BlogDetail = () => {
         <div class="content-section" id="section-1">
           <h2 class="section-heading"><span class="section-icon">🚗</span>1. Di chuyển</h2>
 
-        <h3>Di chuyển bằng phương tiện cá nhân</h3>
-        <p>Từ Hà Nội di chuyển theo hướng cao tốc Hà Nội - Lào Cai khoảng ~300km sẽ tới thị trấn Bắc Hà, từ đây di chuyển thêm khoảng 22km nữa sẽ tới Bản Liền, tổng thời gian di chuyển khoảng 6 tiếng đồng hồ. Chỉ nên sử dụng xe từ 16 chỗ trở xuống.</p>
+          <div class="transport-option">
+            <h3 class="option-title"><span class="option-icon">🚙</span>Di chuyển bằng phương tiện cá nhân</h3>
+            <div class="highlight-box info-box">
+              <p><strong>Quãng đường:</strong> ~300km từ Hà Nội → Bắc Hà + 22km → Bản Liền</p>
+              <p><strong>Thời gian:</strong> Khoảng 6 tiếng đồng hồ</p>
+              <p><strong>Lưu ý:</strong> Chỉ nên sử dụng xe từ 16 chỗ trở xuống</p>
+            </div>
+          </div>
 
-        <div class="image-grid" style="display: flex; justify-content: center; margin: 20px 0;">
-          <img src="/images/ban-lien/bando.jpg" alt="Lộ trình di chuyển" style="max-width: 80%; height: auto;" />
-        </div>
-        <p class="image-caption">Hình ảnh 1: Lộ trình di chuyển từ trung tâm thị trấn Bắc Hà tới Bản Liền</p>
+          <div class="media-showcase">
+            <div class="main-image">
+              <img src="/images/ban-lien/bando.jpg" alt="Lộ trình di chuyển" />
+              <div class="image-overlay">
+                <span class="image-caption">📍 Lộ trình di chuyển từ trung tâm thị trấn Bắc Hà tới Bản Liền</span>
+              </div>
+            </div>
+          </div>
 
-        <h3>Di chuyển bằng xe khách</h3>
+          <div class="transport-option">
+            <h3 class="option-title"><span class="option-icon">🚌</span>Di chuyển bằng xe khách</h3>
         <p>Từ Hà Nội có thể bắt xe khách của những nhà xe như Futa Hà Sơn (ưu tiên), xe Trúc Nghiêu, xe Vũ Hán Group… Đặt vé qua ứng dụng Vexere hoặc tổng đài nhà xe. Thời gian di chuyển khoảng 6 tiếng đồng hồ.</p>
 
         <p>(Ngoài ra có thể đặt xe đi Sapa và xuống tại điểm Bến xe trung tâm thành phố Lào Cai, sau đó bắt xe trung chuyển lên thị trấn Bắc Hà. Tại bến xe có rất nhiều xe lên Bắc Hà, để có thêm thông tin về nhà xe vui lòng hỏi sự tư vấn của nhân viên nhà xe. Đối với cách này quý khách sẽ có nhiều lựa chọn về khung giờ hơn, tuy nhiên nhược điểm là sẽ phải đổi xe nhiều lần và tốn nhiều thời gian chờ đợi.)</p>
 
-        <p>Sau khi tới trung tâm thị trấn Bắc Hà hoặc Bến xe Bắc Hà, di chuyển tới Khách sạn Ngân Nga (Ngan Nga Bac Ha Hotel trên Google maps) để nghỉ ngơi hoặc thuê xe máy, liên hệ anh Đông theo SĐT 0817801988. Ngoài ra quý khách cũng có thể đặt dịch vụ xe ôm (khoảng 200k/người) liên hệ chú An - đội trưởng đội xe ôm du lịch Bắc Hà SĐT 0827999339 hoặc taxi (khoảng 700-800k) để tới Bản Liền. Vào mùa cao điểm như tháng 8-9-10 quý khách nên gọi điện đặt xe trước tránh tình trạng quá tải.</p>
+        <p>Sau khi tới trung tâm thị trấn Bắc Hà hoặc Bến xe Bắc Hà, di chuyển tới Khách sạn Ngân Nga (Ngan Nga Bac Ha Hotel trên Google maps) để nghỉ ngơi hoặc thuê xe máy, liên hệ anh Đông theo SĐT 0817801988. Ngoài ra quý khách cũng có thể đặt dịch vụ xe ôm (khoảng 200k/người) liên hệ chú An - đội trưởng ��ội xe ôm du lịch Bắc Hà SĐT 0827999339 hoặc taxi (khoảng 700-800k) để tới Bản Liền. Vào mùa cao điểm như tháng 8-9-10 quý khách nên gọi điện đặt xe trước tránh tình trạng quá tải.</p>
 
         <p>Tiếp theo, nhập tên homestay tại Bản Liền và di chuyển theo Google Maps. Từ trung tâm Bắc Hà tới Bản Liền quãng đường khoảng 22km tương ứng với hơn 1 tiếng đồng hồ lái xe.</p>
 
@@ -58,7 +69,7 @@ const BlogDetail = () => {
         <p class="image-caption">Hình ảnh 2 và hình ảnh 3</p>
 
         <blockquote>
-          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
+          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuy��n bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
         </blockquote>
 
         <p>Khi gần tới homestay nếu không tìm được đường xuống hoặc đường quá dốc và khó đi, quý khách có thể liên hệ chủ nhà lên hỗ trợ đưa xe và hành lý xuống.</p>
@@ -103,7 +114,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/forest-homestay/9.jpg" alt="Forest Homestay - View" />
         </div>
 
-        <p>Bản Liền Forest Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 4) và 2-6 khách đối với phòng bungalow 2 giường (ảnh 7-8). Hiện tại gia đình có 1 phòng riêng chứa được tối đa 6 người. Homestay được trang bị 2 phòng tắm có bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng riêng có phòng tắm và phòng vệ sinh khép kín (ảnh 9).</p>
+        <p>Bản Liền Forest Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 4) và 2-6 khách đối với phòng bungalow 2 giường (ảnh 7-8). Hiện tại gia đình có 1 phòng riêng chứa được t���i đa 6 người. Homestay được trang bị 2 phòng tắm có bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng riêng có phòng tắm và phòng vệ sinh khép kín (ảnh 9).</p>
 
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
 
