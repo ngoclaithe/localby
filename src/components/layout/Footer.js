@@ -9,8 +9,8 @@ const Footer = () => {
     { name: "Trang chủ", path: "/", icon: "🏠" },
     { name: "Đi Đâu Này?", path: "/destinations", icon: "🗺️" },
     { name: "Đi Đâu Mới Zui?", path: "/blog", icon: "📝" },
-    { name: "Về Mình", path: "/about", icon: "💫" },
-    { name: "Chat Với Mình", path: "/contact", icon: "📞" },
+    { name: "Về tui", path: "/about", icon: "💫" },
+    { name: "Chat với bảnk nè", path: "/contact", icon: "📞" },
   ];
 
   const featuredCategories = BLOG_CATEGORIES.slice(0, 6);
@@ -18,7 +18,7 @@ const Footer = () => {
   const supportLinks = [
     { name: "Trung tâm trợ giúp", path: "/help" },
     { name: "Câu hỏi thường gặp", path: "/faq" },
-    { name: "Chính sách bảo mật", path: "/privacy" },
+    { name: "Chính s��ch bảo mật", path: "/privacy" },
     { name: "Điều khoản sử dụng", path: "/terms" },
     { name: "Sitemap", path: "/sitemap" },
   ];
