@@ -40,40 +40,36 @@
   min-height: 100vh;
 }
 
-/* Stunning Minimalist Breadcrumb */
+/* Sophisticated Breadcrumb */
 .modern-breadcrumb {
-  background: #ffffff;
-  border: none;
-  margin: 30px 0;
-  border-radius: 24px;
-  padding: 20px 32px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 24px 0;
+  border-radius: 18px;
+  padding: 18px 28px;
   box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.05),
-    0 1px 4px rgba(0, 0, 0, 0.02);
+    0 6px 30px rgba(0, 0, 0, 0.08),
+    0 2px 10px rgba(0, 0, 0, 0.04);
   position: relative;
+  overflow: hidden;
 }
 
-.modern-breadcrumb::before {
+.modern-breadcrumb::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    #3b82f6 20%,
-    #8b5cf6 50%,
-    #ef4444 80%,
-    transparent 100%
-  );
+  height: 2px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  opacity: 0.6;
 }
 
 .breadcrumb-nav {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
@@ -81,99 +77,73 @@
 .breadcrumb-link {
   color: #64748b;
   text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 16px;
-  background: #f8fafc;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: rgba(248, 250, 252, 0.8);
+  transition: all 0.25s ease;
   font-weight: 500;
-  font-size: 0.95em;
-  border: 1px solid #e2e8f0;
+  font-size: 0.92em;
+  border: 1px solid rgba(226, 232, 240, 0.6);
   position: relative;
 }
 
-.breadcrumb-link::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  border-radius: 16px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
 .breadcrumb-link:hover {
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
-  border-color: transparent;
-}
-
-.breadcrumb-link:hover::before {
-  opacity: 1;
+  color: #475569;
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.12);
+  border-color: rgba(102, 126, 234, 0.25);
 }
 
 .breadcrumb-separator {
   color: #cbd5e1;
-  font-size: 1.1em;
-  font-weight: 300;
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.7;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background: rgba(203, 213, 225, 0.3);
 }
 
 .breadcrumb-separator::before {
-  content: "›";
-  font-size: 0.9em;
-  opacity: 0.7;
+  content: "•";
+  font-size: 1.2em;
 }
 
 .breadcrumb-current {
-  color: #1e293b;
+  color: #334155;
   font-weight: 600;
-  padding: 12px 20px;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  color: white;
-  border-radius: 16px;
-  border: none;
+  padding: 10px 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.12) 0%,
+    rgba(118, 75, 162, 0.08) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
   position: relative;
-  max-width: 320px;
+  max-width: 300px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   box-shadow:
-    0 6px 20px rgba(59, 130, 246, 0.3),
-    0 2px 6px rgba(0, 0, 0, 0.1);
+    0 3px 10px rgba(102, 126, 234, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-.breadcrumb-current::after {
+.breadcrumb-current::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 0 0 12px 12px;
 }
 
 /* Article Header */
