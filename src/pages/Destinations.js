@@ -328,7 +328,7 @@ const Destinations = () => {
             </p>
             <div className="cta-actions">
               <Link to="/contribute" className="cta-button primary">
-                <span>✍���</span>
+                <span>✍</span>
                 Chia sẻ câu chuyện
               </Link>
               <Link to="/contact" className="cta-button secondary">

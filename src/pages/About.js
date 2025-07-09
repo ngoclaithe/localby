@@ -70,31 +70,6 @@ const About = () => {
                   của bác Phúc Đỗ hay quá, bảnk làm lưu tổng hợp kết hợp vài
                   blog để hôm sau em gái bảnk biết chỗ xem. Thế thôi hẹ hẹ hẹ 😆
                 </p>
-                <p
-                  style={{
-                    fontSize: "1rem",
-                    lineHeight: "1.6",
-                    color: "var(--color-neutral-600)",
-                    marginBottom: "var(--space-lg)",
-                  }}
-                >
-                  Rồi càng ngày càng nhiều người hỏi, bảnk chia sẻ thêm... và
-                  thế là LocalBy ra đời! Từ một ý tưởng nhỏ đơn giản đến một
-                  cộng đồng yêu du lịch thật sự. Ai ngờ được nhỉ? 🤪
-                </p>
-                <p
-                  style={{
-                    fontSize: "1rem",
-                    lineHeight: "1.6",
-                    color: "var(--color-neutral-600)",
-                    marginBottom: "var(--space-lg)",
-                  }}
-                >
-                  Giờ thì LocalBy trở thành nơi bảnk chia sẻ những câu chuyện du
-                  lịch chân thực nhất, những trải nghiệm hay ho nhất mà bảnk tìm
-                  được. Bảnk hi vọng sẽ giúp mọi người khám phá Việt Nam theo
-                  cách thú vị hơn! ✨
-                </p>
               </div>
             </div>
             <div className="story-image">

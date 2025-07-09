@@ -9,7 +9,7 @@ const Footer = () => {
     { name: "Trang chủ", path: "/", icon: "🏠" },
     { name: "Đi Đâu Này?", path: "/destinations", icon: "🗺️" },
     { name: "Đi Đâu Mới Zui?", path: "/blog", icon: "📝" },
-    { name: "Về tui", path: "/about", icon: "💫" },
+    { name: "Tui tui", path: "/about", icon: "💫" },
     { name: "Chat với bảnk nè", path: "/contact", icon: "📞" },
   ];
 
@@ -18,7 +18,7 @@ const Footer = () => {
   const supportLinks = [
     { name: "Trung tâm trợ giúp", path: "/help" },
     { name: "Câu hỏi thường gặp", path: "/faq" },
-    { name: "Chính s��ch bảo mật", path: "/privacy" },
+    { name: "Chính sách bảo mật", path: "/privacy" },
     { name: "Điều khoản sử dụng", path: "/terms" },
     { name: "Sitemap", path: "/sitemap" },
   ];
@@ -225,72 +225,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-
-            <div
-              style={{
-                marginTop: "var(--space-xl)",
-                padding: "var(--space-lg)",
-                background:
-                  "linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)",
-                borderRadius: "var(--radius-xl)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-              }}
-            >
-              <h5
-                style={{
-                  color: "white",
-                  marginBottom: "var(--space-md)",
-                  fontSize: "1rem",
-                }}
-              >
-                📱 Ứng dụng di động
-              </h5>
-              <p
-                style={{
-                  color: "var(--dark-300)",
-                  fontSize: "0.9rem",
-                  marginBottom: "var(--space-md)",
-                }}
-              >
-                Sắp ra mắt trên iOS & Android
-              </p>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "var(--space-sm)",
-                  flexDirection: "column",
-                }}
-              >
-                <button
-                  style={{
-                    padding: "var(--space-sm) var(--space-md)",
-                    background: "rgba(255, 255, 255, 0.1)",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                    borderRadius: "var(--radius-lg)",
-                    color: "white",
-                    fontSize: "0.8rem",
-                    cursor: "pointer",
-                    opacity: "0.7",
-                  }}
-                >
-                  🍎 App Store
-                </button>
-                <button
-                  style={{
-                    padding: "var(--space-sm) var(--space-md)",
-                    background: "rgba(255, 255, 255, 0.1)",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                    borderRadius: "var(--radius-lg)",
-                    color: "white",
-                    fontSize: "0.8rem",
-                    cursor: "pointer",
-                    opacity: "0.7",
-                  }}
-                >
-                  🤖 Google Play
-                </button>
-              </div>
-            </div>
           </div>
 
           {/* Categories */}
@@ -415,17 +349,9 @@ const Footer = () => {
                 <div
                   style={{
                     color: "var(--dark-300)",
-                    marginBottom: "var(--space-sm)",
                   }}
                 >
-                  📞 +84 123 456 789
-                </div>
-                <div
-                  style={{
-                    color: "var(--dark-300)",
-                  }}
-                >
-                  🏢 Hà Nội, Việt Nam
+                  🏢 Hà Nội tháng nhớ năm thương && Thread City
                 </div>
               </div>
 
@@ -444,7 +370,7 @@ const Footer = () => {
                   transition: "all var(--duration-normal) var(--ease-spring)",
                 }}
               >
-                💬 Chat với chúng tôi
+                💬 Muốn góp ý gì cho bảnk
               </button>
             </div>
           </div>
@@ -473,9 +399,9 @@ const Footer = () => {
                   color: "var(--dark-400)",
                 }}
               >
-                <span>Được xây dựng với</span>
+                <span>Làm với tình yêu to lớn</span>
                 <span style={{ color: "#ef4444", fontSize: "1rem" }}>❤️</span>
-                <span>tại Việt Nam</span>
+                <span> dành cho đứa em ngu si của tuiiiiiiii</span>
               </div>
             </div>
 

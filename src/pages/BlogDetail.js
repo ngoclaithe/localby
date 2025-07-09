@@ -64,7 +64,7 @@ const BlogDetail = () => {
         
         <p>BanLien Pine Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 3-4) và 2-5 khách đối với phòng bungalow (ảnh 7-8-9). Hiện tại gia đình có 1 phòng bungalow và tương lai sẽ có thêm một phòng nữa. Gia đình hiện có 2 phòng tắm có trang bị bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng bungalow có phòng tắm và phòng vệ sinh khép kín.</p>
         
-        <p><strong>Dịch v��:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
+        <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
         
         <p><strong>Phí dịch vụ:</strong></p>
         <ul>
@@ -95,7 +95,7 @@ const BlogDetail = () => {
         <ul>
           <li>150k/người/đêm cho phòng tập thể</li>
           <li>Ăn uống: 150k/người áp dụng với bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
-          <li>Hư���ng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
+          <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
           <li>Phòng riêng có giá 600k/đêm áp cho tối đa 6 khách</li>
         </ul>
 
@@ -111,7 +111,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/huong-hoan-homestay/8.jpg" alt="Hướng Hoan Homestay - View núi" />
           <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="Hướng Hoan Homestay - Sân" />
         </div>
-        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian t���i.</p>
+        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
         
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
         
@@ -125,7 +125,7 @@ const BlogDetail = () => {
         <h3>Vang A Binh Homestay (0388 572 409 - Vàng A Bình)</h3>
         <div class="image-grid large">
           <img src="/images/ban-lien/vang-a-binh-homestay/1.jpg" alt="Vang A Binh Homestay - Exterior" />
-          <img src="/images/ban-lien/vang-a-binh-homestay/2.jpg" alt="Vang A Binh Homestay - Phòng tập th��" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/2.jpg" alt="Vang A Binh Homestay - Phòng tập" />
           <img src="/images/ban-lien/vang-a-binh-homestay/3.jpg" alt="Vang A Binh Homestay - Khu vực chung" />
           <img src="/images/ban-lien/vang-a-binh-homestay/4.jpg" alt="Vang A Binh Homestay - Phòng ngủ" />
           <img src="/images/ban-lien/vang-a-binh-homestay/5.jpg" alt="Vang A Binh Homestay - Khu bếp" />

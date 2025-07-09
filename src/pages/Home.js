@@ -46,7 +46,7 @@ const Home = () => {
             </h1>
             <p className="hero-description">
               Trải nghiệm du lịch chân thực với những câu chuyện kể từ trái tim
-              người dân địa phương. Khám phá văn hóa, ẩm thực và v��� đẹp ẩn
+              người dân địa phương. Khám phá văn hóa, ẩm thực và vẻ đẹp ẩn
               giấu của mảnh đất hình chữ S qua LocalBy.
             </p>
             <div className="hero-actions">
@@ -233,14 +233,14 @@ const Home = () => {
           <div className="grid destinations-grid">
             {FEATURED_DESTINATIONS.slice(0, 8).map((destination, index) => {
               const imageIds = [
-                "1559827260-dc66d52bef19", // Ha Long Bay
-                "1583417319070-4a69db38a482", // Ho Chi Minh
-                "1588392382425-d9181b0bd8c0", // Da Nang
-                "1552465011-b4e21bf6e79a", // Hoi An
-                "1551632436-cbf8dd35adfa", // Sapa
-                "1528127269322-539801943592", // Phu Quoc
-                "1578662996442-48f60103fc96", // Nha Trang
-                "1571218447-b7ba11f10515", // Da Lat
+                "1589626288925-8b154938a337", // Ha Noi
+                "1603852452440-b383ac720729", // Ho Chi Minh
+                "1603852452378-a4e8d84324a2", // Da Nang
+                "1660562925534-3f6948ac654f", // Hoi An
+                "1693474358354-f3d31c5c5af8", // Sapa
+                "1583402955903-68dd58b0d463", // Phu Quoc
+                "1689326232193-d55f0b7965eb", // Nha Trang
+                "1626608017817-211d7c48177d", // Da Lat
               ];
 
               return (
