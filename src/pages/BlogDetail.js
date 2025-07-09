@@ -58,7 +58,7 @@ const BlogDetail = () => {
 
         <p>(Ngoài ra có thể đặt xe đi Sapa và xuống tại điểm Bến xe trung tâm thành phố Lào Cai, sau đó bắt xe trung chuyển lên thị trấn Bắc Hà. Tại bến xe có rất nhiều xe lên Bắc Hà, để có thêm thông tin về nhà xe vui lòng hỏi sự tư vấn của nhân viên nhà xe. Đối với cách này quý khách sẽ có nhiều lựa chọn về khung giờ hơn, tuy nhiên nhược điểm là sẽ phải đổi xe nhiều lần và tốn nhiều thời gian chờ đợi.)</p>
 
-        <p>Sau khi tới trung tâm thị trấn Bắc Hà ho���c Bến xe Bắc Hà, di chuyển tới Khách sạn Ngân Nga (Ngan Nga Bac Ha Hotel trên Google maps) để nghỉ ngơi hoặc thuê xe máy, liên hệ anh Đông theo SĐT 0817801988. Ngoài ra quý khách cũng có thể đặt dịch vụ xe ôm (khoảng 200k/người) liên hệ chú An - đội trưởng đội xe ôm du lịch Bắc Hà SĐT 0827999339 hoặc taxi (khoảng 700-800k) để tới Bản Liền. Vào mùa cao điểm như tháng 8-9-10 quý khách nên gọi điện đặt xe trước tránh tình trạng quá tải.</p>
+        <p>Sau khi tới trung tâm thị trấn Bắc Hà hoặc Bến xe Bắc Hà, di chuyển tới Khách sạn Ngân Nga (Ngan Nga Bac Ha Hotel trên Google maps) để nghỉ ngơi hoặc thuê xe máy, liên hệ anh Đông theo SĐT 0817801988. Ngoài ra quý khách cũng có thể đặt dịch vụ xe ôm (khoảng 200k/người) liên hệ chú An - đội trưởng đội xe ôm du lịch Bắc Hà SĐT 0827999339 hoặc taxi (khoảng 700-800k) để tới Bản Liền. Vào mùa cao điểm như tháng 8-9-10 quý khách nên gọi điện đặt xe trước tránh tình trạng quá tải.</p>
 
         <p>Tiếp theo, nhập tên homestay tại Bản Liền và di chuyển theo Google Maps. Từ trung tâm Bắc Hà tới Bản Liền quãng đường khoảng 22km tương ứng với hơn 1 tiếng đồng hồ lái xe.</p>
 
@@ -69,7 +69,7 @@ const BlogDetail = () => {
         <p class="image-caption">Hình ảnh 2 và hình ảnh 3</p>
 
         <blockquote>
-          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn ��ường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
+          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
         </blockquote>
 
         <p>Khi gần tới homestay nếu không tìm được đường xuống hoặc đường quá dốc và khó đi, quý khách có thể liên hệ chủ nhà lên hỗ trợ đưa xe và hành lý xuống.</p>
@@ -191,7 +191,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/huong-hoan-homestay/8.jpg" alt="Hướng Hoan Homestay - View núi" />
           <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="Hướng Hoan Homestay - Sân" />
         </div>
-        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng th��m trong thời gian tới.</p>
+        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
 
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
 
@@ -226,10 +226,63 @@ const BlogDetail = () => {
           <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
         </ul>
 
-        <h2>3. Hoạt động trải nghiệm</h2>
-        <p>Tại Bản Liền quý khách có thể trải nghiệm vô số các hoạt động đặc sắc để hiểu hơn về văn hoá của người dân tộc thiểu số nói chung và của người Tày tại Bản Liền nói riêng.</p>
+        <div class="content-section" id="section-3">
+          <h2 class="section-heading"><span class="section-icon">🎯</span>3. Hoạt động trải nghiệm</h2>
 
-        <p>Một số hoạt động có thể kể tới như: Hái chè và làm chè hữu cơ, thăm ruộng bậc thang, cấy lúa, chăn trâu, xúc cá, tắm thác, dùng bữa bên suối, lên rừng lấy tre, làm đũa cẩm truyền thống, nấu ăn cùng gia đình, đan nón lá, văn nghệ truyền thống, trò chơi dân tộc, làm cốm (theo mùa)….</p>
+          <div class="intro-card">
+            <p class="intro-text">🌿 Tại Bản Li��n, bạn sẽ được hòa mình vào cuộc sống của người Tày với những trải nghiệm đích thực không thể tìm thấy ở nơi nào khác!</p>
+          </div>
+
+          <div class="activities-grid">
+            <div class="activity-item">
+              <span class="activity-icon">🍃</span>
+              <span class="activity-name">Hái chè & làm chè hữu cơ</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🌾</span>
+              <span class="activity-name">Thăm ruộng bậc thang</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🌱</span>
+              <span class="activity-name">Cấy lúa</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🐃</span>
+              <span class="activity-name">Chăn trâu</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🐟</span>
+              <span class="activity-name">Xúc cá suối</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🏞️</span>
+              <span class="activity-name">Tắm thác</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🎋</span>
+              <span class="activity-name">Lên rừng lấy tre</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🥢</span>
+              <span class="activity-name">Làm đũa cẩm truyền thống</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">👨‍🍳</span>
+              <span class="activity-name">Nấu ăn cùng gia đình</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">👒</span>
+              <span class="activity-name">Đan nón lá</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🎭</span>
+              <span class="activity-name">Văn nghệ truyền thống</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🌾</span>
+              <span class="activity-name">Làm cốm (theo mùa)</span>
+            </div>
+          </div>
 
         <h3>Lịch trình tham khảo cho chương trình trải nghiệm 2 ngày 1 đêm tại Bản Liền:</h3>
 
@@ -259,7 +312,7 @@ const BlogDetail = () => {
 
     // Default content for other posts (if any)
     return `
-      <p>Vi��t Nam - đất nước hình chữ S xinh đẹp của chúng ta, không chỉ nổi tiếng với những cảnh quan thiên nhiên hùng vĩ mà còn với nền ẩm thực phong phú và đa dạng.</p>
+      <p>Việt Nam - đất nước hình chữ S xinh đẹp của chúng ta, không chỉ nổi tiếng với những cảnh quan thiên nhiên hùng vĩ mà còn với nền ẩm thực phong phú và đa dạng.</p>
       <p><em>Hãy cùng LocalBy khám phá thêm nhiều câu chuyện du lịch thú vị khác!</em></p>
     `;
   };
