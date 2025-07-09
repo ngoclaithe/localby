@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { mockData } from "../services/api";
 import { formatDate, formatReadingTime } from "../utils/formatters";
 import { BLOG_CATEGORIES } from "../utils/constants";
+import "../BlogDetailGenZ.css";
 
 const Blog = () => {
   const [allPosts, setAllPosts] = useState([]);
@@ -41,15 +42,17 @@ const Blog = () => {
   }
 
   return (
-    <div className="blog-page">
+    <div className="blog-page genz-blog">
       {/* Hero Section */}
-      <section className="blog-hero">
-        <div className="blog-hero-background"></div>
+      <section className="blog-hero genz-hero">
+        <div className="blog-hero-background genz-background"></div>
         <div className="container">
           <div className="blog-hero-content">
-            <h1 className="blog-hero-title">
+            <div className="hero-badge">✨ Khám phá Việt Nam</div>
+            <h1 className="blog-hero-title genz-hero-title">
               <span className="title-main">Câu chuyện</span>
               <span className="title-accent">Du lịch</span>
+              <span className="title-emoji">🇻🇳</span>
             </h1>
             <p className="blog-hero-description">
               Khám phá Việt Nam qua những câu chuyện chân thực từ người dân địa
