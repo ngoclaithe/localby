@@ -103,7 +103,7 @@ const Destinations = () => {
       setFilteredDestinations(enhancedDestinations);
       setIsLoading(false);
     }, 800);
-  }, []);
+  }, [destinationDetails]);
 
   useEffect(() => {
     let filtered = destinations;
