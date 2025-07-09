@@ -148,14 +148,14 @@
 
 .stat-item {
   text-align: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 15px;
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(255, 255, 255, 1);
   min-width: 100px;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .stat-item:hover {
@@ -166,17 +166,17 @@
   display: block;
   font-size: 2rem;
   font-weight: 900;
-  color: #ffd700;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  color: #1e293b;
+  text-shadow: none;
 }
 
 .stat-label {
   display: block;
-  color: #ffffff;
+  color: #475569;
   font-weight: 700;
   font-size: 0.95em;
   margin-top: 5px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: none;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
