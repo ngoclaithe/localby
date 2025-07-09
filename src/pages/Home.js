@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { mockData } from "../services/api";
 import { formatDate, formatReadingTime } from "../utils/formatters";
 import { BLOG_CATEGORIES, FEATURED_DESTINATIONS } from "../utils/constants";
+import "../HomeGenZ.css";
 
 const Home = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
@@ -70,7 +71,7 @@ const Home = () => {
       <section className="hero-section genz-hero">
         <div className="hero-background">
           <div className="floating-elements">
-            <div className="floating-emoji">���️</div>
+            <div className="floating-emoji">🏞️</div>
             <div className="floating-emoji">🍜</div>
             <div className="floating-emoji">📱</div>
             <div className="floating-emoji">✨</div>
@@ -425,7 +426,7 @@ const Home = () => {
             <div className="newsletter-form">
               <input
                 type="email"
-                placeholder="Nhập email của b��n..."
+                placeholder="Nhập email của bạn..."
                 className="newsletter-input"
               />
               <button className="newsletter-button">🚀 Subscribe ngay!</button>
