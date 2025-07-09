@@ -7,6 +7,11 @@ import { BLOG_CATEGORIES, FEATURED_DESTINATIONS } from "../utils/constants";
 const Home = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [imagePreview, setImagePreview] = useState({
+    open: false,
+    src: "",
+    alt: "",
+  });
 
   useEffect(() => {
     // Simulate API loading
