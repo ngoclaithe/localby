@@ -7,10 +7,10 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Trang chủ", path: "/", icon: "🏠" },
-    { name: "Điểm đến", path: "/destinations", icon: "🗺️" },
-    { name: "Đi Đâu Mới Zui?	", path: "/blog", icon: "📝" },
-    { name: "Giới thiệu", path: "/about", icon: "💫" },
-    { name: "Liên hệ", path: "/contact", icon: "📞" },
+    { name: "Đi Đâu Này?", path: "/destinations", icon: "🗺️" },
+    { name: "Đi Đâu Mới Zui?", path: "/blog", icon: "📝" },
+    { name: "Về tui", path: "/about", icon: "💫" },
+    { name: "Chat với bảnk nè", path: "/contact", icon: "📞" },
   ];
 
   const featuredCategories = BLOG_CATEGORIES.slice(0, 6);
@@ -18,7 +18,7 @@ const Footer = () => {
   const supportLinks = [
     { name: "Trung tâm trợ giúp", path: "/help" },
     { name: "Câu hỏi thường gặp", path: "/faq" },
-    { name: "Chính sách bảo mật", path: "/privacy" },
+    { name: "Chính s��ch bảo mật", path: "/privacy" },
     { name: "Điều khoản sử dụng", path: "/terms" },
     { name: "Sitemap", path: "/sitemap" },
   ];
@@ -191,7 +191,9 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://tiktok.com/@localby"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="social-link"
                   aria-label="TikTok"
                   title="TikTok"

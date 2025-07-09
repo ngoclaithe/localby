@@ -6,17 +6,14 @@ import { BLOG_CATEGORIES, FEATURED_DESTINATIONS } from "../utils/constants";
 
 const Home = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
-  const [latestPosts, setLatestPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulate API loading
     setTimeout(() => {
       const featured = mockData.blogPosts.filter((post) => post.featured);
-      const latest = mockData.blogPosts.slice(0, 6);
 
       setFeaturedPosts(featured);
-      setLatestPosts(latest);
       setIsLoading(false);
     }, 500);
   }, []);
@@ -49,8 +46,8 @@ const Home = () => {
             </h1>
             <p className="hero-description">
               Trải nghiệm du lịch chân thực với những câu chuyện kể từ trái tim
-              người dân địa phương. Khám phá văn hóa, ẩm thực và vẻ đẹp ẩn giấu
-              của mảnh đất hình chữ S qua LocalBy.
+              người dân địa phương. Khám phá văn hóa, ẩm thực và v��� đẹp ẩn
+              giấu của mảnh đất hình chữ S qua LocalBy.
             </p>
             <div className="hero-actions">
               <Link to="/destinations" className="cta-button primary">
@@ -124,7 +121,13 @@ const Home = () => {
       )}
 
       {/* Categories Section */}
-      <section className="section categories-section">
+      <section
+        className="section categories-section"
+        style={{
+          background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+          padding: "var(--space-5xl) 0",
+        }}
+      >
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">
@@ -181,6 +184,10 @@ const Home = () => {
                   style={{
                     animationDelay: `${index * 0.1}s`,
                     "--category-gradient": categoryData.color,
+                    background: "rgba(255, 255, 255, 0.95)",
+                    backdropFilter: "blur(10px)",
+                    border: "1px solid rgba(255, 255, 255, 0.3)",
+                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
                   }}
                 >
                   <div className="category-card-background"></div>
@@ -205,84 +212,6 @@ const Home = () => {
                   </div>
                   <div className="category-hover-effect"></div>
                 </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Posts */}
-      <section className="section latest-section">
-        <div className="container">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginBottom: "var(--space-3xl)",
-              flexWrap: "wrap",
-              gap: "var(--space-lg)",
-            }}
-          >
-            <h2
-              className="section-title"
-              style={{ marginBottom: 0, textAlign: "left" }}
-            >
-              <span className="text-gradient">📝 Câu chuyện mới nhất</span>
-            </h2>
-            <Link
-              to="/blog"
-              className="cta-button secondary"
-              style={{
-                padding: "var(--space-md) var(--space-xl)",
-                fontSize: "1rem",
-              }}
-            >
-              Xem tất cả →
-            </Link>
-          </div>
-          <div className="grid posts-grid">
-            {latestPosts.map((post, index) => {
-              const imageIds = [
-                "1588392382425-d9181b0bd8c0",
-                "1552465011-b4e21bf6e79a",
-                "1583417319070-4a69db38a482",
-                "1559827260-dc66d52bef19",
-                "1551632436-cbf8dd35adfa",
-                "1528127269322-539801943592",
-              ];
-
-              return (
-                <article
-                  key={post.id}
-                  className="card post-card fade-in-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="card-image">
-                    <img
-                      src={`https://images.unsplash.com/photo-${imageIds[index % imageIds.length]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
-                      alt={post.title}
-                      loading="lazy"
-                    />
-                    <div className="card-category">
-                      {
-                        BLOG_CATEGORIES.find(
-                          (cat) => cat.slug === post.category,
-                        )?.name
-                      }
-                    </div>
-                  </div>
-                  <div className="card-content">
-                    <h3 className="card-title">
-                      <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                    </h3>
-                    <p className="card-excerpt">{post.excerpt}</p>
-                    <div className="card-meta">
-                      <span>📅 {formatDate(post.published_at)}</span>
-                      <span>👁️ {post.views.toLocaleString()} lượt xem</span>
-                    </div>
-                  </div>
-                </article>
               );
             })}
           </div>
@@ -340,9 +269,10 @@ const Home = () => {
       <section
         className="section"
         style={{
-          background: "var(--gradient-hero)",
+          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
           color: "white",
           textAlign: "center",
+          padding: "var(--space-5xl) 0",
         }}
       >
         <div className="container">
@@ -353,10 +283,8 @@ const Home = () => {
                 fontSize: "clamp(2rem, 5vw, 3rem)",
                 fontWeight: "700",
                 marginBottom: "var(--space-lg)",
-                background: "linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
+                color: "white",
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
               }}
             >
               📮 Nhận tin mới nhất
@@ -365,8 +293,9 @@ const Home = () => {
               style={{
                 fontSize: "1.2rem",
                 marginBottom: "var(--space-2xl)",
-                opacity: "0.9",
+                color: "rgba(255, 255, 255, 0.95)",
                 lineHeight: "1.7",
+                textShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
               }}
             >
               Đăng ký để nhận những câu chuyện du lịch độc đáo và mẹo hay từ
@@ -388,14 +317,13 @@ const Home = () => {
                   flex: "1",
                   minWidth: "250px",
                   padding: "var(--space-lg)",
-                  border: "none",
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
                   borderRadius: "var(--radius-xl)",
                   fontSize: "1rem",
                   fontFamily: "var(--font-primary)",
-                  background: "rgba(255, 255, 255, 0.1)",
+                  background: "rgba(255, 255, 255, 0.95)",
                   backdropFilter: "blur(10px)",
-                  color: "white",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
+                  color: "var(--color-neutral-800)",
                 }}
               />
               <button
