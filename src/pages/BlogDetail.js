@@ -160,14 +160,14 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/forest-homestay/2.jpg" alt="Forest Homestay - Phòng tập thể" />
           <img src="/images/ban-lien/forest-homestay/3.jpg" alt="Forest Homestay - Phòng riêng" />
           <img src="/images/ban-lien/forest-homestay/4.jpg" alt="Forest Homestay - Khu vực chung" />
-          <img src="/images/ban-lien/forest-homestay/5.jpg" alt="Forest Homestay - Ph��ng tắm" />
+          <img src="/images/ban-lien/forest-homestay/5.jpg" alt="Forest Homestay - Phòng tắm" />
           <img src="/images/ban-lien/forest-homestay/6.jpg" alt="Forest Homestay - Khu bếp" />
           <img src="/images/ban-lien/forest-homestay/7.jpg" alt="Forest Homestay - Phòng bungalow" />
           <img src="/images/ban-lien/forest-homestay/8.jpg" alt="Forest Homestay - Toilet riêng" />
           <img src="/images/ban-lien/forest-homestay/9.jpg" alt="Forest Homestay - View" />
         </div>
 
-        <p>Bản Liền Forest Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 4) và 2-6 khách đối với phòng bungalow 2 giường (ảnh 7-8). Hiện tại gia đình có 1 phòng riêng chứa được tối đa 6 người. Homestay được trang bị 2 phòng tắm có bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng riêng có phòng tắm và phòng vệ sinh khép kín (ảnh 9).</p>
+        <p>Bản Liền Forest Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (��nh 4) và 2-6 khách đối với phòng bungalow 2 giường (ảnh 7-8). Hiện tại gia đình có 1 phòng riêng chứa được tối đa 6 người. Homestay được trang bị 2 phòng tắm có bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng riêng có phòng tắm và phòng vệ sinh khép kín (ảnh 9).</p>
 
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
 
@@ -191,7 +191,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/huong-hoan-homestay/8.jpg" alt="Hướng Hoan Homestay - View núi" />
           <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="Hướng Hoan Homestay - Sân" />
         </div>
-        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng t���m có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
+        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
 
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
 
@@ -438,9 +438,17 @@ const BlogDetail = () => {
   const category = BLOG_CATEGORIES.find((cat) => cat.slug === post.category);
 
   return (
-    <div className="blog-detail-page">
+    <div className="blog-detail-page genz-style">
+      {/* Reading Progress Bar */}
+      <div className="reading-progress-bar">
+        <div
+          className="reading-progress-fill"
+          style={{ width: `${readingProgress * 100}%` }}
+        ></div>
+      </div>
+
       {/* Breadcrumb */}
-      <section className="breadcrumb">
+      <section className="breadcrumb modern-breadcrumb">
         <div className="container">
           <nav className="breadcrumb-nav">
             <Link to="/" className="breadcrumb-link">
@@ -585,7 +593,7 @@ const BlogDetail = () => {
                 <nav className="table-of-contents">
                   <ul>
                     <li>
-                      <a href="#section-1">Di chuyển</a>
+                      <a href="#section-1">Di chuy���n</a>
                     </li>
                     <li>
                       <a href="#section-2">Các cơ sở lưu trú</a>
