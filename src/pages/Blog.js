@@ -17,108 +17,15 @@ const Blog = () => {
   const [sortBy, setSortBy] = useState("latest");
   const [isLoading, setIsLoading] = useState(true);
 
-  // Generate more mock posts for better demonstration
-  const generateMorePosts = () => {
-    const additionalPosts = [
-      {
-        id: 3,
-        title: "Những địa điểm check-in đẹp nhất Sapa",
-        slug: "nhung-dia-diem-check-in-dep-nhat-sapa",
-        excerpt:
-          "Sapa không chỉ có ruộng bậc thang mà còn có rất nhiều địa điểm chụp ảnh đẹp lung linh...",
-        content: "Nội dung bài viết đầy đủ...",
-        author: "Thu Hà",
-        category: "thien-nhien",
-        tags: ["Sapa", "check-in", "photography"],
-        published_at: "2024-01-12T09:15:00Z",
-        views: 1680,
-        reading_time: 6,
-        featured: false,
-      },
-      {
-        id: 4,
-        title: "Lễ hội Tết Nguyên Đán ở miền Bắc",
-        slug: "le-hoi-tet-nguyen-dan-o-mien-bac",
-        excerpt:
-          "Tết Nguyên Đán là dịp lễ quan trọng nhất trong năm của người Việt. Hãy cùng khám phá...",
-        content: "Nội dung bài viết đầy đủ...",
-        author: "Văn Minh",
-        category: "festival",
-        tags: ["Tết", "lễ hội", "truyền thống"],
-        published_at: "2024-01-08T16:45:00Z",
-        views: 2340,
-        reading_time: 8,
-        featured: true,
-      },
-      {
-        id: 5,
-        title: "Bí quyết du lịch bụi Việt Nam với ngân sách thấp",
-        slug: "bi-quyet-du-lich-bui-viet-nam-voi-ngan-sach-thap",
-        excerpt:
-          "Du lịch bụi không có nghĩa là phải hy sinh chất lượng. Đây là những mẹo hay từ kinh nghiệm thực tế...",
-        content: "Nội dung bài viết đầy đủ...",
-        author: "Quốc Dũng",
-        category: "kinh-nghiem",
-        tags: ["du lịch bụi", "tiết kiệm", "mẹo hay"],
-        published_at: "2024-01-05T11:20:00Z",
-        views: 3120,
-        reading_time: 10,
-        featured: false,
-      },
-      {
-        id: 6,
-        title: "Khám phá văn hóa cà phê Sài Gòn",
-        slug: "kham-pha-van-hoa-ca-phe-sai-gon",
-        excerpt:
-          "Sài Gòn và cà phê có một mối quan hệ đặc biệt. Từ những quán cà phê vỉa hè đến các chuỗi hiện đại...",
-        content: "Nội dung bài viết đầy đủ...",
-        author: "Thảo Nguyên",
-        category: "van-hoa",
-        tags: ["Sài Gòn", "cà phê", "văn hóa"],
-        published_at: "2024-01-03T14:30:00Z",
-        views: 1890,
-        reading_time: 7,
-        featured: false,
-      },
-      {
-        id: 7,
-        title: "Phố đi bộ Hồ Gươm về đêm",
-        slug: "pho-di-bo-ho-guom-ve-dem",
-        excerpt:
-          "Khi màn đêm buông xuống, phố đi bộ quanh Hồ Gươm trở nên sống động với nhiều hoạt động thú vị...",
-        content: "Nội dung bài viết đầy đủ...",
-        author: "Minh Anh",
-        category: "pho-tay",
-        tags: ["Hà Nội", "phố đi bộ", "đêm"],
-        published_at: "2024-01-01T19:00:00Z",
-        views: 1456,
-        reading_time: 5,
-        featured: false,
-      },
-      {
-        id: 8,
-        title: "Top 5 món ăn vặt không thể bỏ qua ở Huế",
-        slug: "top-5-mon-an-vat-khong-the-bo-qua-o-hue",
-        excerpt:
-          "Huế không chỉ nổi tiếng với những món ăn hoàng gia mà còn có rất nhiều món ăn vặt hấp dẫn...",
-        content: "Nội dung bài viết đầy đủ...",
-        author: "Lan Phương",
-        category: "am-thuc",
-        tags: ["Huế", "ăn vặt", "món ngon"],
-        published_at: "2023-12-28T10:15:00Z",
-        views: 2567,
-        reading_time: 6,
-        featured: false,
-      },
-    ];
-
-    return [...mockData.blogPosts, ...additionalPosts];
+  // Use only the mock data from API
+  const getAllPosts = () => {
+    return mockData.blogPosts;
   };
 
   useEffect(() => {
     // Simulate API loading
     setTimeout(() => {
-      const posts = generateMorePosts();
+      const posts = getAllPosts();
       setAllPosts(posts);
       setFilteredPosts(posts);
       setIsLoading(false);

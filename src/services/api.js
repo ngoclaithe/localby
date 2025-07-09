@@ -94,14 +94,21 @@ export const mockData = {
         "Ở bản Liền, người ta không cần báo thức. Một sáng dậy giữa sương, ngắm ruộng bậc thang xa xa, nghe tiếng gà gáy vọng qua thung – đáng 1000 story Instagram luôn!",
       content: "Nội dung bài viết đầy đủ...",
       author: "Phúc Đỗ TourGuide",
-      category: "du-lich",
-      tags: ["Bắc Hà", "bản Liền", "du lịch vùng cao", "Lào Cai", "cuối tuần chill"],
-      featured_image: "https://vntravel.org.vn/uploads/images/2025/06/26/509441539-1303551227806945-1122938122157054925-n-1750898806.jpg",
+      category: "thien-nhien",
+      tags: [
+        "Bắc Hà",
+        "bản Liền",
+        "du lịch vùng cao",
+        "Lào Cai",
+        "cuối tuần chill",
+      ],
+      featured_image:
+        "https://vntravel.org.vn/uploads/images/2025/06/26/509441539-1303551227806945-1122938122157054925-n-1750898806.jpg",
       published_at: "2025-07-09T10:00:00Z",
       views: 1250,
       reading_time: 4,
       featured: true,
-    }
+    },
   ],
 
   destinations: [
