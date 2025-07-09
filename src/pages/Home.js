@@ -216,10 +216,16 @@ const Home = () => {
                       <div className="category-icon-glow"></div>
                     </div>
                     <div className="category-text">
-                      <h3 className="category-name-enhanced">
+                      <h3
+                        className="category-name-enhanced"
+                        style={{ color: "var(--dark-800)" }}
+                      >
                         {category.name}
                       </h3>
-                      <p className="category-description">
+                      <p
+                        className="category-description"
+                        style={{ color: "var(--dark-600)" }}
+                      >
                         {categoryData.description}
                       </p>
                     </div>
