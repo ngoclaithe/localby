@@ -127,7 +127,7 @@ const Home = () => {
                   alt="User 1"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=40&h=40&fit=crop&crop=face"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face"
                   alt="User 2"
                 />
                 <img
