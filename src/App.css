@@ -680,6 +680,20 @@ body {
   gap: var(--space-xl);
 }
 
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-medium);
+  transition: all var(--duration-normal) var(--ease-spring);
+  aspect-ratio: 4/3;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
 /* Card Components - Futuristic */
 .card {
   background: linear-gradient(
