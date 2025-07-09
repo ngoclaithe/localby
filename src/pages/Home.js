@@ -388,14 +388,13 @@ const Home = () => {
                   flex: "1",
                   minWidth: "250px",
                   padding: "var(--space-lg)",
-                  border: "none",
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
                   borderRadius: "var(--radius-xl)",
                   fontSize: "1rem",
                   fontFamily: "var(--font-primary)",
                   background: "rgba(255, 255, 255, 0.1)",
                   backdropFilter: "blur(10px)",
                   color: "white",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
                 }}
               />
               <button
