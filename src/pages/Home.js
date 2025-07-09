@@ -7,6 +7,11 @@ import { BLOG_CATEGORIES, FEATURED_DESTINATIONS } from "../utils/constants";
 const Home = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [imagePreview, setImagePreview] = useState({
+    open: false,
+    src: "",
+    alt: "",
+  });
 
   useEffect(() => {
     // Simulate API loading
@@ -36,6 +41,31 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      {/* Image Preview Modal */}
+      {imagePreview.open && (
+        <div
+          className="image-preview-modal"
+          onClick={() => setImagePreview({ open: false, src: "", alt: "" })}
+        >
+          <div
+            className="image-preview-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="image-preview-close"
+              onClick={() => setImagePreview({ open: false, src: "", alt: "" })}
+            >
+              ✕
+            </button>
+            <img
+              src={imagePreview.src}
+              alt={imagePreview.alt}
+              className="image-preview-img"
+            />
+            <div className="image-preview-caption">{imagePreview.alt}</div>
+          </div>
+        </div>
+      )}
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
@@ -46,8 +76,8 @@ const Home = () => {
             </h1>
             <p className="hero-description">
               Trải nghiệm du lịch chân thực với những câu chuyện kể từ trái tim
-              người dân địa phương. Khám phá văn hóa, ẩm thực và vẻ đẹp ẩn
-              giấu của mảnh đất hình chữ S qua LocalBy.
+              người dân địa phương. Khám phá văn hóa, ẩm thực và vẻ đẹp ẩn giấu
+              của mảnh đất hình chữ S qua LocalBy.
             </p>
             <div className="hero-actions">
               <Link to="/destinations" className="cta-button primary">
@@ -86,11 +116,7 @@ const Home = () => {
                 >
                   <div className="card-image">
                     <img
-                      src={`https://images.unsplash.com/photo-${
-                        index % 2 === 0
-                          ? "1583417319070-4a69db38a482"
-                          : "1588392382425-d9181b0bd8c0"
-                      }?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
+                      src={"/images/ban-lien/cover.jpg"}
                       alt={post.title}
                       loading="lazy"
                     />
@@ -124,16 +150,32 @@ const Home = () => {
       <section
         className="section categories-section"
         style={{
-          background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+          background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
           padding: "var(--space-5xl) 0",
         }}
       >
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">
-              <span className="text-gradient">🗂️ Khám phá theo chủ đề</span>
+            <h2 className="section-title" style={{ color: "var(--dark-800)" }}>
+              <span
+                style={{
+                  background:
+                    "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                🗂️ Khám phá theo chủ đề
+              </span>
             </h2>
-            <p className="section-subtitle">
+            <p
+              className="section-subtitle"
+              style={{
+                color: "var(--dark-600)",
+                fontSize: "1.1rem",
+              }}
+            >
               Tìm hiểu Việt Nam qua những góc nhìn đa dạng từ người dân địa
               phương
             </p>
@@ -186,8 +228,9 @@ const Home = () => {
                     "--category-gradient": categoryData.color,
                     background: "rgba(255, 255, 255, 0.95)",
                     backdropFilter: "blur(10px)",
-                    border: "1px solid rgba(255, 255, 255, 0.3)",
-                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+                    border: "1px solid rgba(0, 0, 0, 0.1)",
+                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.15)",
+                    color: "var(--dark-800)",
                   }}
                 >
                   <div className="category-card-background"></div>
@@ -199,14 +242,23 @@ const Home = () => {
                       <div className="category-icon-glow"></div>
                     </div>
                     <div className="category-text">
-                      <h3 className="category-name-enhanced">
+                      <h3
+                        className="category-name-enhanced"
+                        style={{ color: "var(--dark-800)" }}
+                      >
                         {category.name}
                       </h3>
-                      <p className="category-description">
+                      <p
+                        className="category-description"
+                        style={{ color: "var(--dark-600)" }}
+                      >
                         {categoryData.description}
                       </p>
                     </div>
-                    <div className="category-arrow">
+                    <div
+                      className="category-arrow"
+                      style={{ color: "var(--dark-500)" }}
+                    >
                       <span>→</span>
                     </div>
                   </div>
@@ -244,21 +296,35 @@ const Home = () => {
               ];
 
               return (
-                <Link
+                <div
                   key={index}
-                  to={`/destination/${destination.toLowerCase().replace(/\s+/g, "-")}`}
                   className="destination-card fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
+                  onMouseEnter={() =>
+                    setImagePreview({
+                      open: true,
+                      src: `https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
+                      alt: destination,
+                    })
+                  }
+                  onMouseLeave={() =>
+                    setImagePreview({ open: false, src: "", alt: "" })
+                  }
                 >
-                  <div className="destination-image">
-                    <img
-                      src={`https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
-                      alt={destination}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="destination-name">{destination}</div>
-                </Link>
+                  <Link
+                    to={`/destination/${destination.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="destination-link"
+                  >
+                    <div className="destination-image">
+                      <img
+                        src={`https://images.unsplash.com/photo-${imageIds[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
+                        alt={destination}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="destination-name">{destination}</div>
+                  </Link>
+                </div>
               );
             })}
           </div>
@@ -367,7 +433,7 @@ const Home = () => {
             {[
               { number: "500+", label: "Bài viết", icon: "📝" },
               { number: "50+", label: "Điểm đến", icon: "🗺️" },
-              { number: "10K+", label: "Độc giả", icon: "👥" },
+              { number: "10K+", label: "Độc giả", icon: "��" },
               { number: "100+", label: "Tác giả", icon: "✍️" },
             ].map((stat, index) => (
               <div

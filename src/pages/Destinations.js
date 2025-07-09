@@ -161,15 +161,42 @@ const Destinations = () => {
             <div className="hero-stats">
               <div className="stat-item">
                 <span className="stat-number">8+</span>
-                <span className="stat-label">Điểm đến</span>
+                <span
+                  className="stat-label"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.95)",
+                    fontWeight: "600",
+                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  Điểm đến
+                </span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">100+</span>
-                <span className="stat-label">Địa điểm</span>
+                <span
+                  className="stat-label"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.95)",
+                    fontWeight: "600",
+                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  Địa điểm
+                </span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">1000+</span>
-                <span className="stat-label">Trải nghiệm</span>
+                <span
+                  className="stat-label"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.95)",
+                    fontWeight: "600",
+                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  Trải nghiệm
+                </span>
               </div>
             </div>
           </div>
