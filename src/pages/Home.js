@@ -229,7 +229,10 @@ const Home = () => {
                         {categoryData.description}
                       </p>
                     </div>
-                    <div className="category-arrow">
+                    <div
+                      className="category-arrow"
+                      style={{ color: "var(--dark-500)" }}
+                    >
                       <span>→</span>
                     </div>
                   </div>
