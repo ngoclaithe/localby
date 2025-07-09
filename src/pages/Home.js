@@ -86,11 +86,7 @@ const Home = () => {
                 >
                   <div className="card-image">
                     <img
-                      src={`https://images.unsplash.com/photo-${
-                        index % 2 === 0
-                          ? "1583417319070-4a69db38a482"
-                          : "1588392382425-d9181b0bd8c0"
-                      }?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
+                      src={"/images/ban-lien/cover.jpg"}
                       alt={post.title}
                       loading="lazy"
                     />
