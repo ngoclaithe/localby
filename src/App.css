@@ -2153,12 +2153,13 @@ body {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-}
 
 .blog-stat .stat-label {
   font-size: 1rem;
-  opacity: 0.9;
-  font-weight: 500;
+  opacity: 0.95;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Featured Posts Section */
