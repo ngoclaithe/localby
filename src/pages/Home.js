@@ -6,17 +6,14 @@ import { BLOG_CATEGORIES, FEATURED_DESTINATIONS } from "../utils/constants";
 
 const Home = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
-  const [latestPosts, setLatestPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulate API loading
     setTimeout(() => {
       const featured = mockData.blogPosts.filter((post) => post.featured);
-      const latest = mockData.blogPosts.slice(0, 6);
 
       setFeaturedPosts(featured);
-      setLatestPosts(latest);
       setIsLoading(false);
     }, 500);
   }, []);
