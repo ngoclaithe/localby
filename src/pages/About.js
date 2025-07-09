@@ -44,7 +44,7 @@ const About = () => {
       icon: "🤝",
       title: "Cộng đồng",
       description:
-        "Kết nối du khách với người dân địa phương, tạo ra những trải nghiệm ý nghĩa và bền vững",
+        "Kết nối du khách với người dân đ��a phương, tạo ra những trải nghiệm ý nghĩa và bền vững",
     },
     {
       icon: "💡",
@@ -236,37 +236,29 @@ const About = () => {
                   📖 Câu chuyện của chúng tôi
                 </span>
               </h2>
-              <div className="story-timeline">
-                <div className="timeline-item">
-                  <div className="timeline-year">2023</div>
-                  <div className="timeline-content">
-                    <h4>Khởi đầu hành trình</h4>
-                    <p>
-                      LocalBy được thành lập với mong muốn chia sẻ vẻ đẹp Việt
-                      Nam qua góc nhìn của người dân địa phương.
-                    </p>
-                  </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-year">2024</div>
-                  <div className="timeline-content">
-                    <h4>Phát triển cộng đồng</h4>
-                    <p>
-                      Kết nối với hơn 100 tác giả địa phương từ khắp 63 tỉnh
-                      thành, tạo ra một mạng lưới chia sẻ phong phú.
-                    </p>
-                  </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-year">Tương lai</div>
-                  <div className="timeline-content">
-                    <h4>Mở rộng tầm nhìn</h4>
-                    <p>
-                      Phát triển thành nền tảng du lịch bền vững hàng đầu, kết
-                      nối du khách với trải nghiệm chân thực nhất.
-                    </p>
-                  </div>
-                </div>
+              <div className="story-content-casual">
+                <p
+                  style={{
+                    fontSize: "1.2rem",
+                    lineHeight: "1.6",
+                    marginBottom: "var(--space-lg)",
+                  }}
+                >
+                  Lý do đơn giản là bảnk tình cờ lướt Threads thấy bài tổng hợp
+                  của bác Phúc Đỗ hay quá, bảnk làm lưu tổng hợp kết hợp vài
+                  blog để hôm sau em gái bảnk biết chỗ xem. Thế thôi hẹ hẹ hẹ 😆
+                </p>
+                <p
+                  style={{
+                    fontSize: "1rem",
+                    lineHeight: "1.6",
+                    color: "var(--color-neutral-600)",
+                  }}
+                >
+                  Rồi càng ngày càng nhiều người hỏi, bảnk chia sẻ thêm... và
+                  thế là LocalBy ra đời! Từ một ý tưởng nhỏ đơn giản đến một
+                  cộng đồng yêu du lịch thật sự. Ai ngờ được nhỉ? 🤪
+                </p>
               </div>
             </div>
             <div className="story-image">
