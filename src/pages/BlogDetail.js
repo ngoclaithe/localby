@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { mockData } from "../services/api";
 import { formatDate, formatReadingTime } from "../utils/formatters";
 import { BLOG_CATEGORIES } from "../utils/constants";
+import { usePerformanceMonitor } from "../hooks/usePerformanceMonitor";
 import "../BlogDetailGenZ.css";
 
 const BlogDetail = () => {
@@ -11,6 +12,9 @@ const BlogDetail = () => {
   const [relatedPosts, setRelatedPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [readingProgress, setReadingProgress] = useState(0);
+
+  // Performance monitoring
+  usePerformanceMonitor("BlogDetail");
 
   // Optimized scroll progress with throttling
   const updateReadingProgress = useCallback(() => {
@@ -83,7 +87,7 @@ const BlogDetail = () => {
         <p class="image-caption">Hình ảnh 2 và hình ảnh 3</p>
 
         <blockquote>
-          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ng��y mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe s��. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
+          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
         </blockquote>
 
         <p>Khi gần tới homestay nếu không tìm được đường xuống hoặc đường quá dốc và khó đi, quý khách có thể liên hệ chủ nhà lên hỗ trợ đưa xe và hành lý xuống.</p>
@@ -203,7 +207,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/huong-hoan-homestay/6.jpg" alt="Hướng Hoan Homestay - Khu vực ăn" />
           <img src="/images/ban-lien/huong-hoan-homestay/7.jpg" alt="Hướng Hoan Homestay - Giường ngủ" />
           <img src="/images/ban-lien/huong-hoan-homestay/8.jpg" alt="Hướng Hoan Homestay - View núi" />
-          <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="Hướng Hoan Homestay - Sân" />
+          <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="H��ớng Hoan Homestay - Sân" />
         </div>
         <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
 
@@ -220,7 +224,7 @@ const BlogDetail = () => {
         <div class="image-grid large">
           <img src="/images/ban-lien/vang-a-binh-homestay/1.jpg" alt="Vang A Binh Homestay - Exterior" />
           <img src="/images/ban-lien/vang-a-binh-homestay/2.jpg" alt="Vang A Binh Homestay - Phòng tập" />
-          <img src="/images/ban-lien/vang-a-binh-homestay/3.jpg" alt="Vang A Binh Homestay - Khu vực chung" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/3.jpg" alt="Vang A Binh Homestay - Khu v��c chung" />
           <img src="/images/ban-lien/vang-a-binh-homestay/4.jpg" alt="Vang A Binh Homestay - Phòng ngủ" />
           <img src="/images/ban-lien/vang-a-binh-homestay/5.jpg" alt="Vang A Binh Homestay - Khu bếp" />
           <img src="/images/ban-lien/vang-a-binh-homestay/6.jpg" alt="Vang A Binh Homestay - Khu vực ăn" />
@@ -380,7 +384,7 @@ const BlogDetail = () => {
         <blockquote>
           <strong>Lưu ý:</strong><br/>
           Đây chỉ là lịch trình tham khảo, tuỳ vào tình hình thời tiết và mùa vụ mà các hoạt động trải nghiệm có thể khác nhau và có những điều chỉnh sao cho phù hợp với tình hình thực tế. Để có thêm thông tin về những hoạt động trải nghiệm cụ thể theo từng ngày quý khách vui lòng liên hệ với chủ nhà để được tư vấn thêm.<br/>
-          Các hoạt động trải nghiệm áp d��ng cho tất cả các hộ homestay tại Bản Liền.
+          Các hoạt động trải nghiệm áp dụng cho tất cả các hộ homestay tại Bản Liền.
         </blockquote>
       `;
       }
