@@ -103,7 +103,7 @@ const BlogDetail = () => {
         <div class="image-grid large">
           <img src="/images/ban-lien/huong-hoan-homestay/1.jpg" alt="Hướng Hoan Homestay - Exterior" />
           <img src="/images/ban-lien/huong-hoan-homestay/2.jpg" alt="Hướng Hoan Homestay - Phòng tập thể" />
-          <img src="/images/ban-lien/huong-hoan-homestay/3-area.jpg" alt="Hướng Hoan Homestay - Khu vực chung" />
+          <img src="/images/ban-lien/huong-hoan-homestay/3.jpg" alt="Hướng Hoan Homestay - Khu vực chung" />
           <img src="/images/ban-lien/huong-hoan-homestay/4.jpg" alt="Hướng Hoan Homestay - Phòng tắm" />
           <img src="/images/ban-lien/huong-hoan-homestay/5.jpg" alt="Hướng Hoan Homestay - Khu bếp" />
           <img src="/images/ban-lien/huong-hoan-homestay/6.jpg" alt="Hướng Hoan Homestay - Khu vực ăn" />
