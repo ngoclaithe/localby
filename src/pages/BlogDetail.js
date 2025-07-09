@@ -160,7 +160,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/forest-homestay/2.jpg" alt="Forest Homestay - Phòng tập thể" />
           <img src="/images/ban-lien/forest-homestay/3.jpg" alt="Forest Homestay - Phòng riêng" />
           <img src="/images/ban-lien/forest-homestay/4.jpg" alt="Forest Homestay - Khu vực chung" />
-          <img src="/images/ban-lien/forest-homestay/5.jpg" alt="Forest Homestay - Phòng tắm" />
+          <img src="/images/ban-lien/forest-homestay/5.jpg" alt="Forest Homestay - Ph��ng tắm" />
           <img src="/images/ban-lien/forest-homestay/6.jpg" alt="Forest Homestay - Khu bếp" />
           <img src="/images/ban-lien/forest-homestay/7.jpg" alt="Forest Homestay - Phòng bungalow" />
           <img src="/images/ban-lien/forest-homestay/8.jpg" alt="Forest Homestay - Toilet riêng" />
@@ -191,7 +191,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/huong-hoan-homestay/8.jpg" alt="Hướng Hoan Homestay - View núi" />
           <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="Hướng Hoan Homestay - Sân" />
         </div>
-        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
+        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng t���m có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
 
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
 
@@ -230,7 +230,7 @@ const BlogDetail = () => {
           <h2 class="section-heading"><span class="section-icon">🎯</span>3. Hoạt động trải nghiệm</h2>
 
           <div class="intro-card">
-            <p class="intro-text">🌿 Tại Bản Li��n, bạn sẽ được hòa mình vào cuộc sống của người Tày với những trải nghiệm đích thực không thể tìm thấy ở nơi nào khác!</p>
+            <p class="intro-text">🌿 Tại Bản Liền, bạn sẽ được hòa mình vào cuộc sống của người Tày với những trải nghiệm đích thực không thể tìm thấy ở nơi nào khác!</p>
           </div>
 
           <div class="activities-grid">
@@ -284,23 +284,84 @@ const BlogDetail = () => {
             </div>
           </div>
 
-        <h3>Lịch trình tham khảo cho chương trình trải nghiệm 2 ngày 1 đêm tại Bản Liền:</h3>
 
-        <h4>Ngày 1:</h4>
-        <ul>
-          <li><strong>7h:</strong> Thức dậy đón bình minh tại Bản Liền, vệ sinh cá nhân sau đó dùng bữa sáng</li>
-          <li><strong>8h - 11h:</strong> Lên rừng chè cổ thụ, uống nước suối nguồn, hái rau mầm đá và lấy tre về làm đũa cẩm</li>
-          <li><strong>12h:</strong> Dùng bữa trưa cùng gia đình sau đó nghỉ trưa</li>
-          <li><strong>14h:</strong> Thăm quan thác nước tại trung tâm xã, tắm thác, hái rau rừng</li>
-          <li><strong>19h:</strong> Dùng bữa tối sau đó nghỉ ngơi hoặc tham gia hoạt động làm cốc tre, làm đũa cẩm, làm trà, chơi trò chơi dân tộc…</li>
-        </ul>
+          <div class="itinerary-section">
+            <h3 class="itinerary-title">📋 Lịch trình 2 ngày 1 đêm</h3>
 
-        <h4>Ngày 2:</h4>
-        <ul>
-          <li><strong>7h:</strong> Dùng bữa sáng sau đó quý khách có thể chọn tham gia các hoạt động trải nghiệm hoặc nghỉ ngơi thư giãn và tận hưởng thiên nhiên tại homestay.</li>
-          <li><strong>8h:</strong> Ra chơi suối, xúc cá suối, hái chè, check-in ruộng bậc thang quanh nhà</li>
-          <li><strong>12h:</strong> Dùng bữa trưa và nghỉ ngơi sau đó di chuyển về Hà Nội</li>
-        </ul>
+            <div class="day-schedule">
+              <div class="day-header">
+                <span class="day-number">1</span>
+                <h4 class="day-title">Ngày đầu - Khám phá & Trải nghiệm</h4>
+              </div>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="time-badge">7:00</div>
+                  <div class="activity-content">
+                    <span class="activity-emoji">🌅</span>
+                    <p>Đón bình minh tại Bản Liền + ăn sáng</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="time-badge">8:00</div>
+                  <div class="activity-content">
+                    <span class="activity-emoji">🌲</span>
+                    <p>Lên rừng chè cổ thụ, uống nước suối nguồn, hái rau mầm đá</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="time-badge">12:00</div>
+                  <div class="activity-content">
+                    <span class="activity-emoji">🍽️</span>
+                    <p>Dùng bữa trưa cùng gia đình + nghỉ trưa</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="time-badge">14:00</div>
+                  <div class="activity-content">
+                    <span class="activity-emoji">🏞️</span>
+                    <p>Thăm quan thác nước, tắm thác, hái rau rừng</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="time-badge">19:00</div>
+                  <div class="activity-content">
+                    <span class="activity-emoji">🌙</span>
+                    <p>Bữa tối + hoạt động văn hóa (làm đũa cẩm, trò chơi dân tộc)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-schedule">
+              <div class="day-header">
+                <span class="day-number">2</span>
+                <h4 class="day-title">Ngày thứ hai - Thư giãn & Về nhà</h4>
+              </div>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="time-badge">7:00</div>
+                  <div class="activity-content">
+                    <span class="activity-emoji">☕</span>
+                    <p>Ăn sáng & lựa chọn hoạt động</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="time-badge">8:00</div>
+                  <div class="activity-content">
+                    <span class="activity-emoji">🎣</span>
+                    <p>Chơi suối, xúc cá, hái chè, check-in ruộng bậc thang</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="time-badge">12:00</div>
+                  <div class="activity-content">
+                    <span class="activity-emoji">🚗</span>
+                    <p>Bữa trưa cuối + chuẩn bị về Hà Nội</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
         <blockquote>
           <strong>Lưu ý:</strong><br/>
