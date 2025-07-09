@@ -2025,7 +2025,8 @@ body {
 
 .featured-posts-grid-equal .featured-post-card {
   width: 350px;
-  height: 450px;
+  min-height: 480px;
+  height: auto;
 }
 
 .featured-post-card {
