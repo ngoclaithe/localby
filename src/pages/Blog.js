@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { mockData } from "../services/api";
 import { formatDate, formatReadingTime } from "../utils/formatters";
 import { BLOG_CATEGORIES } from "../utils/constants";
+import "../BlogDetailGenZ.css";
 
 const Blog = () => {
   const [allPosts, setAllPosts] = useState([]);
@@ -54,7 +55,7 @@ const Blog = () => {
               <span className="title-emoji">🇻🇳</span>
             </h1>
             <p className="blog-hero-description">
-              Khám phá Việt Nam qua những câu chuyện chân th��c từ người dân địa
+              Khám phá Việt Nam qua những câu chuyện chân thực từ người dân địa
               phương. Mỗi bài viết là một hành trình, mỗi hành trình là một kỷ
               niệm đáng nhớ.
             </p>
