@@ -782,6 +782,7 @@
   .content-section {
     padding: 25px 20px;
     margin: 20px 0;
+    border-radius: 20px;
   }
 
   .section-heading {
@@ -791,13 +792,74 @@
     gap: 10px;
   }
 
+  .section-icon {
+    font-size: 2.5rem;
+  }
+
+  .genz-header {
+    padding: 40px 0;
+    margin: 15px 0;
+    border-radius: 20px;
+  }
+
+  .genz-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .genz-excerpt {
+    text-align: center;
+    font-size: 1.1rem;
+    padding-left: 0;
+    margin: 20px auto;
+    max-width: 90%;
+  }
+
+  .genz-excerpt::before {
+    display: none;
+  }
+
+  .article-meta-top {
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .genz-badge {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .genz-date {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
   .activities-grid {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
+  .activity-item {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .activity-icon {
+    font-size: 1.8rem;
+  }
+
+  .activity-name {
+    font-size: 1rem;
+  }
+
   .homestay-gallery {
     gap: 10px;
+  }
+
+  .gallery-main img {
+    height: 250px;
+    border-radius: 15px;
   }
 
   .gallery-grid {
@@ -805,14 +867,35 @@
     gap: 8px;
   }
 
+  .gallery-grid img {
+    height: 100px;
+    border-radius: 12px;
+  }
+
   .capacity-info {
     grid-template-columns: 1fr;
     gap: 15px;
   }
 
+  .info-item {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .info-icon {
+    font-size: 2rem;
+  }
+
   .contact-info {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .phone-number,
+  .owner-name {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    text-align: center;
   }
 
   .timeline {
@@ -823,12 +906,22 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .time-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 
   .activity-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 12px;
+  }
+
+  .activity-emoji {
+    font-size: 1.3rem;
   }
 
   .day-header {
@@ -837,17 +930,379 @@
     gap: 15px;
   }
 
-  .article-meta-top {
-    justify-content: center;
+  .day-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .day-title {
+    font-size: 1.3rem;
+  }
+
+  .homestay-card {
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .homestay-name {
+    font-size: 1.5rem;
     text-align: center;
+  }
+
+  .services-card,
+  .pricing-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .services-title,
+  .pricing-title {
+    font-size: 1.2rem;
+  }
+
+  .modern-breadcrumb {
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 10px;
+  }
+
+  .breadcrumb-nav {
+    gap: 8px;
+  }
+
+  .breadcrumb-link {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .breadcrumb-current {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    max-width: 200px;
+  }
+}
+
+/* Mobile Styles - Small Phones */
+@media (max-width: 480px) {
+  .content-section {
+    padding: 20px 15px;
+    margin: 15px 0;
+    border-radius: 15px;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+    gap: 8px;
+  }
+
+  .section-icon {
+    font-size: 2rem;
+  }
+
+  .genz-header {
+    padding: 30px 0;
+    margin: 10px 0;
   }
 
   .genz-title {
-    text-align: center;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.3;
   }
 
   .genz-excerpt {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  .article-meta-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .genz-badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .genz-date {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .trending-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .activities-grid {
+    gap: 10px;
+  }
+
+  .activity-item {
+    padding: 12px;
+    flex-direction: column;
     text-align: center;
+    gap: 8px;
+  }
+
+  .activity-icon {
+    font-size: 1.5rem;
+  }
+
+  .activity-name {
+    font-size: 0.9rem;
+  }
+
+  .homestay-gallery {
+    gap: 8px;
+  }
+
+  .gallery-main img {
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .gallery-grid img {
+    height: 80px;
+    border-radius: 10px;
+  }
+
+  .capacity-info {
+    gap: 12px;
+  }
+
+  .info-item {
+    padding: 12px;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .info-icon {
+    font-size: 1.8rem;
+  }
+
+  .info-content h4 {
+    font-size: 1rem;
+  }
+
+  .info-content p {
+    font-size: 0.9rem;
+  }
+
+  .homestay-card {
+    padding: 20px;
+  }
+
+  .homestay-name {
+    font-size: 1.3rem;
+  }
+
+  .contact-info {
+    gap: 8px;
+  }
+
+  .phone-number,
+  .owner-name {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item::before {
+    left: -23px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-item {
+    margin-bottom: 15px;
+  }
+
+  .time-badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    min-width: 60px;
+  }
+
+  .activity-content {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  .activity-emoji {
+    font-size: 1.2rem;
+  }
+
+  .activity-content p {
+    font-size: 0.9rem;
+  }
+
+  .day-header {
+    gap: 12px;
+  }
+
+  .day-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+
+  .day-title {
+    font-size: 1.2rem;
+  }
+
+  .day-schedule {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .services-card,
+  .pricing-card {
+    padding: 15px;
+  }
+
+  .services-title,
+  .pricing-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .service-item {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .price-item {
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  .price-value {
+    font-size: 1rem;
+  }
+
+  .intro-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+  }
+
+  .modern-breadcrumb {
+    padding: 10px 12px;
+    margin: 12px 0;
+  }
+
+  .breadcrumb-nav {
+    gap: 6px;
+  }
+
+  .breadcrumb-link {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .breadcrumb-current {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    max-width: 150px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .content-section {
+    padding: 15px 10px;
+    margin: 10px 0;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .genz-title {
+    font-size: clamp(1.3rem, 7vw, 1.8rem);
+  }
+
+  .genz-excerpt {
+    font-size: 0.9rem;
+  }
+
+  .genz-badge,
+  .genz-date,
+  .trending-badge {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .activity-item {
+    padding: 10px;
+  }
+
+  .activity-icon {
+    font-size: 1.3rem;
+  }
+
+  .activity-name {
+    font-size: 0.85rem;
+  }
+
+  .gallery-main img {
+    height: 180px;
+  }
+
+  .gallery-grid img {
+    height: 70px;
+  }
+
+  .homestay-card {
+    padding: 15px;
+  }
+
+  .homestay-name {
+    font-size: 1.2rem;
+  }
+
+  .phone-number,
+  .owner-name {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .day-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .day-title {
+    font-size: 1.1rem;
+  }
+
+  .time-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .activity-content p {
+    font-size: 0.85rem;
   }
 }
 

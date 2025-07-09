@@ -716,6 +716,12 @@
   .stats-title {
     flex-direction: column;
     gap: 8px;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .stats-subtitle {
+    font-size: 1.1rem;
+    padding: 0 20px;
   }
 
   .stats-grid {
@@ -741,19 +747,27 @@
 
   .hero-stats {
     gap: 15px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .stat-item {
-    padding: 15px;
-    min-width: 80px;
+  .hero-stats .stat-item {
+    padding: 15px !important;
+    min-width: 120px !important;
+    margin: 0 !important;
   }
 
-  .stat-number {
-    font-size: 1.5rem;
+  .hero-stats .stat-number {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-stats .stat-label {
+    font-size: 0.9rem !important;
   }
 
   .social-avatars {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .newsletter-features {
@@ -765,19 +779,80 @@
   .newsletter-form {
     flex-direction: column;
     align-items: stretch;
+    max-width: none;
+    width: 100%;
   }
 
   .newsletter-input {
     min-width: auto;
+    width: 100%;
+  }
+
+  .newsletter-button {
+    width: 100%;
   }
 
   .social-links {
     gap: 10px;
+    justify-content: center;
   }
 
   .social-link {
     font-size: 0.8em;
     padding: 6px 12px;
+  }
+
+  /* GenZ Hero Mobile Optimizations */
+  .genz-hero {
+    padding: 50px 0;
+  }
+
+  .genz-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    text-align: center;
+  }
+
+  .genz-description {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .trending-badge {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .title-emoji {
+    font-size: 0.8em;
+  }
+
+  .social-proof {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+
+  .social-text {
+    font-size: 0.9rem;
+  }
+
+  .newsletter-section {
+    padding: 60px 0;
+  }
+
+  .newsletter-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    text-align: center;
+  }
+
+  .newsletter-description {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .newsletter-content {
+    padding: 0 20px;
   }
 }
 
@@ -788,15 +863,163 @@
 
   .floating-emoji {
     font-size: 1.5rem;
+    display: none; /* Hide on very small screens to reduce clutter */
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
 
   .genz-btn {
     width: 100%;
     max-width: 300px;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .genz-title {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .title-gradient {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .genz-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-stats {
+    gap: 10px;
+  }
+
+  .hero-stats .stat-item {
+    padding: 12px !important;
+    min-width: 100px !important;
+    border-radius: 12px !important;
+  }
+
+  .hero-stats .stat-number {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-stats .stat-label {
+    font-size: 0.8rem !important;
+  }
+
+  .social-avatars img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .more-count {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .newsletter-features {
+    gap: 10px;
+  }
+
+  .feature-item {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .newsletter-badge {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 25px 15px;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .genz-hero {
+    padding: 30px 0;
+  }
+
+  .genz-title {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .genz-description {
+    font-size: 0.9rem;
+  }
+
+  .genz-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .trending-badge {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  .hero-stats .stat-item {
+    padding: 10px !important;
+    min-width: 90px !important;
+  }
+
+  .hero-stats .stat-number {
+    font-size: 1.3rem !important;
+  }
+
+  .hero-stats .stat-label {
+    font-size: 0.75rem !important;
+  }
+
+  .newsletter-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .newsletter-description {
+    font-size: 0.95rem;
+  }
+
+  .feature-item {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .newsletter-input {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .newsletter-button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .social-link {
+    font-size: 0.75rem;
+    padding: 5px 10px;
   }
 }
