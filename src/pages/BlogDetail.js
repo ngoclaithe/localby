@@ -93,7 +93,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/duong.jpg" alt="Đường vào Bản Liền" />
           <img src="/images/ban-lien/satlo.jpg" alt="Sạt lở" />
         </div>
-        <p class="image-caption">Hình ảnh 2 và hình ảnh 3</p>
+        <p class="image-caption">Đường đi và sạt lở</p>
 
         <blockquote>
           <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
