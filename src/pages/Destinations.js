@@ -17,71 +17,71 @@ const Destinations = () => {
     "Nam Bộ": "Nam Bộ",
   };
 
-  const destinationDetails = {
-    "Hà Nội": {
-      description: "Thủ đô nghìn năm văn hiến với phố cổ quyến rũ",
-      highlights: ["Phố Cổ", "Hoàn Kiếm", "Văn Miếu", "Lăng Bác"],
-      bestTime: "Tháng 10-12, 3-4",
-      specialties: ["Phở", "Bún chả", "Chả cá"],
-      imageId: "1583417319070-4a69db38a482",
-    },
-    "Hồ Chí Minh": {
-      description: "Thành phố năng động nhất Việt Nam",
-      highlights: ["Bến Thành", "Nhà thờ Đức Bà", "Dinh Độc Lập", "Phố Tây"],
-      bestTime: "Tháng 12-4",
-      specialties: ["Bánh mì", "Cơm tấm", "Hủ tiếu"],
-      imageId: "1552465011-b4e21bf6e79a",
-    },
-    "Đà Nẵng": {
-      description: "Thành phố biển hiện đại với những cây cầu nổi tiếng",
-      highlights: ["Cầu Rồng", "Bà Nà Hills", "Mỹ Khê", "Ngũ Hành Sơn"],
-      bestTime: "Tháng 2-8",
-      specialties: ["Mì Quảng", "Bánh tráng cuốn thịt heo", "Cơm gà"],
-      imageId: "1588392382425-d9181b0bd8c0",
-    },
-    "Hội An": {
-      description: "Phố cổ lãng mạn bên sông Thu Bồn",
-      highlights: ["Phố Cổ", "Chùa Cầu", "Làng rau Trà Quế", "Phố đèn lồng"],
-      bestTime: "Tháng 2-8",
-      specialties: ["Cao lầu", "White Rose", "Bánh mì Phượng"],
-      imageId: "1551632436-cbf8dd35adfa",
-    },
-    Sapa: {
-      description: "Thị trấn sương mù với ruộng bậc thang tuyệt đẹp",
-      highlights: ["Ruộng bậc thang", "Fansipan", "Bản Cát Cát", "Chợ tình"],
-      bestTime: "Tháng 3-5, 9-11",
-      specialties: ["Thịt lợn cắp nách", "Cá tầm", "Rượu táo mèo"],
-      imageId: "1528127269322-539801943592",
-    },
-    "Phú Quốc": {
-      description: "Đảo ngọc với bãi biển trong xanh và hải sản tươi ngon",
-      highlights: ["Bãi Sao", "Cáp treo Hòn Thơm", "Chợ đêm", "Safari"],
-      bestTime: "Tháng 11-3",
-      specialties: ["Hải sản nướng", "Nước mắm", "Sim rượu"],
-      imageId: "1578662996442-48f60103fc96",
-    },
-    "Nha Trang": {
-      description: "Thành phố biển với những hoạt động thể thao nước hấp dẫn",
-      highlights: ["Bãi biển Nha Trang", "Vinpearl", "Tháp Bà", "Hòn Mun"],
-      bestTime: "Tháng 1-8",
-      specialties: ["Nem nướng", "Bánh căn", "Yến sào"],
-      imageId: "1571218447-b7ba11f10515",
-    },
-    "Đà Lạt": {
-      description: "Thành phố ngàn hoa với khí hậu mát mẻ quanh năm",
-      highlights: [
-        "Hồ Xuân Hương",
-        "Valley of Love",
-        "Crazy House",
-        "Langbiang",
-      ],
-      bestTime: "Tháng 12-3",
-      specialties: ["Bánh tráng nướng", "Nem nướng", "Sữa đậu nành"],
-      imageId: "1559827260-dc66d52bef19",
-    },
-  };
-
   useEffect(() => {
+    const destinationDetails = {
+      "Hà Nội": {
+        description: "Thủ đô nghìn năm văn hiến với phố cổ quyến rũ",
+        highlights: ["Phố Cổ", "Hoàn Kiếm", "Văn Miếu", "Lăng Bác"],
+        bestTime: "Tháng 10-12, 3-4",
+        specialties: ["Phở", "Bún chả", "Chả cá"],
+        imageId: "1583417319070-4a69db38a482",
+      },
+      "Hồ Chí Minh": {
+        description: "Thành phố năng động nhất Việt Nam",
+        highlights: ["Bến Thành", "Nhà thờ Đức Bà", "Dinh Độc Lập", "Phố Tây"],
+        bestTime: "Tháng 12-4",
+        specialties: ["Bánh mì", "Cơm tấm", "Hủ tiếu"],
+        imageId: "1552465011-b4e21bf6e79a",
+      },
+      "Đà Nẵng": {
+        description: "Thành phố biển hiện đại với những cây cầu nổi tiếng",
+        highlights: ["Cầu Rồng", "Bà Nà Hills", "Mỹ Khê", "Ngũ Hành Sơn"],
+        bestTime: "Tháng 2-8",
+        specialties: ["Mì Quảng", "Bánh tráng cuốn thịt heo", "Cơm gà"],
+        imageId: "1588392382425-d9181b0bd8c0",
+      },
+      "Hội An": {
+        description: "Phố cổ lãng mạn bên sông Thu Bồn",
+        highlights: ["Phố Cổ", "Chùa Cầu", "Làng rau Trà Quế", "Phố đèn lồng"],
+        bestTime: "Tháng 2-8",
+        specialties: ["Cao lầu", "White Rose", "Bánh mì Phượng"],
+        imageId: "1551632436-cbf8dd35adfa",
+      },
+      Sapa: {
+        description: "Thị trấn sương mù với ruộng bậc thang tuyệt đẹp",
+        highlights: ["Ruộng bậc thang", "Fansipan", "Bản Cát Cát", "Chợ tình"],
+        bestTime: "Tháng 3-5, 9-11",
+        specialties: ["Thịt lợn cắp nách", "Cá tầm", "Rượu táo mèo"],
+        imageId: "1528127269322-539801943592",
+      },
+      "Phú Quốc": {
+        description: "Đảo ngọc với bãi biển trong xanh và hải sản tươi ngon",
+        highlights: ["Bãi Sao", "Cáp treo Hòn Thơm", "Chợ đêm", "Safari"],
+        bestTime: "Tháng 11-3",
+        specialties: ["Hải sản nướng", "Nước mắm", "Sim rượu"],
+        imageId: "1578662996442-48f60103fc96",
+      },
+      "Nha Trang": {
+        description: "Thành phố biển với những hoạt động thể thao nước hấp dẫn",
+        highlights: ["Bãi biển Nha Trang", "Vinpearl", "Tháp Bà", "Hòn Mun"],
+        bestTime: "Tháng 1-8",
+        specialties: ["Nem nướng", "Bánh căn", "Yến sào"],
+        imageId: "1571218447-b7ba11f10515",
+      },
+      "Đà Lạt": {
+        description: "Thành phố ngàn hoa với khí hậu mát mẻ quanh năm",
+        highlights: [
+          "Hồ Xuân Hương",
+          "Valley of Love",
+          "Crazy House",
+          "Langbiang",
+        ],
+        bestTime: "Tháng 12-3",
+        specialties: ["Bánh tráng nướng", "Nem nướng", "Sữa đậu nành"],
+        imageId: "1559827260-dc66d52bef19",
+      },
+    };
+
     // Simulate API loading
     setTimeout(() => {
       const enhancedDestinations = FEATURED_DESTINATIONS.map((name, index) => ({
@@ -103,7 +103,7 @@ const Destinations = () => {
       setFilteredDestinations(enhancedDestinations);
       setIsLoading(false);
     }, 800);
-  }, [destinationDetails]);
+  }, []);
 
   useEffect(() => {
     let filtered = destinations;
