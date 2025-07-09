@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { mockData } from "../services/api";
 import { formatDate, formatReadingTime } from "../utils/formatters";
 import { BLOG_CATEGORIES } from "../utils/constants";
+import "../BlogDetailGenZ.css";
 
 const BlogDetail = () => {
   const { slug } = useParams();
@@ -56,9 +57,9 @@ const BlogDetail = () => {
             <h3 class="option-title"><span class="option-icon">🚌</span>Di chuyển bằng xe khách</h3>
         <p>Từ Hà Nội có thể bắt xe khách của những nhà xe như Futa Hà Sơn (ưu tiên), xe Trúc Nghiêu, xe Vũ Hán Group… Đặt vé qua ứng dụng Vexere hoặc tổng đài nhà xe. Thời gian di chuyển khoảng 6 tiếng đồng hồ.</p>
 
-        <p>(Ngoài ra có thể đặt xe đi Sapa và xuống tại điểm Bến xe trung tâm thành phố Lào Cai, sau đó bắt xe trung chuyển lên thị trấn Bắc Hà. Tại bến xe có rất nhiều xe lên Bắc Hà, để có thêm thông tin về nhà xe vui lòng hỏi sự tư vấn của nhân viên nhà xe. Đối với cách n��y quý khách sẽ có nhiều lựa chọn về khung giờ hơn, tuy nhiên nhược điểm là sẽ phải đổi xe nhiều lần và tốn nhiều thời gian chờ đợi.)</p>
+        <p>(Ngoài ra có thể đặt xe đi Sapa và xuống tại điểm Bến xe trung tâm thành phố Lào Cai, sau đó bắt xe trung chuyển lên thị trấn Bắc Hà. Tại bến xe có rất nhiều xe lên Bắc Hà, để có thêm thông tin về nhà xe vui lòng hỏi sự tư vấn của nhân viên nhà xe. Đối với cách này quý khách sẽ có nhiều lựa chọn về khung giờ hơn, tuy nhiên nhược điểm là sẽ phải đổi xe nhiều lần và tốn nhiều thời gian chờ đợi.)</p>
 
-        <p>Sau khi tới trung tâm thị trấn Bắc Hà hoặc Bến xe Bắc Hà, di chuyển tới Khách sạn Ngân Nga (Ngan Nga Bac Ha Hotel trên Google maps) để nghỉ ngơi hoặc thuê xe máy, liên hệ anh Đông theo SĐT 0817801988. Ngoài ra quý khách cũng có thể đặt dịch vụ xe ôm (khoảng 200k/người) liên hệ chú An - đội trưởng đội xe ôm du lịch Bắc Hà SĐT 0827999339 hoặc taxi (khoảng 700-800k) để tới Bản Liền. Vào mùa cao điểm như tháng 8-9-10 quý khách nên gọi điện đặt xe trước tránh tình trạng quá tải.</p>
+        <p>Sau khi tới trung tâm thị trấn Bắc Hà hoặc Bến xe Bắc Hà, di chuyển tới Khách sạn Ngân Nga (Ngan Nga Bac Ha Hotel trên Google maps) để nghỉ ngơi hoặc thuê xe máy, liên hệ anh Đông theo SĐT 0817801988. Ngoài ra quý khách cũng có thể đặt dịch vụ xe ôm (khoảng 200k/người) liên hệ chú An - đ���i trưởng đội xe ôm du lịch Bắc Hà SĐT 0827999339 hoặc taxi (khoảng 700-800k) để tới Bản Liền. Vào mùa cao điểm như tháng 8-9-10 quý khách nên gọi điện đặt xe trước tránh tình trạng quá tải.</p>
 
         <p>Tiếp theo, nhập tên homestay tại Bản Liền và di chuyển theo Google Maps. Từ trung tâm Bắc Hà tới Bản Liền quãng đường khoảng 22km tương ứng với hơn 1 tiếng đồng hồ lái xe.</p>
 
@@ -83,7 +84,7 @@ const BlogDetail = () => {
             <div class="homestay-header">
               <h3 class="homestay-name">Banlien Pine Homestay</h3>
               <div class="contact-info">
-                <span class="phone-number">�� 0886 073 408</span>
+                <span class="phone-number">📞 0886 073 408</span>
                 <span class="owner-name">👤 Vàng Thị Thông</span>
               </div>
             </div>
@@ -134,7 +135,7 @@ const BlogDetail = () => {
                 <h4 class="pricing-title">💰 Bảng giá</h4>
                 <div class="price-list">
                   <div class="price-item">
-                    <span class="price-label">🛏️ Ph��ng tập thể</span>
+                    <span class="price-label">🛏️ Phòng tập thể</span>
                     <span class="price-value">150k/người/đêm</span>
                   </div>
                   <div class="price-item">
@@ -205,7 +206,7 @@ const BlogDetail = () => {
         <h3>Vang A Binh Homestay (0388 572 409 - Vàng A Bình)</h3>
         <div class="image-grid large">
           <img src="/images/ban-lien/vang-a-binh-homestay/1.jpg" alt="Vang A Binh Homestay - Exterior" />
-          <img src="/images/ban-lien/vang-a-binh-homestay/2.jpg" alt="Vang A Binh Homestay - Phòng t��p" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/2.jpg" alt="Vang A Binh Homestay - Phòng tập" />
           <img src="/images/ban-lien/vang-a-binh-homestay/3.jpg" alt="Vang A Binh Homestay - Khu vực chung" />
           <img src="/images/ban-lien/vang-a-binh-homestay/4.jpg" alt="Vang A Binh Homestay - Phòng ngủ" />
           <img src="/images/ban-lien/vang-a-binh-homestay/5.jpg" alt="Vang A Binh Homestay - Khu bếp" />
@@ -305,7 +306,7 @@ const BlogDetail = () => {
                   <div class="time-badge">8:00</div>
                   <div class="activity-content">
                     <span class="activity-emoji">🌲</span>
-                    <p>Lên rừng chè cổ thụ, uống nước suối ngu���n, hái rau mầm đá</p>
+                    <p>Lên rừng chè cổ thụ, uống nước suối nguồn, hái rau mầm đá</p>
                   </div>
                 </div>
                 <div class="timeline-item">
