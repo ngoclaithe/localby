@@ -58,7 +58,7 @@ const BlogDetail = () => {
 
         <p>(Ngoài ra có thể đặt xe đi Sapa và xuống tại điểm Bến xe trung tâm thành phố Lào Cai, sau đó bắt xe trung chuyển lên thị trấn Bắc Hà. Tại bến xe có rất nhiều xe lên Bắc Hà, để có thêm thông tin về nhà xe vui lòng hỏi sự tư vấn của nhân viên nhà xe. Đối với cách này quý khách sẽ có nhiều lựa chọn về khung giờ hơn, tuy nhiên nhược điểm là sẽ phải đổi xe nhiều lần và tốn nhiều thời gian chờ đợi.)</p>
 
-        <p>Sau khi tới trung tâm thị trấn Bắc Hà hoặc Bến xe Bắc Hà, di chuyển tới Khách sạn Ngân Nga (Ngan Nga Bac Ha Hotel trên Google maps) để nghỉ ngơi hoặc thuê xe máy, liên hệ anh Đông theo SĐT 0817801988. Ngoài ra quý khách cũng có thể đặt dịch vụ xe ôm (khoảng 200k/người) liên hệ chú An - đội trưởng đội xe ôm du lịch Bắc Hà SĐT 0827999339 hoặc taxi (khoảng 700-800k) để tới Bản Liền. Vào mùa cao điểm như tháng 8-9-10 quý khách nên gọi điện đặt xe trước tránh tình trạng quá tải.</p>
+        <p>Sau khi tới trung tâm thị trấn Bắc Hà ho���c Bến xe Bắc Hà, di chuyển tới Khách sạn Ngân Nga (Ngan Nga Bac Ha Hotel trên Google maps) để nghỉ ngơi hoặc thuê xe máy, liên hệ anh Đông theo SĐT 0817801988. Ngoài ra quý khách cũng có thể đặt dịch vụ xe ôm (khoảng 200k/người) liên hệ chú An - đội trưởng đội xe ôm du lịch Bắc Hà SĐT 0827999339 hoặc taxi (khoảng 700-800k) để tới Bản Liền. Vào mùa cao điểm như tháng 8-9-10 quý khách nên gọi điện đặt xe trước tránh tình trạng quá tải.</p>
 
         <p>Tiếp theo, nhập tên homestay tại Bản Liền và di chuyển theo Google Maps. Từ trung tâm Bắc Hà tới Bản Liền quãng đường khoảng 22km tương ứng với hơn 1 tiếng đồng hồ lái xe.</p>
 
@@ -69,7 +69,7 @@ const BlogDetail = () => {
         <p class="image-caption">Hình ảnh 2 và hình ảnh 3</p>
 
         <blockquote>
-          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đo���n đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
+          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn ��ường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
         </blockquote>
 
         <p>Khi gần tới homestay nếu không tìm được đường xuống hoặc đường quá dốc và khó đi, quý khách có thể liên hệ chủ nhà lên hỗ trợ đưa xe và hành lý xuống.</p>
@@ -103,17 +103,56 @@ const BlogDetail = () => {
               </div>
             </div>
 
-        <p>BanLien Pine Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 3-4) và 2-5 khách đối với phòng bungalow (ảnh 7-8-9). Hiện tại gia đình có 1 phòng bungalow và tương lai sẽ có thêm một phòng nữa. Gia đình hiện có 2 phòng tắm có trang bị bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng bungalow có phòng tắm và phòng vệ sinh khép kín.</p>
+            <div class="homestay-info">
+              <div class="capacity-info">
+                <div class="info-item">
+                  <span class="info-icon">👥</span>
+                  <div class="info-content">
+                    <h4>Sức chứa</h4>
+                    <p>15-20 khách (phòng tập thể)<br/>2-5 khách (bungalow)</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <span class="info-icon">🛁</span>
+                  <div class="info-content">
+                    <h4>Tiện nghi</h4>
+                    <p>2 phòng tắm + bình nóng lạnh<br/>2 phòng vệ sinh</p>
+                  </div>
+                </div>
+              </div>
 
-        <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
+              <div class="services-card">
+                <h4 class="services-title">🌟 Dịch vụ</h4>
+                <div class="services-list">
+                  <span class="service-item">🏠 Lưu trú</span>
+                  <span class="service-item">🍽️ Ăn uống</span>
+                  <span class="service-item">🗺️ Hướng dẫn viên</span>
+                </div>
+              </div>
 
-        <p><strong>Phí dịch vụ:</strong></p>
-        <ul>
-          <li>150k/người/đêm cho phòng tập thể</li>
-          <li>Ăn uống: 150k/người áp dụng với bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
-          <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
-          <li>Đối với phòng Bungalow mức giá sẽ phụ thuộc vào số lượng khách, vui lòng liên hệ chủ nhà để có thêm thông tin chi tiết.</li>
-        </ul>
+              <div class="pricing-card">
+                <h4 class="pricing-title">💰 Bảng giá</h4>
+                <div class="price-list">
+                  <div class="price-item">
+                    <span class="price-label">🛏️ Phòng tập thể</span>
+                    <span class="price-value">150k/người/đêm</span>
+                  </div>
+                  <div class="price-item">
+                    <span class="price-label">🍽️ Bữa chính</span>
+                    <span class="price-value">150k/người</span>
+                  </div>
+                  <div class="price-item">
+                    <span class="price-label">🌅 Bữa sáng</span>
+                    <span class="price-value">50k/người</span>
+                  </div>
+                  <div class="price-item">
+                    <span class="price-label">👨‍🏫 Hướng dẫn viên</span>
+                    <span class="price-value">400-500k/ngày</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
         <h3>Bản Liền Forest Homestay (0343 639 564 - Lâm A Nâng)</h3>
         <div class="image-grid large">
@@ -152,7 +191,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/huong-hoan-homestay/8.jpg" alt="Hướng Hoan Homestay - View núi" />
           <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="Hướng Hoan Homestay - Sân" />
         </div>
-        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
+        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng th��m trong thời gian tới.</p>
 
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
 
@@ -200,7 +239,7 @@ const BlogDetail = () => {
           <li><strong>8h - 11h:</strong> Lên rừng chè cổ thụ, uống nước suối nguồn, hái rau mầm đá và lấy tre về làm đũa cẩm</li>
           <li><strong>12h:</strong> Dùng bữa trưa cùng gia đình sau đó nghỉ trưa</li>
           <li><strong>14h:</strong> Thăm quan thác nước tại trung tâm xã, tắm thác, hái rau rừng</li>
-          <li><strong>19h:</strong> Dùng bữa tối sau đó nghỉ ngơi hoặc tham gia hoạt động l��m cốc tre, làm đũa cẩm, làm trà, chơi trò chơi dân tộc…</li>
+          <li><strong>19h:</strong> Dùng bữa tối sau đó nghỉ ngơi hoặc tham gia hoạt động làm cốc tre, làm đũa cẩm, làm trà, chơi trò chơi dân tộc…</li>
         </ul>
 
         <h4>Ngày 2:</h4>
@@ -220,7 +259,7 @@ const BlogDetail = () => {
 
     // Default content for other posts (if any)
     return `
-      <p>Việt Nam - đất nước hình chữ S xinh đẹp của chúng ta, không chỉ nổi tiếng với những cảnh quan thiên nhiên hùng vĩ mà còn với nền ẩm thực phong phú và đa dạng.</p>
+      <p>Vi��t Nam - đất nước hình chữ S xinh đẹp của chúng ta, không chỉ nổi tiếng với những cảnh quan thiên nhiên hùng vĩ mà còn với nền ẩm thực phong phú và đa dạng.</p>
       <p><em>Hãy cùng LocalBy khám phá thêm nhiều câu chuyện du lịch thú vị khác!</em></p>
     `;
   };
@@ -530,9 +569,7 @@ const BlogDetail = () => {
                     </p>
                     <div className="related-post-meta">
                       <span>📅 {formatDate(relatedPost.published_at)}</span>
-                      <span>
-                        ⏱��� {formatReadingTime(relatedPost.content)}
-                      </span>
+                      <span>⏱️ {formatReadingTime(relatedPost.content)}</span>
                     </div>
                   </div>
                 </article>
