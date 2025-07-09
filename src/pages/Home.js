@@ -49,8 +49,8 @@ const Home = () => {
             </h1>
             <p className="hero-description">
               Trải nghiệm du lịch chân thực với những câu chuyện kể từ trái tim
-              người dân địa phương. Khám phá văn hóa, ẩm thực và vẻ đẹp ẩn giấu
-              của mảnh đất hình chữ S qua LocalBy.
+              người dân địa phương. Khám phá văn hóa, ẩm thực và v��� đẹp ẩn
+              giấu của mảnh đất hình chữ S qua LocalBy.
             </p>
             <div className="hero-actions">
               <Link to="/destinations" className="cta-button primary">
@@ -272,9 +272,10 @@ const Home = () => {
       <section
         className="section"
         style={{
-          background: "var(--gradient-hero)",
+          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
           color: "white",
           textAlign: "center",
+          padding: "var(--space-5xl) 0",
         }}
       >
         <div className="container">
@@ -285,10 +286,8 @@ const Home = () => {
                 fontSize: "clamp(2rem, 5vw, 3rem)",
                 fontWeight: "700",
                 marginBottom: "var(--space-lg)",
-                background: "linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
+                color: "white",
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
               }}
             >
               📮 Nhận tin mới nhất
@@ -297,8 +296,9 @@ const Home = () => {
               style={{
                 fontSize: "1.2rem",
                 marginBottom: "var(--space-2xl)",
-                opacity: "0.9",
+                color: "rgba(255, 255, 255, 0.95)",
                 lineHeight: "1.7",
+                textShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
               }}
             >
               Đăng ký để nhận những câu chuyện du lịch độc đáo và mẹo hay từ
@@ -324,9 +324,9 @@ const Home = () => {
                   borderRadius: "var(--radius-xl)",
                   fontSize: "1rem",
                   fontFamily: "var(--font-primary)",
-                  background: "rgba(255, 255, 255, 0.1)",
+                  background: "rgba(255, 255, 255, 0.95)",
                   backdropFilter: "blur(10px)",
-                  color: "white",
+                  color: "var(--color-neutral-800)",
                 }}
               />
               <button
