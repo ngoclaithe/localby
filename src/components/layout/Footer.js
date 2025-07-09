@@ -7,10 +7,10 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Trang chủ", path: "/", icon: "🏠" },
-    { name: "Điểm đến", path: "/destinations", icon: "🗺️" },
-    { name: "Đi Đâu Mới Zui?	", path: "/blog", icon: "📝" },
-    { name: "Giới thiệu", path: "/about", icon: "💫" },
-    { name: "Liên hệ", path: "/contact", icon: "📞" },
+    { name: "Đi Đâu Này?", path: "/destinations", icon: "🗺️" },
+    { name: "Đi Đâu Mới Zui?", path: "/blog", icon: "📝" },
+    { name: "Về Mình", path: "/about", icon: "💫" },
+    { name: "Chat Với Mình", path: "/contact", icon: "📞" },
   ];
 
   const featuredCategories = BLOG_CATEGORIES.slice(0, 6);
