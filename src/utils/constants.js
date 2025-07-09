@@ -2,7 +2,7 @@ export const APP_CONFIG = {
   SITE_NAME: "LocalBy",
   SITE_DESCRIPTION:
     "Blog du lịch địa phương - Khám phá Việt Nam qua góc nhìn người dân địa phương",
-  CONTACT_EMAIL: "contact@localby.com",
+  CONTACT_EMAIL: "companykansei@gmail.com",
   SOCIAL_LINKS: {
     facebook: "https://facebook.com/localby",
     instagram: "https://instagram.com/localby",
