@@ -102,8 +102,7 @@ export const mockData = {
         "Lào Cai",
         "cuối tuần chill",
       ],
-      featured_image:
-        "https://vntravel.org.vn/uploads/images/2025/06/26/509441539-1303551227806945-1122938122157054925-n-1750898806.jpg",
+      featured_image: "/images/ban-lien/cover.jpg",
       published_at: "2025-07-09T10:00:00Z",
       views: 1250,
       reading_time: 4,

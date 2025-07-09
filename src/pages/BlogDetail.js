@@ -23,8 +23,8 @@ const BlogDetail = () => {
         <h3>Di chuyển bằng phương tiện cá nhân</h3>
         <p>Từ Hà Nội di chuyển theo hướng cao tốc Hà Nội - Lào Cai khoảng ~300km sẽ tới thị trấn Bắc Hà, từ đây di chuyển thêm khoảng 22km nữa sẽ tới Bản Liền, tổng thời gian di chuyển khoảng 6 tiếng đồng hồ. Chỉ nên sử dụng xe từ 16 chỗ trở xuống.</p>
         
-        <div class="image-grid">
-          <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lộ trình di chuyển" />
+        <div class="image-grid" style="display: flex; justify-content: center; margin: 20px 0;">
+          <img src="/images/ban-lien/bando.jpg" alt="Lộ trình di chuyển" style="max-width: 80%; height: auto;" />
         </div>
         <p class="image-caption">Hình ảnh 1: Lộ trình di chuyển từ trung tâm thị trấn Bắc Hà tới Bản Liền</p>
         
@@ -38,8 +38,8 @@ const BlogDetail = () => {
         <p>Tiếp theo, nhập tên homestay tại Bản Liền và di chuyển theo Google Maps. Từ trung tâm Bắc Hà tới Bản Liền quãng đường khoảng 22km tương ứng với hơn 1 tiếng đồng hồ lái xe.</p>
         
         <div class="image-grid">
-          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Đường vào Bản Liền" />
-          <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cảnh đường miền núi" />
+          <img src="/images/ban-lien/duong.jpg" alt="Đường vào Bản Liền" />
+          <img src="/images/ban-lien/satlo.jpg" alt="Sạt lở" />
         </div>
         <p class="image-caption">Hình ảnh 2 và hình ảnh 3</p>
         
@@ -53,17 +53,16 @@ const BlogDetail = () => {
         
         <h3>Banlien Pine Homestay (0886 073 408 - Vàng Thị Thông)</h3>
         <div class="image-grid large">
-          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Phòng tập thể" />
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Phòng tắm" />
-          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Bungalow" />
-          <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c15a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Không gian chung" />
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Khu vực ăn uống" />
-          <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Phòng vệ sinh" />
-          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Bungalow interior" />
-          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - Khu vực nghỉ ngơi" />
-          <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Banlien Pine Homestay - View từ homestay" />
+          <img src="/images/ban-lien/pine-homestay/1.jpg" alt="Banlien Pine Homestay - Phòng tập thể" />
+          <img src="/images/ban-lien/pine-homestay/2.jpg" alt="Banlien Pine Homestay - Phòng tắm" />
+          <img src="/images/ban-lien/pine-homestay/3.jpg" alt="Banlien Pine Homestay - Bungalow" />
+          <img src="/images/ban-lien/pine-homestay/4.jpg" alt="Banlien Pine Homestay - Không gian chung" />
+          <img src="/images/ban-lien/pine-homestay/5.jpg" alt="Banlien Pine Homestay - Khu vực ăn uống" />
+          <img src="/images/ban-lien/pine-homestay/6.jpg" alt="Banlien Pine Homestay - Phòng vệ sinh" />
+          <img src="/images/ban-lien/pine-homestay/7.jpg" alt="Banlien Pine Homestay - Bungalow interior" />
+          <img src="/images/ban-lien/pine-homestay/8.jpg" alt="Banlien Pine Homestay - Khu vực nghỉ ngơi" />
+          <img src="/images/ban-lien/pine-homestay/9.jpg" alt="Banlien Pine Homestay - View từ homestay" />
         </div>
-        <p class="image-caption">Hình ảnh 4,5,6,7,8,9,10,11,12</p>
         
         <p>BanLien Pine Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 3-4) và 2-5 khách đối với phòng bungalow (ảnh 7-8-9). Hiện tại gia đình có 1 phòng bungalow và tương lai sẽ có thêm một phòng nữa. Gia đình hiện có 2 phòng tắm có trang bị bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng bungalow có phòng tắm và phòng vệ sinh khép kín.</p>
         
@@ -72,25 +71,24 @@ const BlogDetail = () => {
         <p><strong>Phí dịch vụ:</strong></p>
         <ul>
           <li>150k/người/đêm cho phòng tập thể</li>
-          <li>Ăn uống: 150k/người áp dụng v���i bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
+          <li>Ăn uống: 150k/người áp dụng với bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
           <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
           <li>Đối với phòng Bungalow mức giá sẽ phụ thuộc vào số lượng khách, vui lòng liên hệ chủ nhà để có thêm thông tin chi tiết.</li>
         </ul>
 
         <h3>Bản Liền Forest Homestay (0343 639 564 - Lâm A Nâng)</h3>
         <div class="image-grid large">
-          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Exterior" />
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Phòng tập thể" />
-          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Phòng riêng" />
-          <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c15a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Khu vực chung" />
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Phòng tắm" />
-          <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Khu bếp" />
-          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Phòng bungalow" />
-          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - Toilet riêng" />
-          <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Forest Homestay - View" />
+          <img src="/images/ban-lien/forest-homestay/1.jpg" alt="Forest Homestay - Exterior" />
+          <img src="/images/ban-lien/forest-homestay/2.jpg" alt="Forest Homestay - Phòng tập thể" />
+          <img src="/images/ban-lien/forest-homestay/3.jpg" alt="Forest Homestay - Phòng riêng" />
+          <img src="/images/ban-lien/forest-homestay/4.jpg" alt="Forest Homestay - Khu vực chung" />
+          <img src="/images/ban-lien/forest-homestay/5.jpg" alt="Forest Homestay - Phòng tắm" />
+          <img src="/images/ban-lien/forest-homestay/6.jpg" alt="Forest Homestay - Khu bếp" />
+          <img src="/images/ban-lien/forest-homestay/7.jpg" alt="Forest Homestay - Phòng bungalow" />
+          <img src="/images/ban-lien/forest-homestay/8.jpg" alt="Forest Homestay - Toilet riêng" />
+          <img src="/images/ban-lien/forest-homestay/9.jpg" alt="Forest Homestay - View" />
         </div>
-        <p class="image-caption">Hình ảnh 13,14,15,16,17,18,19,20,21</p>
-        
+
         <p>Bản Liền Forest Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 4) và 2-6 khách đối với phòng bungalow 2 giường (ảnh 7-8). Hiện tại gia đình có 1 phòng riêng chứa được tối đa 6 người. Homestay được trang bị 2 phòng tắm có bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng riêng có phòng tắm và phòng vệ sinh khép kín (ảnh 9).</p>
         
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
@@ -105,18 +103,16 @@ const BlogDetail = () => {
 
         <h3>Hướng Hoan Homestay (0837 856 293 - Lâm A Hướng)</h3>
         <div class="image-grid large">
-          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Exterior" />
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Phòng tập thể" />
-          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Khu vực chung" />
-          <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c15a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Phòng tắm" />
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Khu bếp" />
-          <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Khu vực ăn" />
-          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Giường ngủ" />
-          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - View núi" />
-          <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hướng Hoan Homestay - Sân" />
+          <img src="/images/ban-lien/huong-hoan-homestay/1.jpg" alt="Hướng Hoan Homestay - Exterior" />
+          <img src="/images/ban-lien/huong-hoan-homestay/2.jpg" alt="Hướng Hoan Homestay - Phòng tập thể" />
+          <img src="/images/ban-lien/huong-hoan-homestay/3-area.jpg" alt="Hướng Hoan Homestay - Khu vực chung" />
+          <img src="/images/ban-lien/huong-hoan-homestay/4.jpg" alt="Hướng Hoan Homestay - Phòng tắm" />
+          <img src="/images/ban-lien/huong-hoan-homestay/5.jpg" alt="Hướng Hoan Homestay - Khu bếp" />
+          <img src="/images/ban-lien/huong-hoan-homestay/6.jpg" alt="Hướng Hoan Homestay - Khu vực ăn" />
+          <img src="/images/ban-lien/huong-hoan-homestay/7.jpg" alt="Hướng Hoan Homestay - Giường ngủ" />
+          <img src="/images/ban-lien/huong-hoan-homestay/8.jpg" alt="Hướng Hoan Homestay - View núi" />
+          <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="Hướng Hoan Homestay - Sân" />
         </div>
-        <p class="image-caption">Hình ảnh 22,23,24,25,26,27,28,29,30</p>
-        
         <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian t���i.</p>
         
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
@@ -130,17 +126,16 @@ const BlogDetail = () => {
 
         <h3>Vang A Binh Homestay (0388 572 409 - Vàng A Bình)</h3>
         <div class="image-grid large">
-          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Exterior" />
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Phòng tập thể" />
-          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Khu vực chung" />
-          <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c15a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Phòng ngủ" />
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Khu bếp" />
-          <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Khu vực ăn" />
-          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Phòng tắm" />
-          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - View đường" />
-          <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vang A Binh Homestay - Cảnh quan" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/1.jpg" alt="Vang A Binh Homestay - Exterior" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/2.jpg" alt="Vang A Binh Homestay - Phòng tập thể" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/3.jpg" alt="Vang A Binh Homestay - Khu vực chung" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/4.jpg" alt="Vang A Binh Homestay - Phòng ngủ" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/5.jpg" alt="Vang A Binh Homestay - Khu bếp" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/6.jpg" alt="Vang A Binh Homestay - Khu vực ăn" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/7.jpg" alt="Vang A Binh Homestay - Phòng tắm" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/8.jpg" alt="Vang A Binh Homestay - View đường" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/9.jpg" alt="Vang A Binh Homestay - Cảnh quan" />
         </div>
-        <p class="image-caption">Hình ảnh 31,32,33,34,35,36,37,38,39</p>
         
         <p>Vang A Binh Homestay nằm ở cuối đường bê tông của Bản Liền, từ trung tâm xã tới homestay khoảng 15-20 phút di chuyển. Homestay hiện đang có sức chứa tối đa khoảng 15 khách tại phòng tập thể. Gia đình hiện chưa có phòng riêng.</p>
         
@@ -181,8 +176,6 @@ const BlogDetail = () => {
           Đây chỉ là lịch trình tham khảo, tuỳ vào tình hình thời tiết và mùa vụ mà các hoạt động trải nghiệm có thể khác nhau và có những điều chỉnh sao cho phù hợp với tình hình thực tế. Để có thêm thông tin về những hoạt động trải nghiệm cụ thể theo từng ngày quý khách vui lòng liên hệ với chủ nhà để được tư vấn thêm.<br/>
           Các hoạt động trải nghiệm áp dụng cho tất cả các hộ homestay tại Bản Liền.
         </blockquote>
-        
-        <p><em>Bản Liền chờ đón bạn với những trải nghiệm chân thực và ấm áp nhất từ vùng đất Tày xinh đẹp này!</em></p>
       `;
     }
 
@@ -364,9 +357,10 @@ const BlogDetail = () => {
 
           <div className="article-image">
             <img
-              src={`https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`}
+              src={"/images/ban-lien/cover.jpg"}
               alt={post.title}
               loading="eager"
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
         </div>
