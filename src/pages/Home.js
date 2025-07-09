@@ -187,6 +187,10 @@ const Home = () => {
                   style={{
                     animationDelay: `${index * 0.1}s`,
                     "--category-gradient": categoryData.color,
+                    background: "rgba(255, 255, 255, 0.95)",
+                    backdropFilter: "blur(10px)",
+                    border: "1px solid rgba(255, 255, 255, 0.3)",
+                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
                   }}
                 >
                   <div className="category-card-background"></div>
