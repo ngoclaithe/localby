@@ -16,12 +16,13 @@ const BlogDetail = () => {
   // Performance monitoring
   usePerformanceMonitor("BlogDetail");
 
-  // Optimized scroll progress with throttling
+  // Optimized scroll progress with better throttling
   const updateReadingProgress = useCallback(() => {
     const scrollTop = window.scrollY;
     const docHeight =
       document.documentElement.scrollHeight - window.innerHeight;
-    const progress = Math.min(scrollTop / docHeight, 1);
+    const progress =
+      docHeight > 0 ? Math.min(Math.max(scrollTop / docHeight, 0), 1) : 0;
     setReadingProgress(progress);
   }, []);
 
@@ -30,16 +31,24 @@ const BlogDetail = () => {
 
     const throttledUpdate = () => {
       if (!ticking) {
+        ticking = true;
         requestAnimationFrame(() => {
           updateReadingProgress();
           ticking = false;
         });
-        ticking = true;
       }
     };
 
+    // Add initial calculation
+    updateReadingProgress();
+
     window.addEventListener("scroll", throttledUpdate, { passive: true });
-    return () => window.removeEventListener("scroll", throttledUpdate);
+    window.addEventListener("resize", throttledUpdate, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", throttledUpdate);
+      window.removeEventListener("resize", throttledUpdate);
+    };
   }, [updateReadingProgress]);
 
   // Memoized detailed content for the post
@@ -207,7 +216,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/huong-hoan-homestay/6.jpg" alt="Hướng Hoan Homestay - Khu vực ăn" />
           <img src="/images/ban-lien/huong-hoan-homestay/7.jpg" alt="Hướng Hoan Homestay - Giường ngủ" />
           <img src="/images/ban-lien/huong-hoan-homestay/8.jpg" alt="Hướng Hoan Homestay - View núi" />
-          <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="H��ớng Hoan Homestay - Sân" />
+          <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="Hướng Hoan Homestay - Sân" />
         </div>
         <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
 
@@ -224,7 +233,7 @@ const BlogDetail = () => {
         <div class="image-grid large">
           <img src="/images/ban-lien/vang-a-binh-homestay/1.jpg" alt="Vang A Binh Homestay - Exterior" />
           <img src="/images/ban-lien/vang-a-binh-homestay/2.jpg" alt="Vang A Binh Homestay - Phòng tập" />
-          <img src="/images/ban-lien/vang-a-binh-homestay/3.jpg" alt="Vang A Binh Homestay - Khu v��c chung" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/3.jpg" alt="Vang A Binh Homestay - Khu vực chung" />
           <img src="/images/ban-lien/vang-a-binh-homestay/4.jpg" alt="Vang A Binh Homestay - Phòng ngủ" />
           <img src="/images/ban-lien/vang-a-binh-homestay/5.jpg" alt="Vang A Binh Homestay - Khu bếp" />
           <img src="/images/ban-lien/vang-a-binh-homestay/6.jpg" alt="Vang A Binh Homestay - Khu vực ăn" />
@@ -239,7 +248,7 @@ const BlogDetail = () => {
 
         <p><strong>Phí dịch vụ:</strong></p>
         <ul>
-          <li>150k/người/đêm cho phòng tập thể</li>
+          <li>150k/người/đ��m cho phòng tập thể</li>
           <li>Ăn uống: 150k/người áp dụng với bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
           <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
         </ul>
