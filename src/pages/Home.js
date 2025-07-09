@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { mockData } from "../services/api";
 import { formatDate, formatReadingTime } from "../utils/formatters";
 import { BLOG_CATEGORIES, FEATURED_DESTINATIONS } from "../utils/constants";
+import "../HomeGenZ.css";
 
 const Home = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
@@ -66,36 +67,97 @@ const Home = () => {
           </div>
         </div>
       )}
-      {/* Hero Section */}
-      <section className="hero-section">
+      {/* Hero Section - GenZ Vibes */}
+      <section className="hero-section genz-hero">
+        <div className="hero-background">
+          <div className="floating-elements">
+            <div className="floating-emoji">🏞️</div>
+            <div className="floating-emoji">🍜</div>
+            <div className="floating-emoji">📱</div>
+            <div className="floating-emoji">✨</div>
+          </div>
+        </div>
         <div className="hero-content">
           <div className="hero-text">
-            <h1 className="hero-title">
-              Khám phá Việt Nam qua
-              <span className="hero-accent"> góc nhìn địa phương</span>
+            <div className="trending-badge">🔥 HOT TREND</div>
+            <h1 className="hero-title genz-title">
+              Đi khám phá
+              <span className="title-gradient"> Việt Nam chill phết!</span>
+              <span className="title-emoji">🇻🇳</span>
             </h1>
-            <p className="hero-description">
-              Trải nghiệm du lịch chân thực với những câu chuyện kể từ trái tim
-              người dân địa phương. Khám phá văn hóa, ẩm thực và vẻ đẹp ẩn giấu
-              của mảnh đất hình chữ S qua LocalBy.
+            <p className="hero-description genz-description">
+              Trải nghiệm du lịch <strong>authentic</strong> với những câu
+              chuyện kể từ trái tim người địa phương. Khám phá văn hóa, ẩm thực
+              và những <em>hidden gems</em>
+              của mảnh đất hình chữ S qua LocalBy! 🌟
             </p>
+            <div className="hero-stats">
+              <div className="stat-item">
+                <span className="stat-number">500+</span>
+                <span className="stat-label">Bài review</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">50+</span>
+                <span className="stat-label">Địa điểm</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">10K+</span>
+                <span className="stat-label">Followers</span>
+              </div>
+            </div>
             <div className="hero-actions">
-              <Link to="/destinations" className="cta-button primary">
+              <Link to="/destinations" className="cta-button primary genz-btn">
                 <span>🌟</span>
-                Khám phá ngay
+                Khám phá ngay bro!
+                <div className="btn-shine"></div>
               </Link>
-              <Link to="/blog" className="cta-button secondary">
+              <Link to="/blog" className="cta-button secondary genz-btn">
                 <span>📚</span>
                 Đi Đâu Mới Zui?
+                <div className="btn-shine"></div>
               </Link>
             </div>
+            <div className="social-proof">
+              <span className="social-text">
+                Join cộng đồng travel addicts 🚀
+              </span>
+              <div className="social-avatars">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"
+                  alt="User 1"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=40&h=40&fit=crop&crop=face"
+                  alt="User 2"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"
+                  alt="User 3"
+                />
+                <span className="more-count">+1K</span>
+              </div>
+            </div>
           </div>
-          <div className="hero-image">
-            <img
-              src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-              alt="Vịnh Hạ Long - Kỳ quan thiên nhiên Việt Nam"
-              loading="eager"
-            />
+          <div className="hero-image genz-hero-image">
+            <div className="image-frame">
+              <img
+                src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                alt="Vịnh Hạ Long - Kỳ quan thiên nhiên Việt Nam"
+                loading="eager"
+              />
+              <div className="image-overlay">
+                <div className="trending-tag">📍 Trending Now</div>
+                <div className="like-count">
+                  <span>❤️</span>
+                  <span>1.2K likes</span>
+                </div>
+              </div>
+            </div>
+            <div className="story-indicators">
+              <div className="story active"></div>
+              <div className="story"></div>
+              <div className="story"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -104,8 +166,11 @@ const Home = () => {
       {featuredPosts.length > 0 && (
         <section className="section featured-section">
           <div className="container">
-            <h2 className="section-title">
-              <span className="text-gradient">✨ Nổi bật tuần này</span>
+            <h2 className="section-title genz-section-title">
+              <span className="text-gradient">✨ Content hot nhất tuần</span>
+              <span className="subtitle">
+                Những địa điểm đang viral trên MXH 🔥
+              </span>
             </h2>
             <div className="grid featured-grid">
               {featuredPosts.map((post, index) => (
@@ -331,146 +396,118 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section
-        className="section"
-        style={{
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-          color: "white",
-          textAlign: "center",
-          padding: "var(--space-5xl) 0",
-        }}
-      >
+      {/* Newsletter CTA - GenZ Style */}
+      <section className="newsletter-section genz-newsletter">
         <div className="container">
-          <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-            <h2
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(2rem, 5vw, 3rem)",
-                fontWeight: "700",
-                marginBottom: "var(--space-lg)",
-                color: "white",
-                textShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
-              }}
-            >
-              📮 Nhận tin mới nhất
+          <div className="newsletter-content">
+            <div className="newsletter-badge">📱 Stay Connected</div>
+            <h2 className="newsletter-title">
+              Đăng ký nhận noti
+              <span className="gradient-text">mỗi khi có content mới!</span>
             </h2>
-            <p
-              style={{
-                fontSize: "1.2rem",
-                marginBottom: "var(--space-2xl)",
-                color: "rgba(255, 255, 255, 0.95)",
-                lineHeight: "1.7",
-                textShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
-              }}
-            >
-              Đăng ký để nhận những câu chuyện du lịch độc đáo và mẹo hay từ
-              người địa phương
+            <p className="newsletter-description">
+              Subscribe để không bỏ lỡ những <strong>hidden gems</strong> và
+              <em>travel hacks</em> từ các local experts 🌟
             </p>
-            <div
-              style={{
-                display: "flex",
-                gap: "var(--space-md)",
-                maxWidth: "500px",
-                margin: "0 auto",
-                flexWrap: "wrap",
-              }}
-            >
+            <div className="newsletter-features">
+              <div className="feature-item">
+                <span className="feature-icon">🔔</span>
+                <span>Noti ngay khi có bài mới</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">🎁</span>
+                <span>Exclusive travel guide</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">👥</span>
+                <span>Join community Discord</span>
+              </div>
+            </div>
+            <div className="newsletter-form">
               <input
                 type="email"
                 placeholder="Nhập email của bạn..."
-                style={{
-                  flex: "1",
-                  minWidth: "250px",
-                  padding: "var(--space-lg)",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
-                  borderRadius: "var(--radius-xl)",
-                  fontSize: "1rem",
-                  fontFamily: "var(--font-primary)",
-                  background: "rgba(255, 255, 255, 0.95)",
-                  backdropFilter: "blur(10px)",
-                  color: "var(--color-neutral-800)",
-                }}
+                className="newsletter-input"
               />
-              <button
-                style={{
-                  padding: "var(--space-lg) var(--space-xl)",
-                  background: "var(--gradient-warm)",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "var(--radius-xl)",
-                  fontWeight: "600",
-                  cursor: "pointer",
-                  fontSize: "1rem",
-                  fontFamily: "var(--font-primary)",
-                  transition: "all var(--duration-normal) var(--ease-bounce)",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                🚀 Đăng ký
-              </button>
+              <button className="newsletter-button">🚀 Subscribe ngay!</button>
+            </div>
+            <div className="newsletter-social">
+              <span>Follow chúng mình tại:</span>
+              <div className="social-links">
+                <a href="#" className="social-link">
+                  📘 Facebook
+                </a>
+                <a href="#" className="social-link">
+                  📸 Instagram
+                </a>
+                <a href="#" className="social-link">
+                  🎵 TikTok
+                </a>
+                <a href="#" className="social-link">
+                  💬 Discord
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section
-        className="section"
-        style={{
-          background: "var(--color-neutral-100)",
-        }}
-      >
+      {/* Stats Section - Modern Design */}
+      <section className="stats-section">
         <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-              gap: "var(--space-xl)",
-              textAlign: "center",
-            }}
-          >
+          <div className="stats-header">
+            <h2 className="stats-title">
+              Con số ấn tượng
+              <span className="stats-emoji">📊</span>
+            </h2>
+            <p className="stats-subtitle">
+              Hành trình khám phá Việt Nam cùng LocalBy
+            </p>
+          </div>
+          <div className="stats-grid">
             {[
-              { number: "500+", label: "Bài viết", icon: "📝" },
-              { number: "50+", label: "Điểm đến", icon: "🗺️" },
-              { number: "10K+", label: "Độc giả", icon: "��" },
-              { number: "100+", label: "Tác giả", icon: "✍️" },
+              {
+                number: "500+",
+                label: "Bài review",
+                icon: "📝",
+                color: "#3b82f6",
+              },
+              {
+                number: "50+",
+                label: "Địa điểm",
+                icon: "🗺️",
+                color: "#10b981",
+              },
+              {
+                number: "10K+",
+                label: "Followers",
+                icon: "👥",
+                color: "#8b5cf6",
+              },
+              {
+                number: "100+",
+                label: "Travel buddies",
+                icon: "✍️",
+                color: "#f59e0b",
+              },
             ].map((stat, index) => (
               <div
                 key={index}
-                className="glassmorphism fade-in-up"
+                className="stat-card"
                 style={{
-                  padding: "var(--space-xl)",
-                  borderRadius: "var(--radius-xl)",
-                  animationDelay: `${index * 0.1}s`,
+                  animationDelay: `${index * 0.15}s`,
+                  "--stat-color": stat.color,
                 }}
               >
-                <div
-                  style={{ fontSize: "3rem", marginBottom: "var(--space-md)" }}
-                >
-                  {stat.icon}
+                <div className="stat-icon-wrapper">
+                  <div className="stat-icon">{stat.icon}</div>
+                  <div className="stat-icon-bg"></div>
                 </div>
-                <div
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: "700",
-                    background: "var(--gradient-primary)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                    marginBottom: "var(--space-sm)",
-                  }}
-                >
-                  {stat.number}
+                <div className="stat-content">
+                  <div className="stat-number">{stat.number}</div>
+                  <div className="stat-label">{stat.label}</div>
                 </div>
-                <div
-                  style={{
-                    color: "var(--color-neutral-600)",
-                    fontWeight: "500",
-                  }}
-                >
-                  {stat.label}
-                </div>
+                <div className="stat-decoration"></div>
               </div>
             ))}
           </div>

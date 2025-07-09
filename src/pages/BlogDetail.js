@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { mockData } from "../services/api";
 import { formatDate, formatReadingTime } from "../utils/formatters";
 import { BLOG_CATEGORIES } from "../utils/constants";
+import { usePerformanceMonitor } from "../hooks/usePerformanceMonitor";
 import "../BlogDetailGenZ.css";
 
 const BlogDetail = () => {
@@ -12,26 +13,51 @@ const BlogDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [readingProgress, setReadingProgress] = useState(0);
 
-  // Scroll progress for reading indicator
-  useEffect(() => {
-    const updateReadingProgress = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = scrollTop / docHeight;
-      setReadingProgress(progress);
-    };
+  // Performance monitoring
+  usePerformanceMonitor("BlogDetail");
 
-    window.addEventListener("scroll", updateReadingProgress);
-    return () => window.removeEventListener("scroll", updateReadingProgress);
+  // Optimized scroll progress with better throttling
+  const updateReadingProgress = useCallback(() => {
+    const scrollTop = window.scrollY;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const progress =
+      docHeight > 0 ? Math.min(Math.max(scrollTop / docHeight, 0), 1) : 0;
+    setReadingProgress(progress);
   }, []);
 
-  // Mock detailed content for the post
-  const getDetailedContent = (postData) => {
-    if (
-      postData.slug === "ga-gay-5h-sang-ban-lien-goi-minh-day-bang-binh-yen"
-    ) {
-      return `
+  useEffect(() => {
+    let ticking = false;
+
+    const throttledUpdate = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          updateReadingProgress();
+          ticking = false;
+        });
+      }
+    };
+
+    // Add initial calculation
+    updateReadingProgress();
+
+    window.addEventListener("scroll", throttledUpdate, { passive: true });
+    window.addEventListener("resize", throttledUpdate, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", throttledUpdate);
+      window.removeEventListener("resize", throttledUpdate);
+    };
+  }, [updateReadingProgress]);
+
+  // Memoized detailed content for the post
+  const getDetailedContent = useMemo(
+    () => (postData) => {
+      if (
+        postData.slug === "ga-gay-5h-sang-ban-lien-goi-minh-day-bang-binh-yen"
+      ) {
+        return `
         <div class="content-section" id="section-1">
           <h2 class="section-heading"><span class="section-icon">🚗</span>1. Di chuyển</h2>
 
@@ -222,7 +248,7 @@ const BlogDetail = () => {
 
         <p><strong>Phí dịch vụ:</strong></p>
         <ul>
-          <li>150k/người/đêm cho phòng tập thể</li>
+          <li>150k/người/đ��m cho phòng tập thể</li>
           <li>Ăn uống: 150k/người áp dụng với bữa trưa và bữa tối, 50k/người cho bữa sáng</li>
           <li>Hướng dẫn viên: 400k - 500k/ngày áp dụng cho cả đoàn</li>
         </ul>
@@ -370,18 +396,22 @@ const BlogDetail = () => {
           Các hoạt động trải nghiệm áp dụng cho tất cả các hộ homestay tại Bản Liền.
         </blockquote>
       `;
-    }
+      }
 
-    // Default content for other posts (if any)
-    return `
+      // Default content for other posts (if any)
+      return `
       <p>Việt Nam - đất nước hình chữ S xinh đẹp của chúng ta, không chỉ nổi tiếng với những cảnh quan thiên nhiên hùng vĩ mà còn với nền ẩm thực phong phú và đa dạng.</p>
       <p><em>Hãy cùng LocalBy khám phá thêm nhiều câu chuyện du lịch thú vị khác!</em></p>
     `;
-  };
+    },
+    [],
+  );
 
   useEffect(() => {
-    // Simulate API loading
-    setTimeout(() => {
+    setIsLoading(true);
+
+    // Simulate API loading with reduced delay
+    const timeoutId = setTimeout(() => {
       // Find the post by slug
       const foundPost = mockData.blogPosts.find((p) => p.slug === slug);
 
@@ -401,8 +431,10 @@ const BlogDetail = () => {
       }
 
       setIsLoading(false);
-    }, 800);
-  }, [slug]);
+    }, 300); // Reduced from 800ms to 300ms
+
+    return () => clearTimeout(timeoutId);
+  }, [slug, getDetailedContent]);
 
   if (isLoading) {
     return (
