@@ -125,7 +125,7 @@ const BlogDetail = () => {
         <h3>Vang A Binh Homestay (0388 572 409 - Vàng A Bình)</h3>
         <div class="image-grid large">
           <img src="/images/ban-lien/vang-a-binh-homestay/1.jpg" alt="Vang A Binh Homestay - Exterior" />
-          <img src="/images/ban-lien/vang-a-binh-homestay/2.jpg" alt="Vang A Binh Homestay - Phòng tập thể" />
+          <img src="/images/ban-lien/vang-a-binh-homestay/2.jpg" alt="Vang A Binh Homestay - Phòng tập th��" />
           <img src="/images/ban-lien/vang-a-binh-homestay/3.jpg" alt="Vang A Binh Homestay - Khu vực chung" />
           <img src="/images/ban-lien/vang-a-binh-homestay/4.jpg" alt="Vang A Binh Homestay - Phòng ngủ" />
           <img src="/images/ban-lien/vang-a-binh-homestay/5.jpg" alt="Vang A Binh Homestay - Khu bếp" />
@@ -359,7 +359,23 @@ const BlogDetail = () => {
                     <span>🐦</span>
                     Twitter
                   </a>
-                  <button onClick={handleShare} className="share-button native">
+                  <button
+                    onClick={() => {
+                      if (navigator.share) {
+                        navigator
+                          .share({
+                            title: post.title,
+                            text: post.excerpt,
+                            url: window.location.href,
+                          })
+                          .catch(console.error);
+                      } else {
+                        navigator.clipboard.writeText(window.location.href);
+                        alert("Link đã được sao chép vào clipboard!");
+                      }
+                    }}
+                    className="share-button native"
+                  >
                     <span>📱</span>
                     Chia sẻ
                   </button>
