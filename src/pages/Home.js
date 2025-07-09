@@ -46,8 +46,8 @@ const Home = () => {
             </h1>
             <p className="hero-description">
               Trải nghiệm du lịch chân thực với những câu chuyện kể từ trái tim
-              người dân địa phương. Khám phá văn hóa, ẩm thực và vẻ đẹp ẩn
-              giấu của mảnh đất hình chữ S qua LocalBy.
+              người dân địa phương. Khám phá văn hóa, ẩm thực và vẻ đẹp ẩn giấu
+              của mảnh đất hình chữ S qua LocalBy.
             </p>
             <div className="hero-actions">
               <Link to="/destinations" className="cta-button primary">
@@ -124,7 +124,7 @@ const Home = () => {
       <section
         className="section categories-section"
         style={{
-          background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+          background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
           padding: "var(--space-5xl) 0",
         }}
       >
