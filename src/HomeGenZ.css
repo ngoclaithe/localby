@@ -148,13 +148,14 @@
 
 .stat-item {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
   min-width: 100px;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .stat-item:hover {
@@ -166,7 +167,9 @@
   font-size: 2rem;
   font-weight: 900;
   color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .stat-label {
@@ -175,7 +178,9 @@
   font-weight: 700;
   font-size: 0.9em;
   margin-top: 5px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .genz-btn {
