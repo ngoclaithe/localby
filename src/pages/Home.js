@@ -124,7 +124,13 @@ const Home = () => {
       )}
 
       {/* Categories Section */}
-      <section className="section categories-section">
+      <section
+        className="section categories-section"
+        style={{
+          background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+          padding: "var(--space-5xl) 0",
+        }}
+      >
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">
