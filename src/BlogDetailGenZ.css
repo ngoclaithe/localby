@@ -40,161 +40,78 @@
   min-height: 100vh;
 }
 
-/* Beautiful Modern Breadcrumb */
+/* Elegant Glass Breadcrumb */
 .modern-breadcrumb {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.98) 0%,
-    rgba(248, 250, 252, 0.95) 100%
-  );
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  margin: 25px 0;
-  border-radius: 20px;
-  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 20px 0;
+  border-radius: 16px;
+  padding: 14px 20px;
   box-shadow:
-    0 8px 32px rgba(99, 102, 241, 0.1),
-    0 4px 16px rgba(0, 0, 0, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    0 10px 40px rgba(0, 0, 0, 0.06),
+    0 2px 8px rgba(0, 0, 0, 0.02),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
   position: relative;
-  overflow: hidden;
-}
-
-.modern-breadcrumb::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    #6366f1 0%,
-    #8b5cf6 25%,
-    #ec4899 50%,
-    #f59e0b 75%,
-    #10b981 100%
-  );
-  border-radius: 20px 20px 0 0;
 }
 
 .breadcrumb-nav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
 .breadcrumb-link {
-  color: #64748b;
+  color: #6b7280;
   text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.6);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: transparent;
+  transition: all 0.25s ease;
   font-weight: 500;
   font-size: 0.9em;
   position: relative;
-  border: 1px solid rgba(226, 232, 240, 0.5);
-}
-
-.breadcrumb-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.1),
-    rgba(139, 92, 246, 0.05)
-  );
-  border-radius: 14px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .breadcrumb-link:hover {
-  color: #475569;
-  background: rgba(255, 255, 255, 0.9);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.2);
-}
-
-.breadcrumb-link:hover::before {
-  opacity: 1;
+  color: #374151;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .breadcrumb-separator {
-  color: #cbd5e1;
-  font-size: 1em;
-  font-weight: 400;
-  margin: 0 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: rgba(203, 213, 225, 0.2);
+  color: #d1d5db;
+  font-size: 0.9em;
+  font-weight: 300;
   position: relative;
 }
 
 .breadcrumb-separator::before {
-  content: "›";
-  font-size: 0.9em;
+  content: "/";
+  opacity: 0.6;
 }
 
 .breadcrumb-current {
-  color: #334155;
+  color: #111827;
   font-weight: 600;
-  padding: 10px 16px;
+  padding: 8px 14px;
   background: linear-gradient(
     135deg,
-    rgba(99, 102, 241, 0.15) 0%,
-    rgba(139, 92, 246, 0.1) 100%
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(147, 51, 234, 0.08) 100%
   );
-  border-radius: 14px;
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 10px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
   position: relative;
-  max-width: 280px;
+  max-width: 300px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   box-shadow:
-    0 4px 12px rgba(99, 102, 241, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumb-current::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #6366f1, #8b5cf6);
-  border-radius: 0 0 14px 14px;
-}
-
-.breadcrumb-current::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    transparent 50%,
-    rgba(99, 102, 241, 0.05) 100%
-  );
-  border-radius: 14px;
-  pointer-events: none;
+    0 2px 8px rgba(59, 130, 246, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* Article Header */
