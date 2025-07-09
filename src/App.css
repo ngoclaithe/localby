@@ -2080,6 +2080,9 @@ body {
 
 .featured-post-content {
   padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
 }
 
 .featured-post-title {
