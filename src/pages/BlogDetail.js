@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { mockData } from "../services/api";
 import { formatDate, formatReadingTime } from "../utils/formatters";
@@ -12,26 +12,39 @@ const BlogDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [readingProgress, setReadingProgress] = useState(0);
 
-  // Scroll progress for reading indicator
-  useEffect(() => {
-    const updateReadingProgress = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = scrollTop / docHeight;
-      setReadingProgress(progress);
-    };
-
-    window.addEventListener("scroll", updateReadingProgress);
-    return () => window.removeEventListener("scroll", updateReadingProgress);
+  // Optimized scroll progress with throttling
+  const updateReadingProgress = useCallback(() => {
+    const scrollTop = window.scrollY;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const progress = Math.min(scrollTop / docHeight, 1);
+    setReadingProgress(progress);
   }, []);
 
-  // Mock detailed content for the post
-  const getDetailedContent = (postData) => {
-    if (
-      postData.slug === "ga-gay-5h-sang-ban-lien-goi-minh-day-bang-binh-yen"
-    ) {
-      return `
+  useEffect(() => {
+    let ticking = false;
+
+    const throttledUpdate = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateReadingProgress();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", throttledUpdate, { passive: true });
+    return () => window.removeEventListener("scroll", throttledUpdate);
+  }, [updateReadingProgress]);
+
+  // Memoized detailed content for the post
+  const getDetailedContent = useMemo(
+    () => (postData) => {
+      if (
+        postData.slug === "ga-gay-5h-sang-ban-lien-goi-minh-day-bang-binh-yen"
+      ) {
+        return `
         <div class="content-section" id="section-1">
           <h2 class="section-heading"><span class="section-icon">🚗</span>1. Di chuyển</h2>
 
@@ -70,7 +83,7 @@ const BlogDetail = () => {
         <p class="image-caption">Hình ảnh 2 và hình ảnh 3</p>
 
         <blockquote>
-          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
+          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ng��y mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe s��. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
         </blockquote>
 
         <p>Khi gần tới homestay nếu không tìm được đường xuống hoặc đường quá dốc và khó đi, quý khách có thể liên hệ chủ nhà lên hỗ trợ đưa xe và hành lý xuống.</p>
@@ -367,21 +380,25 @@ const BlogDetail = () => {
         <blockquote>
           <strong>Lưu ý:</strong><br/>
           Đây chỉ là lịch trình tham khảo, tuỳ vào tình hình thời tiết và mùa vụ mà các hoạt động trải nghiệm có thể khác nhau và có những điều chỉnh sao cho phù hợp với tình hình thực tế. Để có thêm thông tin về những hoạt động trải nghiệm cụ thể theo từng ngày quý khách vui lòng liên hệ với chủ nhà để được tư vấn thêm.<br/>
-          Các hoạt động trải nghiệm áp dụng cho tất cả các hộ homestay tại Bản Liền.
+          Các hoạt động trải nghiệm áp d��ng cho tất cả các hộ homestay tại Bản Liền.
         </blockquote>
       `;
-    }
+      }
 
-    // Default content for other posts (if any)
-    return `
+      // Default content for other posts (if any)
+      return `
       <p>Việt Nam - đất nước hình chữ S xinh đẹp của chúng ta, không chỉ nổi tiếng với những cảnh quan thiên nhiên hùng vĩ mà còn với nền ẩm thực phong phú và đa dạng.</p>
       <p><em>Hãy cùng LocalBy khám phá thêm nhiều câu chuyện du lịch thú vị khác!</em></p>
     `;
-  };
+    },
+    [],
+  );
 
   useEffect(() => {
-    // Simulate API loading
-    setTimeout(() => {
+    setIsLoading(true);
+
+    // Simulate API loading with reduced delay
+    const timeoutId = setTimeout(() => {
       // Find the post by slug
       const foundPost = mockData.blogPosts.find((p) => p.slug === slug);
 
@@ -401,8 +418,10 @@ const BlogDetail = () => {
       }
 
       setIsLoading(false);
-    }, 800);
-  }, [slug]);
+    }, 300); // Reduced from 800ms to 300ms
+
+    return () => clearTimeout(timeoutId);
+  }, [slug, getDetailedContent]);
 
   if (isLoading) {
     return (
