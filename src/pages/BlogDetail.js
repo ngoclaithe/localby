@@ -69,7 +69,7 @@ const BlogDetail = () => {
         <p class="image-caption">Hình ảnh 2 và hình ảnh 3</p>
 
         <blockquote>
-          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đoạn đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
+          <strong>Lưu ý:</strong> Đường vào Bản Liền từ Bắc Hà tương đối đẹp, không quá dốc và không có quá nhiều khúc cua khó, tuy nhiên sau những ngày mưa có thể xuất hiện nhiều đoạn đường bị bùn đất từ trên núi sạt xuống che lấp, qua những đoạn này quý khách nên đi chậm và về số thấp đối với xe số. Những đo���n đường xấu không quá nhiều nên quý khách hoàn toàn có thể yên tâm. Ngoài ra nên đi dép và quần ngắn khi di chuyển bằng xe máy vào bản để tránh bị bùn đất làm bẩn.
         </blockquote>
 
         <p>Khi gần tới homestay nếu không tìm được đường xuống hoặc đường quá dốc và khó đi, quý khách có thể liên hệ chủ nhà lên hỗ trợ đưa xe và hành lý xuống.</p>
@@ -87,17 +87,21 @@ const BlogDetail = () => {
                 <span class="owner-name">👤 Vàng Thị Thông</span>
               </div>
             </div>
-        <div class="image-grid large">
-          <img src="/images/ban-lien/pine-homestay/1.jpg" alt="Banlien Pine Homestay - Phòng tập thể" />
-          <img src="/images/ban-lien/pine-homestay/2.jpg" alt="Banlien Pine Homestay - Phòng tắm" />
-          <img src="/images/ban-lien/pine-homestay/3.jpg" alt="Banlien Pine Homestay - Bungalow" />
-          <img src="/images/ban-lien/pine-homestay/4.jpg" alt="Banlien Pine Homestay - Không gian chung" />
-          <img src="/images/ban-lien/pine-homestay/5.jpg" alt="Banlien Pine Homestay - Khu vực ăn uống" />
-          <img src="/images/ban-lien/pine-homestay/6.jpg" alt="Banlien Pine Homestay - Phòng vệ sinh" />
-          <img src="/images/ban-lien/pine-homestay/7.jpg" alt="Banlien Pine Homestay - Bungalow interior" />
-          <img src="/images/ban-lien/pine-homestay/8.jpg" alt="Banlien Pine Homestay - Khu vực nghỉ ngơi" />
-          <img src="/images/ban-lien/pine-homestay/9.jpg" alt="Banlien Pine Homestay - View từ homestay" />
-        </div>
+            <div class="homestay-gallery">
+              <div class="gallery-main">
+                <img src="/images/ban-lien/pine-homestay/1.jpg" alt="Phòng tập thể" class="main-gallery-image" />
+              </div>
+              <div class="gallery-grid">
+                <img src="/images/ban-lien/pine-homestay/2.jpg" alt="Phòng tắm" />
+                <img src="/images/ban-lien/pine-homestay/3.jpg" alt="Bungalow" />
+                <img src="/images/ban-lien/pine-homestay/4.jpg" alt="Không gian chung" />
+                <img src="/images/ban-lien/pine-homestay/5.jpg" alt="Khu vực ăn uống" />
+                <img src="/images/ban-lien/pine-homestay/6.jpg" alt="Phòng vệ sinh" />
+                <img src="/images/ban-lien/pine-homestay/7.jpg" alt="Bungalow interior" />
+                <img src="/images/ban-lien/pine-homestay/8.jpg" alt="Khu vực nghỉ ngơi" />
+                <img src="/images/ban-lien/pine-homestay/9.jpg" alt="View từ homestay" />
+              </div>
+            </div>
 
         <p>BanLien Pine Homestay hiện đang có sức chứa khoảng 15-20 khách đối với phòng tập thể (ảnh 3-4) và 2-5 khách đối với phòng bungalow (ảnh 7-8-9). Hiện tại gia đình có 1 phòng bungalow và tương lai sẽ có thêm một phòng nữa. Gia đình hiện có 2 phòng tắm có trang bị bình nóng lạnh và 2 phòng vệ sinh (ảnh 6), phòng bungalow có phòng tắm và phòng vệ sinh khép kín.</p>
 
@@ -148,7 +152,7 @@ const BlogDetail = () => {
           <img src="/images/ban-lien/huong-hoan-homestay/8.jpg" alt="Hướng Hoan Homestay - View núi" />
           <img src="/images/ban-lien/huong-hoan-homestay/9.jpg" alt="Hướng Hoan Homestay - Sân" />
         </div>
-        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hi���n có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
+        <p>Hướng Hoan Homestay hiện đang có sức chứa khoảng dưới 10 khách đối với phòng tập thể, gia đình hiện chưa có phòng bungalow. Homestay hiện có 1 phòng tắm có trang bị bình nóng lạnh và 1 phòng vệ sinh và sẽ xây dựng thêm trong thời gian tới.</p>
 
         <p><strong>Dịch vụ:</strong> Lưu trú, ăn uống, hướng dẫn viên hướng dẫn trải nghiệm các hoạt động đặc sắc tại Bản Liền.</p>
 
@@ -196,7 +200,7 @@ const BlogDetail = () => {
           <li><strong>8h - 11h:</strong> Lên rừng chè cổ thụ, uống nước suối nguồn, hái rau mầm đá và lấy tre về làm đũa cẩm</li>
           <li><strong>12h:</strong> Dùng bữa trưa cùng gia đình sau đó nghỉ trưa</li>
           <li><strong>14h:</strong> Thăm quan thác nước tại trung tâm xã, tắm thác, hái rau rừng</li>
-          <li><strong>19h:</strong> Dùng bữa tối sau đó nghỉ ngơi hoặc tham gia hoạt động làm cốc tre, làm đũa cẩm, làm trà, chơi trò chơi dân tộc…</li>
+          <li><strong>19h:</strong> Dùng bữa tối sau đó nghỉ ngơi hoặc tham gia hoạt động l��m cốc tre, làm đũa cẩm, làm trà, chơi trò chơi dân tộc…</li>
         </ul>
 
         <h4>Ngày 2:</h4>
@@ -526,7 +530,9 @@ const BlogDetail = () => {
                     </p>
                     <div className="related-post-meta">
                       <span>📅 {formatDate(relatedPost.published_at)}</span>
-                      <span>⏱️ {formatReadingTime(relatedPost.content)}</span>
+                      <span>
+                        ⏱��� {formatReadingTime(relatedPost.content)}
+                      </span>
                     </div>
                   </div>
                 </article>
